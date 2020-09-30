@@ -50,7 +50,7 @@ public class Arzt extends Personal
     {
         if (Rang < 1 || Rang > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3,Assistenzarzt = 4
         { 
-            System.out.println("Dieser Rang existiert nicht!");           //Exception muss da gemacht werden!
+            System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
         }
         else
         {
