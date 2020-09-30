@@ -5,6 +5,7 @@
  * @author(Nicolas Fix, Erwin Malsam)
  * @version (30.9.2020, 1.0)
  */
+import java.util.ArrayList;
 public class Verwaltung
 {
     /**
@@ -32,6 +33,6 @@ public class Verwaltung
     }
     public String getArrayList ()
     {
-        return String
+        private ArrayList<String>(Objekt)=new ArrayList<String>();
     }
 }
