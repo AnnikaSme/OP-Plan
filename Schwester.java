@@ -1,6 +1,6 @@
 
 /**
- * Hier werden die Attribute der Schwestern definiert
+ * In der Klasse werden die Atrribute der Schwester definiert.
  * 
  * @author (Lilli Stoffels, Annika Smetaczko) 
  * @version (30.09.2020, 1.0)
