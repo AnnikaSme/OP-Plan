@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Raum
+comment0.text=\n\ Das\ ist\ die\ Klasse\ Raum\n\n\ @Nicolas\ Fix,\ Erwin\ Malsam\n\ @version\ (30.9.2020)\n
+comment1.params=Raumnummer\ FreiR
+comment1.target=Raum(int,\ boolean)
+comment1.text=\n\ Kosntruktor\ der\ Klasse\ Raum\n
+comment2.params=Raumnummer
+comment2.target=void\ setRaumnummer(int)
+comment2.text=\n\ Get\ und\ Set-Methode\ der\ Raumnummer\n\n\ \n\n
+comment3.params=
+comment3.target=int\ getRaumnummer()
+comment4.params=FreiR
+comment4.target=void\ setFreiR(boolean)
+comment4.text=\n\ Get\ und\ Set-Methode\ von\ FreiR\n
+comment5.params=
+comment5.target=boolean\ getFreiR()
+numComments=6
