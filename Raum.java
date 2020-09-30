@@ -2,8 +2,8 @@
 /**
  * Das ist die Klasse Raum
  *
- * @Nicolas Fix, Erwin Malsam
- * @version (30.9.2020)
+ * @author (Nicolas Fix, Erwin Malsam)
+ * @version (30.9.2020, 1.0)
  */
 public class Raum
 {
