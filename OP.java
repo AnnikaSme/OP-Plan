@@ -2,8 +2,8 @@
 /**
  * Die Klasse definiert einen OP. Der OP wird beschrieben durch die Attribute.
  * 
- * @author Sarah, Nathalie
- * @version 1.0  30.09.2020
+ * @author (Sarah Huber, Nathalie Schatz)
+ * @version (30.09.2020, 1.0)
  */
 public class OP
 {
