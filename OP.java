@@ -1,6 +1,7 @@
 
 /**
- * Die Klasse definiert einen OP. Der OP wird beschrieben durch die Attribute.
+ * Die Klasse definiert die OP mit NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit.
+ * 
  * 
  * @author Sarah Huber, Nathalie Schatz
  * @version 01.10.2020, 1.1
@@ -21,6 +22,15 @@ public class OP
 
     /**
      * Konstruktor für Objekte der Klasse OP
+     * @param NamePatient
+     * @param AlterPatient
+     * @param Gesundheitszustand
+     * @param AnzahlAerzte
+     * @param AnzahlSchwester
+     * @param AnzahlKT
+     * @param Dauer
+     * @param OPTyp
+     * @param Dringlichkeit
      */
     public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int Anzahlaerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
@@ -37,7 +47,7 @@ public class OP
     }
     
     /**
-     * Standartkonstruktor für Objekte der Klasse OP
+     * Standardkonstruktor der Klasse OP mit ausgedachten Werten.
      */
     public OP()
     {
@@ -54,9 +64,9 @@ public class OP
     }
 
     /**
-     * Set-Methode Namen des Patienten
+     * Set-Methode für den Namen des Patienten
      * 
-     * @param  NamePatient
+     * @param  NamePatient Name des Patienten
      */
     public void setNamePatient(String NamePatient)
     {
@@ -65,16 +75,15 @@ public class OP
     }
     
     /**
-     * Set-Methode Alter des Patienten
+     * Set-Methode für das Alter des Patienten
      * 
-     * @param  AlterPatient
+     * @param  AlterPatient Alter des Patienten kann nur zwischen 0 und 130 Jahren liegen.
      */
     public void setAlterPatient(int AlterPatient)
     {
-        // tragen Sie hier den Code ein
-        if (AlterPatient < 0 || AlterPatient > 150)   //Kein Mensch kann über 150 Jahre alt werden und kein Mensch kann unter 0 sein.
+        if (AlterPatient < 0 || AlterPatient > 130)   //Kein Mensch kann über 130 Jahre alt werden und kein Mensch kann unter 0 sein.
         { 
-            System.out.println("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 150 Jahre alt sein .");           //Exception muss da gemacht werden!
+            System.out.println("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 130 Jahre alt sein.");           //Exception muss da gemacht werden!
         }
         else
         {
@@ -83,24 +92,22 @@ public class OP
     }
     
     /**
-     * Set-Methode Gesundheitszustand des Patienten
+     * Set-Methode für den Gesundheitszustand des Patienten
      * 
-     * @param  Gesundheitszustand
+     * @param  Gesundheitszustand Gesundheitszustand des Patienten
      */
     public void setGesundheitszustand(String Gesundheitszustand)
     {
-        // tragen Sie hier den Code ein
         this.Gesundheitszustand = Gesundheitszustand;
     }
     
     /**
-     * Set-Methode Anzahl der Ärzte 
+     * Set-Methode für die Anzahl der Ärzte 
      * 
-     * @param  AnzahlAerzte
+     * @param  AnzahlAerzte Anzahl der Ärzte kann nicht <2 oder >4 sein
      */
     public void setAnzahlAerzte(int AnzahlAerzte)
     {
-        // tragen Sie hier den Code ein
         if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es muessen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
             System.out.println("Es muessen mindestens 2-4 Aerzte bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
