@@ -36,7 +36,7 @@ public class OP
         this.Dringlichkeit = Dringlichkeit;
     }
     
-     /**
+    /**
      * Standartkonstruktor für Objekte der Klasse OP
      */
     public OP()
@@ -54,7 +54,7 @@ public class OP
     }
 
     /**
-     * Definiert den Namen des Patienten
+     * Set-Methode Namen des Patienten
      * 
      * @param  NamePatient
      */
@@ -65,7 +65,7 @@ public class OP
     }
     
     /**
-     * Definiert das Alter des Patienten
+     * Set-Methode Alter des Patienten
      * 
      * @param  AlterPatient
      */
@@ -73,10 +73,18 @@ public class OP
     {
         // tragen Sie hier den Code ein
         this.AlterPatient = AlterPatient;
+        if (AlterPatient < 1 || AlterPatient > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3, Assistenzarzt = 4
+        { 
+            System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
+        }
+        else
+        {
+            this.Rang = Rang;
+        }
     }
     
     /**
-     * Definiert den Gesundheitszustand des Patienten
+     * Set-Methode Gesundheitszustand des Patienten
      * 
      * @param  Gesundheitszustand
      */
@@ -87,7 +95,7 @@ public class OP
     }
     
     /**
-     * Definiert die Anzahl der Ärzte 
+     * Set-Methode Anzahl der Ärzte 
      * 
      * @param  AnzahlAerzte
      */
@@ -95,10 +103,18 @@ public class OP
     {
         // tragen Sie hier den Code ein
         this.AnzahlAerzte = AnzahlAerzte;
+        if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
+        { 
+            System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
+        }
+        else
+        {
+            this.AnzahlAerzte = AnzahlAerzte;
+        }
     }
     
     /**
-     * Definiert die Anzahl der Schwestern
+     * Set-Methode Anzahl der Schwestern
      * 
      * @param  AnzahlSchwester
      */
@@ -109,9 +125,9 @@ public class OP
     }
     
     /**
-     * Definiert die Anzahl der Kardiotechniker
+     * Set-Methode Anzahl der Kardiotechniker
      * 
-     * @param  Anzahl der Kardiotechniker
+     * @param  AnzahlKT Gibt die Anzahl der Kardiotechniker an.
      */
     public void setAnzahlKT(int AnzahlKT)
     {
@@ -120,9 +136,9 @@ public class OP
     }
     
     /**
-     * Definiert die Dauer 
+     * Set-Methode Dauer 
      * 
-     * @param  Dauer
+     * @param  Dauer Gibt die Dauer der Operation an.
      */
     public void setDauer(int Dauer)
     {
@@ -131,9 +147,9 @@ public class OP
     }
     
     /**
-     * Definiert den OPTyp
+     * Set-Methode OPTyp
      * 
-     * @param  OPTyp
+     * @param  OPTyp Gibt den Typ der Operation an.
      */
     public void setOPTyp(String OPTyp)
     {
@@ -142,9 +158,9 @@ public class OP
     }
     
     /**
-     * Definiert die Dringlichkeit
+     * Set-Methode Dringlichkeit
      * 
-     * @param  Dringlichkeit
+     * @param  Dringlichkeit Gibt die Dringlichkeit der Operation an.
      */
     public void setDringlichkeit(int Dringlichkeit)
     {
@@ -153,9 +169,9 @@ public class OP
     }
     
     /**
-     * Gibt den Namen des Patienten aus.
+     * Get-Methode Namen des Patienten.
      *
-     * @return       NamePatient 
+     * @return       NamePatient Gibt den Namen des Patienten aus.
      */
     public String getNamePatient()
     {
@@ -164,9 +180,9 @@ public class OP
     }
     
     /**
-     * Gibt das Alter des Patienten aus.
+     * Get-Methode Alter des Patienten.
      * 
-     * @return        AlterPatient
+     * @return        AlterPatient Gibt das Alter des Patienten aus.
      */
     public int getAlterPatient()
     {
@@ -175,9 +191,9 @@ public class OP
     }
     
     /**
-     * Gibt den Gesundheitszustand des Patienten aus.
+     * Get-Methode Gesundheitszustand des Patienten.
      * 
-     * @return       Gesundheitszustand
+     * @return       Gesundheitszustand Gibt den Gesunheitszustand des Patienten aus.
      */
     public String getGesundheitszustand()
     {
@@ -187,9 +203,9 @@ public class OP
     
     
     /**
-     * Gibt die Anzahl der Aerzte aus.
+     * Get-Methode Anzahl der Aerzte.
      * 
-     * @return        Anzahl Aerzte
+     * @return        Anzahl Aerzte Gibt die Anzahl der Ärzte aus.
      */
     public int getAnzahlAerzte()
     {
@@ -198,9 +214,9 @@ public class OP
     }
     
     /**
-     * Gibt die Anzahl der Schwestern aus.
+     * Get-Methode Anzahl der Schwestern.
      * 
-     * @return        AnzahlSchwester
+     * @return        AnzahlSchwester Gibt die Anzahl der Schwestern aus.
      */
     public int getAnzahlSchwester()
     {
@@ -209,9 +225,9 @@ public class OP
     }
     
     /**
-     * Gibt die Anzahl der Kardiotechniker aus.
+     * Get-Methode Anzahl der Kardiotechniker.
      *
-     * @return        AnzahlKT
+     * @return        AnzahlKT Gibt die Anzahl der Kardiotechniker aus.
      */
     public int getAnzahlKT()
     {
@@ -220,9 +236,9 @@ public class OP
     }
     
     /**
-     * Gibt die Dauer der OP aus.
+     * Get-Methode Dauer der OP.
      * 
-     * @return        Dauer
+     * @return        Dauer Gibt die Dauer der Operation aus.
      */
     public int getDauer()
     {
@@ -231,9 +247,9 @@ public class OP
     }
     
     /**
-     * Gibt OPTyp aus.
+     * Get-Methode OPTyp.
      * 
-     * @return        OPTyp
+     * @return        OPTyp Gibt den Typ der Operation aus.
      */
     public String getOPTyp()
     {
@@ -242,9 +258,9 @@ public class OP
     }
     
     /**
-     * Gibt Dringlichkeit aus.
+     * Get-Methode Dringlichkeit.
      * 
-     * @return        Dringlichkeit
+     * @return        Dringlichkeit Gibt die Dringlichkeit der Operation aus.
      */
     public int getDringlichkeit()
     {
@@ -252,7 +268,7 @@ public class OP
         return Dringlichkeit;
     }
     
-      /**
+     /**
      * Die Methode legt eine neue Operation an.
      * 
      * @param  NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit
