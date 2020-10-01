@@ -3,7 +3,7 @@
  * In dieser Klasse werden die Schwestern mit Name, Personalnummer, Arbeitszweig, Kontakt und Station festgelegt. 
  * 
  * @author Lilli Stoffels, Annika Smetaczko
- * @version 30.09.2020, 1.0
+ * @version 01.10.2020, 1.1
  */
 public class Schwester extends Personal
 {

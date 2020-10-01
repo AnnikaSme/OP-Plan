@@ -4,7 +4,7 @@
  * Es gibt 4 Arztränge: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4
  * 
  * @author Lilli Stoffels, Annika Smetaczko
- * @version 01.10.2020 1.1
+ * @version 01.10.2020, 1.1
  */
 public class Arzt extends Personal
 {

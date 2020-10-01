@@ -2,8 +2,8 @@
 /**
  * Abstrakte Klasse Personal von der weitere Klassen vererbt werden.
  * 
- * @author (Lilli  Stoffels, Annika Smetaczko) 
- * @version (30.09.2020, 1.0)
+ * @author Lilli  Stoffels, Annika Smetaczko
+ * @version 01.10.2020, 1.1
  */
  abstract public  class Personal
 {
