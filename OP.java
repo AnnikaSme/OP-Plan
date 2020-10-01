@@ -37,10 +37,9 @@ public class OP
     }
 
     /**
-     * Name des Patienten definieren
+     * Definiert den Name des Patienten
      * 
-     * @param  N
-     * @return        die Summe aus x und y
+     * @param  NamePatient
      */
     public void setNamePatient(String NamePatient)
     {
@@ -49,10 +48,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert das Alter des Patienten
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  AlterPatient
      */
     public void setAlterPatient(int AlterPatient)
     {
@@ -61,10 +59,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert den Gesundheitszustand des Patienten
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  Gesundheitszustand
      */
     public void setGesundheitszustand(String Gesundheitszustand)
     {
@@ -73,10 +70,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert die Anzahl der Ärzte 
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  AnzahlAerzte
      */
     public void setAnzahlAerzte(int AnzahlAerzte)
     {
@@ -85,10 +81,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert die Anzahl der Schwestern
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  AnzahlSchwester
      */
     public void setAnzahlSchwester(int AnzahlSchwester)
     {
@@ -97,10 +92,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert die Anzahl der Kardiotechniker
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  Anzahl der Kardiotechniker
      */
     public void setAnzahlKT(int AnzahlKT)
     {
@@ -109,10 +103,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert die Dauer 
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  Dauer
      */
     public void setDauer(int Dauer)
     {
@@ -121,10 +114,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert den OPTyp
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  OPTyp
      */
     public void setOPTyp(String OPTyp)
     {
@@ -133,10 +125,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Definiert die Dringlichkeit
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  Dringlichkeit
      */
     public void setDringlichkeit(int Dringlichkeit)
     {
@@ -145,10 +136,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * Gibt den Namen des Patienten aus.
+     *
+     * @return       NamePatient 
      */
     public String getNamePatient()
     {
@@ -157,10 +147,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt das Alter des Patienten aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return        AlterPatient
      */
     public int getAlterPatient()
     {
@@ -169,10 +158,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt den Gesundheitszustand des Patienten aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return       Gesundheitszustand
      */
     public String getGesundheitszustand()
     {
@@ -182,10 +170,9 @@ public class OP
     
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt die Anzahl der Aerzte aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return        Anzahl Aerzte
      */
     public int getAnzahlAerzte()
     {
@@ -194,10 +181,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt die Anzahl der Schwestern aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return        AnzahlSchwester
      */
     public int getAnzahlSchwester()
     {
@@ -206,10 +192,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * Gibt die Anzahl der Kardiotechniker aus.
+     *
+     * @return        AnzahlKT
      */
     public int getAnzahlKT()
     {
@@ -218,10 +203,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt die Dauer der OP aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return        Dauer
      */
     public int getDauer()
     {
@@ -230,10 +214,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt OPTyp aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return        OPTyp
      */
     public String getOPTyp()
     {
@@ -242,10 +225,9 @@ public class OP
     }
     
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gibt Dringlichkeit aus.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return        Dringlichkeit
      */
     public int getDringlichkeit()
     {
@@ -292,6 +274,6 @@ public class OP
         String O = getOPTyp();
         int Dr = getDringlichkeit();
         
-        return  N.concat(newLine).concat(A).concat(newLine).concat(G).concat(newLine).concat(AA).concat(newLine).concat(AS).concat(newLine).concat(AK).concat(newLine).concat(D).concat(newLine).concat(O).concat(newLine).concat(Dr); 
+        return  N + A + G + AA + AS + AK + D + O + D; 
     }
 }
