@@ -45,7 +45,7 @@ public class Arzt extends Personal
     /**
      * Set-Methode für Fachrichtung. Die Fachrichtung kann frei eingegeben werden. 
      * 
-     * @param  Fachrichtung gibt die Fachrichtung an
+     * @param  Fachrichtung  Fachrichtung des Arztes 
      */
     public void SetFachrichtung(String Fachrichtung)
     {
