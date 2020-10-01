@@ -241,7 +241,7 @@ public class OP
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public void Anlegen (String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
+    public void Anlegen(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
         // tragen Sie hier den Code ein
         setNamePatient(NamePatient);
@@ -261,10 +261,10 @@ public class OP
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public String Abrufen ()
+    public String Abrufen()
     {
         // tragen Sie hier den Code ein
-        String N = getNamePatient();
+        String N = getNamePatient();    //Umprogrammieren zu Name: ...  Alter: ...
         int A = getAlterPatient();
         String G = getGesundheitszustand();
         int AA = getAnzahlAerzte();
