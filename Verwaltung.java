@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Verwaltung
 {
     private Raum[] raeume;
-    private ArrayList<String>personalarzt;
+    private ArrayList<Arzt>personalarzt;
     
     
    /**
@@ -25,11 +25,14 @@ public class Verwaltung
             raeume [i] = new Raum (a, true);
             a++;
         }
-       //personalarzt=new ArrayList<String>();
+       
+        personalarzt=new ArrayList<Arzt>();
     }
-    /*public void speicherpersonalarzt ()
+    
+   public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
-        personalarzt.add();
+        Arzt b = new Arzt( Fachrichtung,  Rang,  Name,  Personalnummer, Kontakt);
+        personalarzt.add(b);
     }
    
     /**
