@@ -253,7 +253,7 @@ public class OP
     }
     
       /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Die Methode legt eine neue Operation an.
      * 
      * @param  NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit
      */
@@ -272,7 +272,7 @@ public class OP
     }
     
         /**
-     * Soll die Daten der Operation ausgeben.
+     * Die Methode soll die Daten der Operation ausgeben.
      *
      * @return        NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit
      */
