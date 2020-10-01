@@ -58,31 +58,27 @@ public class Verwaltung
         OP b = new OP( NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit );
         operationsliste.add(b);
     }
-    /**
-     *
-     */
-    /*public String DatenExportieren ()
+   
+    public String DatenExportieren ()
     {
-       return Daten
+       return "daten";
     }
-    public String DatenLoeschen ()
+    public void DatenLoeschen(int Personalnummer)
     {
-        get.
+        
     }
     public int Raumzuweisen ()
     {
-        get
+        return 1;
     }
     public int Zeitzuweisung()
     {
-        get
+        return 2;
     }
     public String Eintragen ()
     {
-        return 
+        return "Daten";
     }
-    public String getArrayList ()
-    {
-        private ArrayList<String>=new ArrayList<String>();
-    }*/
+    
+    
 }
