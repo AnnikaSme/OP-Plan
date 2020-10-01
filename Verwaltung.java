@@ -59,10 +59,7 @@ public class Verwaltung
         operationsliste.add(b);
     }
    
-    public String DatenExportieren ()
-    {
-       return "daten";
-    }
+    
     public void PersonalDatenLoeschen(int Personalnummer) //Die Daten zu einer Bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         
@@ -84,5 +81,8 @@ public class Verwaltung
         return "Daten"; //Personal trägt sich zur OP ein und die Daten des Personals werden ausgegeben.
     }
     
-    
+    public String DatenExportieren ()
+    {
+       return "daten";      // Alle Daten zu einer Operation sollen ausgegeben werden. Zum langfristigen Speichern.
+    }
 }
