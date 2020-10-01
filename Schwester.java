@@ -32,7 +32,7 @@ public class Schwester extends Personal
     public Schwester()
     {
         super("Mayer", 291736, "Schwester", "mayer.schwester@perfecthospital.de");     
-        this.Station = 3;
+        Station = 3;
     }
     
     /**
