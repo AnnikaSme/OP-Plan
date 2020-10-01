@@ -14,6 +14,12 @@ public class Arzt extends Personal
 
     /**
      * Konstruktor für Objekte der Klasse Arzt
+     * 
+     * @param Fachrichtung gibt die Fachrichtung des Arztes an
+     * @param Rang gibt den Rang des Arztes an
+     * @param Name Name des Arztes
+     * @param Personalnummer Personalnummer des Arztes
+     * @param Kontakt Kontakt des Arztes
      */
     public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
@@ -72,9 +78,9 @@ public class Arzt extends Personal
     }
   
     /**
-     * Get-Methode für Rang gibt den Rang zurück
+     * Get-Methode für Rang gibt den Rang zurück. Chefarzt = 1, Oberarzt = 2, Facharzt = 3, Assistenzarzt = 4
      * 
-     * @return   Rang
+     * @return   Rang  (als Ziffer, die für einen bestimmten Rang steht)
      */
     public int GetRang()
     {
