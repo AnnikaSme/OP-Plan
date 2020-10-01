@@ -1,6 +1,7 @@
 
 /**
- * Die Klasse Raum definiert den Raum mit Raummnummer, FreiR.
+ * Die Klasse Raum definiert den Raum mit Raummnummer, FreiR. 
+ * Es gibt nur 6 OP-Räume.
  * @author Nicolas Fix, Erwin Malsam
  * @version 01.10.2020, 1.1
  */
@@ -9,7 +10,9 @@ public class Raum
     private int Raumnummer; // Die Raumnummer der einzelnen OP-Raeume
     private boolean FreiR; // Die Verügbarkeit der OP-Raeume
     /**
-     * Konstruktor für Objekte der Klasse Raum 
+     * Konstruktor für Objekte der Klasse Raum.
+     * @param Raumnummer Raumnummer des Raumes
+     * @param FreiR Verfügbarkeit des Raumes
      */
     public Raum(int Raumnummer, boolean FreiR)
     {
@@ -18,7 +21,7 @@ public class Raum
     }
     
     /**
-     * Standardkonstruktor für die Objekte der Klasse Raum mit ausgedachten Werten
+     * Standardkonstruktor der Klasse Raum mit ausgedachten Werten.
      */
     public Raum()
     {
@@ -27,12 +30,12 @@ public class Raum
     }
 
     /**
-     * Set-Methode der Raumnummer 
+     * Set-Methode für Raumnummer.
      * 
-     * Es gibt nur 6 OP-Räume, diese Methode prüft das keine Raumnummer < 1 und keine Raumnummer > 6 eingegeben werden können.
-     * Bei falscher Eingabe wird durch eine Bildschirmausgabe darauf hingewiesen.
+     * Diese Methode prüft, dass keine Raumnummer < 1 und keine Raumnummer > 6 eingegeben können.
+     * Bei ungültiger Eingabe wird mit einer Bildschirmausgabe darauf hingewiesen.
      *
-     * @param Raumnummer gibt die Raumnummer an
+     * @param Raumnummer Raumnummer des Raumes
      *
      */
     public void setRaumnummer(int Raumnummer)
@@ -56,9 +59,9 @@ public class Raum
         return Raumnummer;
     }
     /**
-     * Set-Methode von FreiR (Verfügbarkeit)
+     * Set-Methode für FreiR (Verfügbarkeit)
      * 
-     * @param FreiR
+     * @param FreiR Verfügbarkeit des Raumes
      */
     public void setFreiR (boolean FreiR)
     {
