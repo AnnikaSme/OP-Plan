@@ -1,6 +1,7 @@
 
 /**
  * Das ist die Klasse Raum
+ * 
  *
  * @author (Nicolas Fix, Erwin Malsam)
  * @version (30.9.2020, 1.0)

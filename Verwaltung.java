@@ -8,6 +8,11 @@
 import java.util.ArrayList;
 public class Verwaltung
 {
+    private Raum Raumnummer;
+    private Raum FreiR;
+    private Arzt Fachrichtung;
+    private Arzt Rang;
+    private Schwester Station;
     /**
      *
      */
@@ -29,7 +34,7 @@ public class Verwaltung
     }
     public String Eintragen ()
     {
-        return Personal
+        return 
     }
     public String getArrayList ()
     {
