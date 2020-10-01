@@ -34,7 +34,6 @@ public class OP
      */
     public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int Anzahlaerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
-        // Instanzvariable initialisieren
         this.NamePatient = NamePatient;
         this.AlterPatient = AlterPatient;
         this.Gesundheitszustand = Gesundheitszustand;
@@ -51,7 +50,6 @@ public class OP
      */
     public OP()
     {
-        // Instanzvariable initialisieren
         NamePatient = "Miller";
         AlterPatient = 45;
         Gesundheitszustand = "Der Patient ist in einem schwachen Zustand.";
@@ -70,7 +68,6 @@ public class OP
      */
     public void setNamePatient(String NamePatient)
     {
-        // tragen Sie hier den Code ein
         this.NamePatient = NamePatient;
     }
     
@@ -110,7 +107,7 @@ public class OP
     {
         if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es muessen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
-            System.out.println("Es muessen mindestens 2-4 Aerzte bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+            System.out.println("Es müssen 2 bis 4 Ärzte bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
         }
         else
         {
@@ -119,14 +116,13 @@ public class OP
     }
     
     /**
-     * Set-Methode Anzahl der Schwestern
+     * Set-Methode für die Anzahl der Schwestern
      * 
-     * @param  AnzahlSchwester
+     * @param  AnzahlSchwester Anzahl der Schwestern muss zwischen 1 und 4 liegen.
      */
     public void setAnzahlSchwester(int AnzahlSchwester)
     {
-        // tragen Sie hier den Code ein
-        if ( AnzahlSchwester < 2|| AnzahlSchwester > 4)   //Es muessen mindestens 1 und es können nur maximal 4 Schwestern an einer Operation teilnehmen.
+        if ( AnzahlSchwester < 1 || AnzahlSchwester > 4)   //Es muessen mindestens 1 und es können nur maximal 4 Schwestern an einer Operation teilnehmen.
         { 
             System.out.println("Es muessen mindestens 1-4 Schwestern bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
         }
