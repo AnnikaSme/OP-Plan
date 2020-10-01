@@ -1,23 +1,26 @@
 
 /**
- * Das ist die Klasse Raum
+ * In dieser Klasse werden die Atribute der Klasse Raum definiert. Dabei werden die Raumnummern und die Verfügbarkeit festgelegt.
  *
- * @author (Nicolas Fix, Erwin Malsam)
- * @version (30.9.2020, 1.0)
+ * @author Nicolas Fix, Erwin Malsam
+ * @version 01.10.2020, 1.1
  */
 public class Raum
 {
-    private int Raumnummer;
-    private boolean FreiR;
+    private int Raumnummer; // Die Raumnummer der einzelnen OP-Raeume
+    private boolean FreiR; // Die Verügbarkeit der OP-Raeume
     /**
-     * Kosntruktor der Klasse Raum
+     * Kosntruktor für die Klasse Raum 
      */
     public Raum(int Raumnummer, boolean FreiR)
     {
-        this.Raumnummer = Raumnummer;
+        this.Raumnummer = Raumnummer; // Raumnummer wird auf Raum festgelegt
         this.FreiR = FreiR;
     }
     
+    /**
+     * Satndardkonstruktor für die Klasse Raum
+     */
     public Raum()
     {
         Raumnummer = 4;
@@ -25,26 +28,38 @@ public class Raum
     }
 
     /**
-     * Get und Set-Methode der Raumnummer
+     * Set-Methode der Raumnummer
      *
-     * 
+     * @param Raumnummer
      *
      */
     public void setRaumnummer(int Raumnummer)
     {
         this.Raumnummer = Raumnummer;
     }
+    /**
+     * Get-Methode Raumnummer
+     * 
+     * @return Raumnummer
+     */
     public int getRaumnummer ()
     {
         return Raumnummer;
     }
     /**
-     * Get und Set-Methode von FreiR
+     * Set-Methode von FreiR (Verfügbarkeit)
+     * 
+     * @param FreiR
      */
     public void setFreiR (boolean FreiR)
     {
         this.FreiR = FreiR;
     }
+    /**
+     * Get-Mathode von FreiR (Verfügbarkeit)
+     * 
+     * @return FreiR
+     */
     public boolean getFreiR ()
     {
         return FreiR;
