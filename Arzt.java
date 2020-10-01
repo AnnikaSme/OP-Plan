@@ -58,9 +58,9 @@ public class Arzt extends Personal
             this.Rang = Rang;
         }
     }
-    
+  
     /**
-     * Get-Methode für Rang
+ * Get-Methode für Rang
      * 
      * @return   Rang
      */
@@ -68,4 +68,5 @@ public class Arzt extends Personal
     {
         return Rang;
     }
+ public String Anlegen
 }

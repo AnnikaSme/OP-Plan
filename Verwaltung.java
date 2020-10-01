@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Verwaltung
 {
     private Raum[] raeume;
+    private ArrayList<String>personalarzt;
     
     public Verwaltung ()
     {
@@ -20,7 +21,13 @@ public class Verwaltung
             raeume[i]= a++;
             
         }
+        personalarzt=new ArrayList<String>();
     }
+    public void speicherpersonalarzt ()
+    {
+        personalarzt.add();
+    }
+   
     /**
      *
      */
@@ -46,10 +53,6 @@ public class Verwaltung
     }
     public String getArrayList ()
     {
-        private ArrayList<String>(Objekt)=new ArrayList<String>();
+        private ArrayList<String>=new ArrayList<String>();
     }
-    
-    
-    
-    
 }
