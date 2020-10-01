@@ -1,7 +1,9 @@
 
 /**
- * Die Klasse Arzt definiert den Arzt mit Fachrichtung, Rang, Name, Personalnummer, Kontakt. Die Fachrichtungen können frei eingegeben.
- * Es gibt 4 Arztränge: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4
+ * Diese Klasse Arzt ist eine vererbte Klasse der abstrakten Klasse Personal.
+ * Die Klasse definiert den Arzt mit Fachrichtung, Rang, Name, Personalnummer, Kontakt. Die Fachrichtungen können frei eingegeben werden.
+ * Es gibt 4 Arztränge: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4.
+ * Der Arbeitszweig ist "Arzt".
  * 
  * @author Lilli Stoffels, Annika Smetaczko
  * @version 01.10.2020, 1.1
@@ -13,10 +15,11 @@ public class Arzt extends Personal
     private int Rang;             //Rang des Arztes, Chefarzt = 1, Oberarzt = 2, Facharzt = 3,Assistenzarzt = 4
 
     /**
-     * Konstruktor für Objekte der Klasse Arzt
+     * Konstruktor für Objekte der Klasse Arzt.
+     * Die Attribute der abstrakten Klasse sind geerbt.
      * 
-     * @param Fachrichtung gibt die Fachrichtung des Arztes an
-     * @param Rang gibt den Rang des Arztes an
+     * @param Fachrichtung  Fachrichtung des Arztes 
+     * @param Rang  Rang des Arztes
      * @param Name Name des Arztes
      * @param Personalnummer Personalnummer des Arztes
      * @param Kontakt Kontakt des Arztes
@@ -29,7 +32,7 @@ public class Arzt extends Personal
     }
     
     /**
-     * Standardkonstruktor der Klasse Arzt mit ausgedachten Werten
+     * Standardkonstruktor der Klasse Arzt mit ausgedachten Werten.
      */
     public Arzt()
     {
@@ -50,7 +53,7 @@ public class Arzt extends Personal
     }
     
     /**
-     * Get-Methode für Fachrichtung gibt Fachrichtung wieder.
+     * Get-Methode für Fachrichtung gibt Fachrichtung zurück.
      * 
      * @return    Fachrichtung
      */

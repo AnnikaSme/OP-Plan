@@ -11,6 +11,7 @@ public class Kardiotechniker extends Personal
 {
     /**
      * Konstruktor für Objekte der Klasse Kardiotechniker
+     * Die Attribute der abstrakten Klasse sind geerbt.
      * @param Name Name des Kardiotechnikers
      * @param Personalnummer Personalnummer des Kardiotechnikers
      * @param Kontakt Kontakt des Kardiotechnikers
