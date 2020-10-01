@@ -182,7 +182,7 @@ public class OP
      */
     public void setDringlichkeit(int Dringlichkeit)
     {
-         if ( Dringlichkeit < 2|| Dringlichkeit > 4)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
+         if ( Dringlichkeit < 1|| Dringlichkeit > 4)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
         { 
             System.out.println("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception muss da gemacht werden!
         }
