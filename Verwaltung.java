@@ -11,7 +11,12 @@ public class Verwaltung
     private Raum[] raeume;
     private ArrayList<String>personalarzt;
     
-    public Verwaltung ()
+    
+   /**
+    * Konstriktor der Verwaltung, welcher die OP-Räume der einem Array der länge 6 speichert
+    *
+    */
+   public Verwaltung ()
     {
         raeume = new Raum [5];
         for (int i=0; i<raeume.length; i++)
