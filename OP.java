@@ -21,15 +21,15 @@ public class OP
 
     /**
      * Konstruktor für Objekte der Klasse OP
-     * @param NamePatient
-     * @param AlterPatient
-     * @param Gesundheitszustand
-     * @param AnzahlAerzte
-     * @param AnzahlSchwester
-     * @param AnzahlKT
-     * @param Dauer
-     * @param OPTyp
-     * @param Dringlichkeit
+     * @param NamePatient Name des Patienten
+     * @param AlterPatient Alter des Patienten
+     * @param Gesundheitszustand Gesundheitszustand des Patienten
+     * @param AnzahlAerzte Anzahl der benötigten Ärzte
+     * @param AnzahlSchwester Anzahl der benötigten Schwestern
+     * @param AnzahlKT Anzahl der benötigten Kardiotechniker
+     * @param Dauer Dauer der OP
+     * @param OPTyp Typ der OP
+     * @param Dringlichkeit Dringlichkeit der OP
      */
     public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
@@ -104,7 +104,7 @@ public class OP
      */
     public void setAnzahlAerzte(int AnzahlAerzte)
     {
-        if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es muessen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
+        if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
             System.out.println("Es müssen 2 bis 4 Ärzte bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
         }
