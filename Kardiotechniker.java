@@ -12,7 +12,7 @@ public class Kardiotechniker extends Personal
      */
     public Kardiotechniker( String Name, int Personalnummer, String Kontakt)
     {
-        super(Name, Personalnummer, "Kardiotechniker", Kontakt);     
+        super(Name, Personalnummer, "Kardiotechniker", Kontakt);     // Arbeitszweig wird fest auf Kardiotechniker festgelegt. 
          
     }
 }

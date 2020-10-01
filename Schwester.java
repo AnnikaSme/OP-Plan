@@ -14,7 +14,7 @@ public class Schwester extends Personal
      */
     public Schwester(int Station, String Name, int Personalnummer, String Kontakt)
     {
-        super(Name, Personalnummer, "Schwester", Kontakt);    
+        super(Name, Personalnummer, "Schwester", Kontakt);    // Arbeitszweig wird fest auf Schwester festgelegt. 
          SetStation(Station);
     }
 

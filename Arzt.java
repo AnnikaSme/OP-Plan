@@ -16,7 +16,7 @@ public class Arzt extends Personal
      */
     public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
-        super(Name, Personalnummer, "Arzt", Kontakt);  
+        super(Name, Personalnummer, "Arzt", Kontakt);  // Arbeitszweig wird fest auf Arzt festgelegt. 
         
         SetFachrichtung(Fachrichtung);
         SetRang(Rang);
