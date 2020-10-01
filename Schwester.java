@@ -12,9 +12,9 @@ public class Schwester extends Personal
      /**
      * Konstruktor für Objekte der Klasse Schwester
      */
-    public Schwester(int Station, String Name, int Personalnummer, String Arbeitszweig, String Kontakt)
+    public Schwester(int Station, String Name, int Personalnummer, String Kontakt)
     {
-        super(Name, Personalnummer, Arbeitszweig, Kontakt);     //Arbeitszweig Konstant auf Schwester setzen!!!
+        super(Name, Personalnummer, "Schwester", Kontakt);    
          SetStation(Station);
     }
 

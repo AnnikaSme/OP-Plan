@@ -10,9 +10,9 @@ public class Kardiotechniker extends Personal
     /**
      * Konstruktor für Objekte der Klasse KT
      */
-    public Kardiotechniker( String Name, int Personalnummer, String Arbeitszweig, String Kontakt)
+    public Kardiotechniker( String Name, int Personalnummer, String Kontakt)
     {
-        super(Name, Personalnummer, Arbeitszweig, Kontakt);     //Arbeitszweig Konstant auf KT setzen!!!
+        super(Name, Personalnummer, "Kardiotechniker", Kontakt);     
          
     }
 }
