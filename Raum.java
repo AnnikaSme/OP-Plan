@@ -1,7 +1,6 @@
 
 /**
- * In dieser Klasse werden die Atribute der Klasse Raum definiert. Dabei werden die Raumnummern und die Verfügbarkeit festgelegt. 
- *
+ * Die Klasse Raum definiert den Raum mit Raummnummer, FreiR.
  * @author Nicolas Fix, Erwin Malsam
  * @version 01.10.2020, 1.1
  */
