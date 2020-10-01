@@ -10,7 +10,7 @@ public class Raum
     private int Raumnummer; // Die Raumnummer der einzelnen OP-Raeume
     private boolean FreiR; // Die Verügbarkeit der OP-Raeume
     /**
-     * Kosntruktor für die Klasse Raum 
+     * Konstruktor für Objekte der Klasse Raum 
      */
     public Raum(int Raumnummer, boolean FreiR)
     {
@@ -19,7 +19,7 @@ public class Raum
     }
     
     /**
-     * Standardkonstruktor für die Klasse Raum
+     * Standardkonstruktor für die Objekte der Klasse Raum mit ausgedachten Werten
      */
     public Raum()
     {
