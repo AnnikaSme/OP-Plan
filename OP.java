@@ -124,7 +124,7 @@ public class OP
     {
         if ( AnzahlSchwester < 1 || AnzahlSchwester > 4)   //Es muessen mindestens 1 und es können nur maximal 4 Schwestern an einer Operation teilnehmen.
         { 
-            System.out.println("Es muessen mindestens 1-4 Schwestern bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+            System.out.println("Es müssen 1 bis 4 Schwestern bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
         }
         else
         {
@@ -133,14 +133,13 @@ public class OP
     }
     
     /**
-     * Set-Methode Anzahl der Kardiotechniker
+     * Set-Methode für die Anzahl der Kardiotechniker
      * 
-     * @param  AnzahlKT Gibt die Anzahl der Kardiotechniker an.
+     * @param  AnzahlKT Anzahl der Kardiotechniker kann 0 oder 1 sein
      */
     public void setAnzahlKT(int AnzahlKT)
     {
-        // tragen Sie hier den Code ein
-        if ( AnzahlKT < 0|| AnzahlKT > 1)   //Es wird nicht bei jeder Operation ein Kardiotechniker benönigt, wenn ein Kardiotechniker benötigt wird, kann nur einer bei einer Operation dabei sein.
+        if ( AnzahlKT < 0|| AnzahlKT > 1)   //Es wird nicht bei jeder Operation ein Kardiotechniker benötigt, mehr als einer wird nicht gebraucht.
         { 
             System.out.println("Es können nicht weniger als 0 und nicht mehr als 1 Kardiotechniker bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
         }
@@ -151,13 +150,12 @@ public class OP
     }
     
     /**
-     * Set-Methode Dauer 
+     * Set-Methode für die Dauer der OP
      * 
-     * @param  Dauer Gibt die Dauer der Operation an.
+     * @param  Dauer Dauer der OP kann nicht negativ und nicht >10 Stunden sein
      */
     public void setDauer(int Dauer)
     {
-        // tragen Sie hier den Code ein
          if ( Dauer < 1|| Dauer > 10)   //Eine Operation muss mindestens 1 Stunde und kann nur bis zu 10 Stunden dauern.
         { 
             System.out.println("Die Dauer einer Operation muss mindestens 1 Stunde und kann höchstens 10 Stunden betragen.");           //Exception muss da gemacht werden!
@@ -169,27 +167,25 @@ public class OP
     }
     
     /**
-     * Set-Methode OPTyp
+     * Set-Methode für den OPTyp
      * 
-     * @param  OPTyp Gibt den Typ der Operation an.
+     * @param  OPTyp Typ der Operation (z.B. Aortenklappenersatz OP oder Appendektomie...)
      */
     public void setOPTyp(String OPTyp)
     {
-        // tragen Sie hier den Code ein
         this.OPTyp = OPTyp;
     }
     
     /**
-     * Set-Methode Dringlichkeit
+     * Set-Methode für die Dringlichkeit
      * 
-     * @param  Dringlichkeit Gibt die Dringlichkeit der Operation an.
+     * @param  Dringlichkeit Dringlichkeit der Operation
      */
     public void setDringlichkeit(int Dringlichkeit)
     {
-        // tragen Sie hier den Code ein
          if ( Dringlichkeit < 2|| Dringlichkeit > 4)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
         { 
-            System.out.println("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3..");           //Exception muss da gemacht werden!
+            System.out.println("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception muss da gemacht werden!
         }
         else
         {
@@ -198,109 +194,108 @@ public class OP
     }
     
     /**
-     * Get-Methode Namen des Patienten.
+     * Get-Methode für den  Namen des Patienten.
      *
-     * @return       NamePatient Gibt den Namen des Patienten aus.
+     * @return       NamePatient 
      */
     public String getNamePatient()
     {
-        // tragen Sie hier den Code ein
         return NamePatient;
     }
     
     /**
-     * Get-Methode Alter des Patienten.
+     * Get-Methode für das Alter des Patienten.
      * 
-     * @return        AlterPatient Gibt das Alter des Patienten aus.
+     * @return        AlterPatient
      */
     public int getAlterPatient()
     {
-        // tragen Sie hier den Code ein
         return AlterPatient;
     }
     
     /**
-     * Get-Methode Gesundheitszustand des Patienten.
+     * Get-Methode für den Gesundheitszustand des Patienten.
      * 
-     * @return       Gesundheitszustand Gibt den Gesunheitszustand des Patienten aus.
+     * @return       Gesundheitszustand 
      */
     public String getGesundheitszustand()
     {
-        // tragen Sie hier den Code ein
         return Gesundheitszustand;
     }
     
     
     /**
-     * Get-Methode Anzahl der Aerzte.
+     * Get-Methode für die Anzahl der Ärzte.
      * 
-     * @return        Anzahl Aerzte Gibt die Anzahl der Ärzte aus.
+     * @return        Anzahl
      */
     public int getAnzahlAerzte()
     {
-        // tragen Sie hier den Code ein
         return AnzahlAerzte;
     }
     
     /**
-     * Get-Methode Anzahl der Schwestern.
+     * Get-Methode für die Anzahl der Schwestern.
      * 
-     * @return        AnzahlSchwester Gibt die Anzahl der Schwestern aus.
+     * @return        AnzahlSchwester
      */
     public int getAnzahlSchwester()
     {
-        // tragen Sie hier den Code ein
         return AnzahlSchwester;
     }
     
     /**
-     * Get-Methode Anzahl der Kardiotechniker.
+     * Get-Methode für die Anzahl der Kardiotechniker.
      *
-     * @return        AnzahlKT Gibt die Anzahl der Kardiotechniker aus.
+     * @return        AnzahlKT 
      */
     public int getAnzahlKT()
     {
-        // tragen Sie hier den Code ein
         return AnzahlKT;
     }
     
     /**
-     * Get-Methode Dauer der OP.
+     * Get-Methode für die Dauer der OP.
      * 
-     * @return        Dauer Gibt die Dauer der Operation aus.
+     * @return        Dauer
      */
     public int getDauer()
     {
-        // tragen Sie hier den Code ein
         return Dauer;
     }
     
     /**
-     * Get-Methode OPTyp.
+     * Get-Methode für den OPTyp.
      * 
-     * @return        OPTyp Gibt den Typ der Operation aus.
+     * @return        OPTyp 
      */
     public String getOPTyp()
     {
-        // tragen Sie hier den Code ein
         return OPTyp;
     }
     
     /**
-     * Get-Methode Dringlichkeit.
+     * Get-Methode für die Dringlichkeit.
      * 
-     * @return        Dringlichkeit Gibt die Dringlichkeit der Operation aus.
+     * @return        Dringlichkeit 
      */
     public int getDringlichkeit()
     {
-        // tragen Sie hier den Code ein
         return Dringlichkeit;
     }
     
      /**
      * Die Methode legt eine neue Operation an.
      * 
-     * @param  NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit
+     * @param  NamePatient
+     * @param AlterPatient
+     * @param Gesundheitszustand
+     * @param AnzahlAerzte
+     * @param AnzahlSchwester
+     * @param AnzahlKT
+     * @param Dauer
+     * @param OPTyp
+     * @param Dringlichkeit
      */
     public void Anlegen(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
