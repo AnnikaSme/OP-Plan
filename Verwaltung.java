@@ -83,6 +83,6 @@ public class Verwaltung
     
     public String DatenExportieren ()
     {
-       return "daten";      // Alle Daten zu einer Operation sollen ausgegeben werden. Zum langfristigen Speichern.
+       return "daten";      // Alle Daten zu einer Operation sollen ausgegeben werden. Zum langfristigen Speichern.ß
     }
 }
