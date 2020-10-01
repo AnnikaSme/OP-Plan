@@ -63,7 +63,11 @@ public class Verwaltung
     {
        return "daten";
     }
-    public void DatenLoeschen(int Personalnummer)
+    public void PersonalDatenLoeschen(int Personalnummer) //Die Daten zu einer Bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    {
+        
+    }
+    public void OpDatenLöschen() //Alle Daten aus der OP-Array-List sollen gelöscht werden.
     {
         
     }
@@ -77,7 +81,7 @@ public class Verwaltung
     }
     public String Eintragen ()
     {
-        return "Daten";
+        return "Daten"; //Personal trägt sich zur OP ein und die Daten des Personals werden ausgegeben.
     }
     
     
