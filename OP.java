@@ -72,14 +72,13 @@ public class OP
     public void setAlterPatient(int AlterPatient)
     {
         // tragen Sie hier den Code ein
-        this.AlterPatient = AlterPatient;
-        if (AlterPatient < 1 || AlterPatient > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3, Assistenzarzt = 4
+        if (AlterPatient < 0 || AlterPatient > 150)   //Kein Mensch kann über 150 Jahre alt werden und kein Mensch kann unter 0 sein.
         { 
-            System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
+            System.out.println("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 150 Jahre alt sein .");           //Exception muss da gemacht werden!
         }
         else
         {
-            this.Rang = Rang;
+            this.AlterPatient = AlterPatient;
         }
     }
     
@@ -102,10 +101,9 @@ public class OP
     public void setAnzahlAerzte(int AnzahlAerzte)
     {
         // tragen Sie hier den Code ein
-        this.AnzahlAerzte = AnzahlAerzte;
-        if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
+        if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es muessen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
-            System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
+            System.out.println("Es muessen mindestens 2-4 Aerzte bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
         }
         else
         {
@@ -121,7 +119,14 @@ public class OP
     public void setAnzahlSchwester(int AnzahlSchwester)
     {
         // tragen Sie hier den Code ein
-        this.AnzahlSchwester= AnzahlSchwester;
+        if ( AnzahlSchwester < 2|| AnzahlSchwester > 4)   //Es muessen mindestens 1 und es können nur maximal 4 Schwestern an einer Operation teilnehmen.
+        { 
+            System.out.println("Es muessen mindestens 1-4 Schwestern bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+        }
+        else
+        {
+            this.AnzahlSchwester= AnzahlSchwester;
+        }
     }
     
     /**
@@ -132,7 +137,14 @@ public class OP
     public void setAnzahlKT(int AnzahlKT)
     {
         // tragen Sie hier den Code ein
-        this.AnzahlKT = AnzahlKT;
+        if ( AnzahlKT < 0|| AnzahlKT > 1)   //Es wird nicht bei jeder Operation ein Kardiotechniker benönigt, wenn ein Kardiotechniker benötigt wird, kann nur einer bei einer Operation dabei sein.
+        { 
+            System.out.println("Es können nicht weniger als 0 und nicht mehr als 1 Kardiotechniker bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+        }
+        else
+        {
+            this.AnzahlKT = AnzahlKT;
+        }
     }
     
     /**
@@ -143,7 +155,14 @@ public class OP
     public void setDauer(int Dauer)
     {
         // tragen Sie hier den Code ein
-        this.Dauer = Dauer;
+         if ( Dauer < 1|| Dauer > 10)   //Eine Operation muss mindestens 1 Stunde und kann nur bis zu 10 Stunden dauern.
+        { 
+            System.out.println("Die Dauer einer Operation muss mindestens 1 Stunde und kann höchstens 10 Stunden betragen.");           //Exception muss da gemacht werden!
+        }
+        else
+        {
+            this.Dauer = Dauer;
+        }
     }
     
     /**
@@ -165,7 +184,14 @@ public class OP
     public void setDringlichkeit(int Dringlichkeit)
     {
         // tragen Sie hier den Code ein
-        this.Dringlichkeit = Dringlichkeit;
+         if ( Dringlichkeit < 2|| Dringlichkeit > 4)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
+        { 
+            System.out.println("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3..");           //Exception muss da gemacht werden!
+        }
+        else
+        {
+            this.Dringlichkeit = Dringlichkeit;
+        }
     }
     
     /**
