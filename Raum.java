@@ -28,14 +28,24 @@ public class Raum
     }
 
     /**
-     * Set-Methode der Raumnummer
+     * Set-Methode der Raumnummer 
+     * 
+     * Es gibt nur 6 OP-Räume, diese Methode prüft das keine Raumnummer < 1 und keine Raumnummer > 6 eingegeben werden können.
+     * Bei falscher Eingabe wird durch eine Bildschirmausgabe darauf hingewiesen.
      *
-     * @param Raumnummer
+     * @param Raumnummer gibt die Raumnummer an
      *
      */
     public void setRaumnummer(int Raumnummer)
     {
+        if (Raumnummer < 1 || Raumnummer > 6) // Es gibt nur 6 OP-Räume
+       {
+           System.out.println ("Diese Raumnummer kann nicht vergeben werden"); // Exception muss gemacht werden
+       }
+       else
+       {
         this.Raumnummer = Raumnummer;
+       }
     }
     /**
      * Get-Methode Raumnummer
@@ -56,7 +66,7 @@ public class Raum
         this.FreiR = FreiR;
     }
     /**
-     * Get-Mathode von FreiR (Verfügbarkeit)
+     * Get-Methode von FreiR (Verfügbarkeit)
      * 
      * @return FreiR
      */
