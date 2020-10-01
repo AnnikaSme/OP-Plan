@@ -37,7 +37,7 @@ public class OP
     }
 
     /**
-     * Definiert den Name des Patienten
+     * Definiert den Namen des Patienten
      * 
      * @param  NamePatient
      */
