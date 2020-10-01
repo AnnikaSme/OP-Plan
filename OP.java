@@ -8,7 +8,6 @@
  */
 public class OP
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private String NamePatient;
     private int AlterPatient;
     private String Gesundheitszustand;
@@ -32,17 +31,17 @@ public class OP
      * @param OPTyp
      * @param Dringlichkeit
      */
-    public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int Anzahlaerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
+    public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
-        this.NamePatient = NamePatient;
-        this.AlterPatient = AlterPatient;
-        this.Gesundheitszustand = Gesundheitszustand;
-        this.AnzahlAerzte = AnzahlAerzte;
-        this.AnzahlSchwester = AnzahlSchwester;
-        this.AnzahlKT = AnzahlKT;
-        this.Dauer = Dauer;
-        this.OPTyp = OPTyp;
-        this.Dringlichkeit = Dringlichkeit;
+        setNamePatient(NamePatient);
+        setAlterPatient(AlterPatient);
+        setGesundheitszustand(Gesundheitszustand);
+        setAnzahlAerzte(AnzahlAerzte);
+        setAnzahlSchwester(AnzahlSchwester);
+        setAnzahlKT(AnzahlKT);
+        setDauer(Dauer);
+        setOPTyp(OPTyp);
+        setDringlichkeit(Dringlichkeit);
     }
     
     /**
@@ -299,7 +298,6 @@ public class OP
      */
     public void Anlegen(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
-        // tragen Sie hier den Code ein
         setNamePatient(NamePatient);
         setAlterPatient(AlterPatient);
         setGesundheitszustand(Gesundheitszustand);
@@ -311,14 +309,13 @@ public class OP
         setDringlichkeit(Dringlichkeit);
     }
     
-        /**
+     /**
      * Die Methode soll die Daten der Operation ausgeben.
      *
      * @return        NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit
      */
     public String Abrufen()
     {
-        // tragen Sie hier den Code ein
         String N = getNamePatient();    
         int A = getAlterPatient();
         String G = getGesundheitszustand();
