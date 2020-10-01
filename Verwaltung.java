@@ -10,7 +10,7 @@ public class Verwaltung
 {
     private Raum[] raeume;
     private ArrayList<Arzt>personalarzt;
-    
+     private ArrayList<Schwester>personalschwester;
     
    /**
     * Konstriktor der Verwaltung, welcher die OP-Räume der einem Array der länge 6 speichert
@@ -27,12 +27,19 @@ public class Verwaltung
         }
        
         personalarzt=new ArrayList<Arzt>();
+        personalschwester=new ArrayList<Schwester>();
     }
     
    public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
         Arzt b = new Arzt( Fachrichtung,  Rang,  Name,  Personalnummer, Kontakt);
         personalarzt.add(b);
+    }
+    
+     public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt)
+    {
+        Schwester b = new Schwester( Station, Name,  Personalnummer, Kontakt);
+        personalschwester.add(b);
     }
    
     /**
