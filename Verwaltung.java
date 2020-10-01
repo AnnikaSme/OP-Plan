@@ -2,8 +2,8 @@
 /**
  * Klasse Verwaltung
  *
- * @author(Nicolas Fix, Erwin Malsam)
- * @version (30.9.2020, 1.0)
+ * @author Nicolas Fix, Erwin Malsam, Sarah Huber, Nathalie Schatz, Lilli Stoffels, Annika Smetaczko
+ * @version 01.10.2020, 1.1
  */
 import java.util.ArrayList;
 public class Verwaltung
