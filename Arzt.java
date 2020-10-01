@@ -17,10 +17,20 @@ public class Arzt extends Personal
     public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
         super(Name, Personalnummer, "Arzt", Kontakt);  // Arbeitszweig wird fest auf Arzt festgelegt. 
-        
         SetFachrichtung(Fachrichtung);
         SetRang(Rang);
     }
+    
+    /**
+     * Konstruktor für Objekte der Klasse Arzt
+     */
+    public Arzt()
+    {
+        super("Willi", 12345, "Arzt", "willi.arzt@Perfecthospital.de"); 
+        this.Fachrichtung = "Chirurg";
+        this.Rang = 1;
+    }
+
 
     /**
      * Set-Methode für Fachrichtung
@@ -68,5 +78,5 @@ public class Arzt extends Personal
     {
         return Rang;
     }
- public String Anlegen
+ //public String Anlegen
 }

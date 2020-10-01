@@ -35,6 +35,23 @@ public class OP
         this.OPTyp = OPTyp;
         this.Dringlichkeit = Dringlichkeit;
     }
+    
+     /**
+     * Standartkonstruktor für Objekte der Klasse OP
+     */
+    public OP()
+    {
+        // Instanzvariable initialisieren
+        NamePatient = "Miller";
+        AlterPatient = 45;
+        Gesundheitszustand = "Der Patient ist in einem schwachen Zustand.";
+        AnzahlAerzte = 2;
+        AnzahlSchwester = 3;
+        AnzahlKT = 1;
+        Dauer = 5;
+        OPTyp = "Herzklappenrekonstruktion";
+        Dringlichkeit = 2;
+    }
 
     /**
      * Definiert den Namen des Patienten
