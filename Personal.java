@@ -28,6 +28,18 @@
     }
     
     /**
+     * Konstruktor für Objekte der Klasse Personal
+     */
+    public Personal()
+    {
+        this.Name = "Schmidt";
+        this.Personalnummer = 739203;
+        this.Arbeitszweig = "Arzt";
+        this.Kontakt = "schmidt.arzt@perfercthospital.de";
+        
+    }
+    
+    /**
      * Set-Methode für Name
      * 
      * @param Name
