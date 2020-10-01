@@ -18,6 +18,11 @@ public class Raum
         this.Raumnummer = Raumnummer;
         this.FreiR = FreiR;
     }
+    public Raum()
+    {
+        Raumnummer = 4;
+        FreiR = true;
+    }
 
     /**
      * Get und Set-Methode der Raumnummer
