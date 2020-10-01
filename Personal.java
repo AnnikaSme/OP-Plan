@@ -1,23 +1,28 @@
 
 /**
- * Abstrakte Klasse Personal von der weitere Klassen vererbt werden.
+ * Diese Klasse Personal ist eine  abstrakten Klasse, die ihre Attribute an die Klassen Arzt, Schwester und Kardiotechniker weitervererbt.
+ * Die Klasse definiert das Personal mit Name, Personalnummer, Arbeitszweig, Kontakt.
  * 
  * @author Lilli  Stoffels, Annika Smetaczko
  * @version 01.10.2020, 1.1
  */
- abstract public  class Personal
+ abstract public  class Personal //Attribute werden mit protected geschrieben um von den vererbten Klassen darauf zuzugreifen.
 {
     
-    protected String Name;          // Nachname des Personals 
-    protected int Personalnummer;   // Personalnummer
-    protected String Arbeitszweig;  // Arbeitszweig des Personals: Arzt, Schwester oder Kardiotechniker
-    protected String Kontakt;       // Kontaktdaten des Personals
+    protected String Name;        
+    protected int Personalnummer;   
+    protected String Arbeitszweig;  
+    protected String Kontakt;    
     
     
 
     /**
-     * Konstruktor für Objekte der Klasse Personal
-     */
+     * Konstruktor für Objekte der Klasse Personals
+     
+     * @param Name Name des Personals
+     * @param Personalnummer Personalnummer des Personals
+     * @param Kontakt Kontakt des Personals
+      */
     public Personal(String Name, int Personalnummer, String Arbeitszweig, String Kontakt)
     {
         SetName(Name);
@@ -28,7 +33,7 @@
     }
     
     /**
-     * Konstruktor für Objekte der Klasse Personal
+     * Standardkonstruktor der Klasse Personal mit ausgedachten Werten.
      */
     public Personal()
     {
@@ -42,7 +47,7 @@
     /**
      * Set-Methode für Name
      * 
-     * @param Name
+     * @param Name  Name des Personals
      */
     public void SetName(String Name)
     {
@@ -52,7 +57,7 @@
     /**
      * Set-Methode für Personalnummer
      * 
-     * @param  Personalnummer   
+     * @param  Personalnummer   Personalnummer des Personals
      */
     public void SetPersonalnummer(int Personalnummer)
     {
@@ -62,7 +67,7 @@
     /**
      * Set-Methode für Arbeitszweig
      * 
-     * @param Arbeitszweig
+     * @param Arbeitszweig Arbeitszweig des Personals
      */
     public void SetArbeitszweig(String Arbeitszweig)
     {
@@ -72,7 +77,7 @@
     /**
      * Set-Methode für Kontakt
      * 
-     * @param  Kontakt
+     * @param  Kontakt Kontakt des Personals
      */
     public void SetKontakt(String Kontakt)
     {
