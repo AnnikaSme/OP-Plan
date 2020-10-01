@@ -19,6 +19,15 @@ public class Schwester extends Personal
     }
 
     /**
+     * Konstruktor für Objekte der Klasse Schwester, die Attribute der abstrakten Klasse werden vererbt. 
+     */
+    public Schwester()
+    {
+        super("Mayer", 291736, "Schwester", "mayer.schwester@perfecthospital.de");     
+        this.Station = 3;
+    }
+    
+    /**
      * Set-Methode für die Station. Es gibt nur 4 Stationen und dementsprechend ist die Eingabe <0 und >4 ungültig.
      * Auf ungültige Eingabe wird mit Ausgabe auf dem Bildschirm hingewiesen.
      * 

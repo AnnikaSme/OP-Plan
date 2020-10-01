@@ -18,6 +18,7 @@ public class Raum
         this.Raumnummer = Raumnummer;
         this.FreiR = FreiR;
     }
+    
     public Raum()
     {
         Raumnummer = 4;
