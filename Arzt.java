@@ -14,9 +14,10 @@ public class Arzt extends Personal
     /**
      * Konstruktor für Objekte der Klasse Arzt
      */
-    public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Arbeitszweig, String Kontakt)
+    public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
-        super(Name, Personalnummer, Arbeitszweig, Kontakt);     //Arbeitszweig Konstant auf Arzt setzen!
+        super(Name, Personalnummer, "Arzt", Kontakt);  
+        
         SetFachrichtung(Fachrichtung);
         SetRang(Rang);
     }
@@ -48,7 +49,7 @@ public class Arzt extends Personal
      */
     public void SetRang(int Rang)
     {
-        if (Rang < 1 || Rang > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3,Assistenzarzt = 4
+        if (Rang < 1 || Rang > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3, Assistenzarzt = 4
         { 
             System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
         }
