@@ -19,7 +19,7 @@ public class Raum
     }
     
     /**
-     * Satndardkonstruktor für die Klasse Raum
+     * Standardkonstruktor für die Klasse Raum
      */
     public Raum()
     {
