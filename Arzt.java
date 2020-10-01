@@ -1,9 +1,10 @@
 
 /**
- * Beschreiben Sie hier die Klasse Arzt.
+ * Die Klasse Arzt definiert den Arzt mit Fachrichtung, Rang, Name, Personalnummer, Kontakt. Die Fachrichtungen können frei eingegeben.
+ * Es gibt 4 Arztränge: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4
  * 
- * @author (Lilli Stoffels, Annika Smetaczko) 
- * @version (30.09.2020 1.0)
+ * @author Lilli Stoffels, Annika Smetaczko
+ * @version 30.09.2020 1.0
  */
 public class Arzt extends Personal
 {
@@ -22,7 +23,7 @@ public class Arzt extends Personal
     }
     
     /**
-     * Konstruktor für Objekte der Klasse Arzt
+     * Standardkonstruktor der Klasse Arzt mit ausgedachten Werten
      */
     public Arzt()
     {
@@ -33,9 +34,9 @@ public class Arzt extends Personal
 
 
     /**
-     * Set-Methode für Fachrichtung
+     * Set-Methode für Fachrichtung. Die Fachrichtung kann frei eingegeben werden. 
      * 
-     * @param  Fachrichtung
+     * @param  Fachrichtung gibt die Fachrichtung an
      */
     public void SetFachrichtung(String Fachrichtung)
     {
@@ -43,7 +44,7 @@ public class Arzt extends Personal
     }
     
     /**
-     * Get-Methode für Fachrichtung
+     * Get-Methode für Fachrichtung gibt Fachrichtung wieder.
      * 
      * @return    Fachrichtung
      */
@@ -53,9 +54,10 @@ public class Arzt extends Personal
     }
 
  /**
-     * Set-Methode für Rang
+     * Set-Methode für Rang. Es gibt nur 4 Ränge: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4.
+     * Diese Methode prüft, dass keine Ränge <0 oder >4 eingegeben werden. Bei falscher Eingabe wird mit einer Bildschirmausgabe darauf hingewiesen.
      * 
-     * @param  Rang
+     * @param  Rang beschreibt den Rang des Arzts
      */
     public void SetRang(int Rang)
     {
@@ -70,7 +72,7 @@ public class Arzt extends Personal
     }
   
     /**
- * Get-Methode für Rang
+ * Get-Methode für Rang gibt den Rang zurück
      * 
      * @return   Rang
      */
@@ -78,5 +80,4 @@ public class Arzt extends Personal
     {
         return Rang;
     }
- //public String Anlegen
 }
