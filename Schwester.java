@@ -28,7 +28,7 @@ public class Schwester extends Personal
     }
     
     /**
-     * Set-Methode für die Station. Es gibt nur 4 Stationen und dementsprechend ist die Eingabe <0 und >4 ungültig.
+     * Set-Methode für die Station. Es gibt nur 4 Stationen und dementsprechend ist die Eingabe <1 und >4 ungültig.
      * Auf ungültige Eingabe wird mit Ausgabe auf dem Bildschirm hingewiesen.
      * 
      * @param  Station  Es gibt 4 Stationen welche mit Nummern gekennzeichnet sind: Chirurgie=1, Kinderstation=2, Herzstation=3, Innere Medizin=4
