@@ -272,14 +272,14 @@ public class OP
     }
     
         /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Soll die Daten der Operation ausgeben.
      *
      * @return        NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit
      */
     public String Abrufen()
     {
         // tragen Sie hier den Code ein
-        String N = getNamePatient();    //Umprogrammieren zu Name: ...  Alter: ...
+        String N = getNamePatient();    
         int A = getAlterPatient();
         String G = getGesundheitszustand();
         int AA = getAnzahlAerzte();
@@ -289,10 +289,12 @@ public class OP
         String O = getOPTyp();
         int Dr = getDringlichkeit();
         
-        String allesA = "Name des Patienten: " + N + '\n' + "Alter des Patienten:" + A + "Gesundheitszustand des Patienten: " + G + "Anzahl der Aerzte:" + AA + "Anzahl der Schwestern:" + AS;
+        String allesA = "Name des Patienten: " + N + "Alter des Patienten:" + A + "Gesundheitszustand des Patienten: " + G + "Anzahl der Aerzte:" + AA + "Anzahl der Schwestern:" + AS;
         String allesB = "Anzahl der Kardiotechniker: " + AK + "Dauer der Operation:" + D + "Typ der Operation:" + O + "Dringlichkeit der Operation:" + Dr;
         
-        String gesamt = allesA + allesB;
+        String gesamt = allesA + "\n" + allesB;
+        
+        System.out.println(gesamt); // Zeilenumbruch 
         
         return  gesamt;
     }
