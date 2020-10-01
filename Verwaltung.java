@@ -17,13 +17,12 @@ public class Verwaltung
         for (int i=0; i<raeume.length; i++)
         {   
             int a = 1;
-            //Raum Raumnummer = a;
-            raeume[i]= a++;
-            
+            raeume [i] = new Raum (a, true);
+            a++;
         }
-        personalarzt=new ArrayList<String>();
+       //personalarzt=new ArrayList<String>();
     }
-    public void speicherpersonalarzt ()
+    /*public void speicherpersonalarzt ()
     {
         personalarzt.add();
     }
@@ -31,7 +30,7 @@ public class Verwaltung
     /**
      *
      */
-    public String DatenExportieren ()
+    /*public String DatenExportieren ()
     {
        return Daten
     }
@@ -54,5 +53,5 @@ public class Verwaltung
     public String getArrayList ()
     {
         private ArrayList<String>=new ArrayList<String>();
-    }
+    }*/
 }
