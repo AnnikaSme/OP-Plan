@@ -12,6 +12,7 @@ public class Verwaltung
     private ArrayList<Arzt>personalarzt;
     private ArrayList<Schwester>personalschwester;
     private ArrayList<Kardiotechniker>personalkardiotechniker;
+    private ArrayList<OP>operationsliste;
      
     
    /**
@@ -31,6 +32,7 @@ public class Verwaltung
         personalarzt=new ArrayList<Arzt>();
         personalschwester=new ArrayList<Schwester>();
         personalkardiotechniker=new ArrayList<Kardiotechniker>();
+        operationsliste=new ArrayList<OP>();
     }
     
    public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
@@ -49,6 +51,12 @@ public class Verwaltung
     {
         Kardiotechniker b = new Kardiotechniker(  Name,  Personalnummer, Kontakt);
         personalkardiotechniker.add(b);
+    }
+    
+     public void speicherOP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
+    {
+        OP b = new OP( NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit );
+        operationsliste.add(b);
     }
     /**
      *
