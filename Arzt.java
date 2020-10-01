@@ -37,8 +37,8 @@ public class Arzt extends Personal
     public Arzt()
     {
         super("Willi", 12345, "Arzt", "willi.arzt@Perfecthospital.de"); 
-        this.Fachrichtung = "Chirurg";
-        this.Rang = 1;
+        Fachrichtung = "Chirurg";
+        Rang = 1;
     }
 
 
