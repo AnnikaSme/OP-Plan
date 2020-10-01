@@ -1,6 +1,8 @@
 
 /**
- * Beschreiben Sie hier die Klasse Kardiotechniker.
+ * Diese Klasse Kardiotechniker ist eine vererbte Klasse der abstrakten Klasse Personal.
+ * Die Klasse definiert den Kardiotechniker mit Name, Personalnummer und Kontakt. 
+ * Der Arbeitszweig ist "Kardiotechniker".
  * 
  * @author Lilli Stoffels, Annika Smetaczko
  * @version 01.10.2020, 1.1
@@ -8,7 +10,10 @@
 public class Kardiotechniker extends Personal
 {
     /**
-     * Konstruktor für Objekte der Klasse KT
+     * Konstruktor für Objekte der Klasse Kardiotechniker
+     * @param Name Name des Kardiotechnikers
+     * @param Personalnummer Personalnummer des Kardiotechnikers
+     * @param Kontakt Kontakt des Kardiotechnikers
      */
     public Kardiotechniker( String Name, int Personalnummer, String Kontakt)
     {
@@ -17,7 +22,7 @@ public class Kardiotechniker extends Personal
     }
     
      /**
-     * Konstruktor für Objekte der Klasse KT
+     * Standardkonstruktor der Klasse Kardiotechniker mit ausgedachten Werten.
      */
     public Kardiotechniker( )
     {
