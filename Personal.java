@@ -37,10 +37,10 @@
      */
     public Personal()
     {
-        this.Name = "Schmidt";
-        this.Personalnummer = 739203;
-        this.Arbeitszweig = "Arzt";
-        this.Kontakt = "schmidt.arzt@perfercthospital.de";
+        Name = "Schmidt";
+        Personalnummer = 739203;
+        Arbeitszweig = "Arzt";
+        Kontakt = "schmidt.arzt@perfercthospital.de";
         
     }
     
