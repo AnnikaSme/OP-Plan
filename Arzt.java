@@ -55,7 +55,7 @@ public class Arzt extends Personal
 
  /**
      * Set-Methode für Rang. Es gibt nur 4 Ränge: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4.
-     * Diese Methode prüft, dass keine Ränge <0 oder >4 eingegeben werden. Bei falscher Eingabe wird mit einer Bildschirmausgabe darauf hingewiesen.
+     * Diese Methode prüft, dass keine Ränge <1 oder >4 eingegeben werden. Bei falscher Eingabe wird mit einer Bildschirmausgabe darauf hingewiesen.
      * 
      * @param  Rang beschreibt den Rang des Arzts
      */
