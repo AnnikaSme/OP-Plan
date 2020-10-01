@@ -19,7 +19,8 @@ public class Schwester extends Personal
     }
 
     /**
-     * Set-Methode für Station
+     * Set-Methode für die Station. Es gibt nur 4 Stationen und dementsprechend ist die Eingabe <0 und >4 ungültig.
+     * Auf ungültige Eingabe wird mit Ausgabe auf dem Bildschirm hingewiesen.
      * 
      * @param  Station
      */
