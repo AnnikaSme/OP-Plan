@@ -8,11 +8,19 @@
 import java.util.ArrayList;
 public class Verwaltung
 {
-    private Raum Raumnummer;
-    private Raum FreiR;
-    private Arzt Fachrichtung;
-    private Arzt Rang;
-    private Schwester Station;
+    private Raum[] raeume;
+    
+    public Verwaltung ()
+    {
+        raeume = new Raum [5];
+        for (int i=0; i<raeume.length; i++)
+        {   
+            int a = 1;
+            //Raum Raumnummer = a;
+            raeume[i]= a++;
+            
+        }
+    }
     /**
      *
      */
@@ -40,4 +48,8 @@ public class Verwaltung
     {
         private ArrayList<String>(Objekt)=new ArrayList<String>();
     }
+    
+    
+    
+    
 }
