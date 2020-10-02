@@ -15,8 +15,7 @@ public class Verwaltung
     private ArrayList<Kardiotechniker>personalkardiotechniker;
     private ArrayList<OP>operationsliste;
     //private Personal[] personal;
-    
-   
+
 
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert und erzeugt drei ArryList (Arzt, Schwester, Kardiotechniker).
@@ -31,19 +30,19 @@ public class Verwaltung
             raeume [i] = new Raum (a, true);
             a++;
         }
-        
+
         personalarzt=new ArrayList<Arzt>();
         personalschwester=new ArrayList<Schwester>();
         personalkardiotechniker=new ArrayList<Kardiotechniker>();
         operationsliste=new ArrayList<OP>();
-        
-       /*
+
+        /*
         personal = new Personal[3];
         personal[0] = personalarzt;
         personal[1] = personalschwester;
         personal[2] = personalkardiotechniker;
          */ 
-        }
+    }
 
     public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) throws Exception
     {
@@ -57,7 +56,7 @@ public class Verwaltung
         {
             personalarzt.add(b);
         }
-        
+
     }
 
     public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt) throws Exception
