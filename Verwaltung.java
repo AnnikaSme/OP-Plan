@@ -21,8 +21,8 @@ public class Verwaltung
     */
    public Verwaltung ()
     {
-        raeume = new Raum [5];
-        for (int i=0; i<raeume.length; i++)
+        raeume = new Raum [5];  //Array mit 6 Speicherplätze für die 6 Räume wird erzeugt.
+        for (int i=0; i<raeume.length; i++)     //befüllung des Arrays
         {   
             int a = 1;
             raeume [i] = new Raum (a, true);
