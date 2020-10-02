@@ -22,7 +22,7 @@ public class Verwaltung
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert und erzeugt drei ArryList (Arzt, Schwester, Kardiotechniker).
      *
      */
-    public Verwaltung ()
+    public Verwaltung () throws Exception
     {
         raeume = new Raum [5];  //Array mit 6 Speicherplätze für die 6 Räume wird erzeugt.
         for (int i=0; i<raeume.length; i++)     //Befüllung des Arrays
