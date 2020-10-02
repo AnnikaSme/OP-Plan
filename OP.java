@@ -283,31 +283,31 @@ public class OP
         return Dringlichkeit;
     }
     
-     /**
-     * Die Methode legt eine neue Operation an.
-     * 
-     * @param NamePatient Name des Patienten
-     * @param AlterPatient Alter des Patienten
-     * @param Gesundheitszustand Gesundheitszustand des Patienten
-     * @param AnzahlAerzte Anzahl der benötigten Ärzte
-     * @param AnzahlSchwester Anzahl der benötigten Schwestern
-     * @param AnzahlKT Anzahl der benötigten Kardiotechniker
-     * @param Dauer Dauer der OP
-     * @param OPTyp Typ der OP
-     * @param Dringlichkeit Dringlichkeit der OP
-     */
-    public void Anlegen(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
-    {
-        setNamePatient(NamePatient);
-        setAlterPatient(AlterPatient);
-        setGesundheitszustand(Gesundheitszustand);
-        setAnzahlAerzte(AnzahlAerzte);
-        setAnzahlSchwester(AnzahlSchwester);
-        setAnzahlKT(AnzahlKT);
-        setDauer(Dauer);
-        setOPTyp(OPTyp);
-        setDringlichkeit(Dringlichkeit);
-    }
+     // /**
+     // * Die Methode legt eine neue Operation an.
+     // * 
+     // * @param NamePatient Name des Patienten
+     // * @param AlterPatient Alter des Patienten
+     // * @param Gesundheitszustand Gesundheitszustand des Patienten
+     // * @param AnzahlAerzte Anzahl der benötigten Ärzte
+     // * @param AnzahlSchwester Anzahl der benötigten Schwestern
+     // * @param AnzahlKT Anzahl der benötigten Kardiotechniker
+     // * @param Dauer Dauer der OP
+     // * @param OPTyp Typ der OP
+     // * @param Dringlichkeit Dringlichkeit der OP
+     // */
+    // public void Anlegen(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
+    // {
+        // setNamePatient(NamePatient);
+        // setAlterPatient(AlterPatient);
+        // setGesundheitszustand(Gesundheitszustand);
+        // setAnzahlAerzte(AnzahlAerzte);
+        // setAnzahlSchwester(AnzahlSchwester);
+        // setAnzahlKT(AnzahlKT);
+        // setDauer(Dauer);
+        // setOPTyp(OPTyp);
+        // setDringlichkeit(Dringlichkeit);
+    // }
     
      /**
      * Die Methode soll die Daten der Operation ausgeben.
