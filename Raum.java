@@ -14,7 +14,7 @@ public class Raum
      * @param Raumnummer Raumnummer des Raumes
      * @param FreiR Verfügbarkeit des Raumes
      */
-    public Raum(int Raumnummer, boolean FreiR)
+    public Raum(int Raumnummer, boolean FreiR)throws Exception
     {
         this.Raumnummer = Raumnummer; // Raumnummer wird auf Raum festgelegt
         this.FreiR = FreiR;
@@ -38,12 +38,12 @@ public class Raum
      * @param Raumnummer Raumnummer des Raumes
      *
      */
-    public void setRaumnummer(int Raumnummer)
+    public void setRaumnummer(int Raumnummer)throws Exception
     {
         if (Raumnummer < 1 || Raumnummer > 6) // Es gibt nur 6 OP-Räume
        {
-           System.out.println ("Diese Raumnummer kann nicht vergeben werden"); // Exception muss gemacht werden
-       }
+           throw new Exception("Diese Raumnummer kann nicht vergeben werden");                                                              // Exception geworfen
+        }
        else
        {
         this.Raumnummer = Raumnummer;
