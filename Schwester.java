@@ -20,7 +20,7 @@ public class Schwester extends Personal
      * @param Personalnummer Personalnummer der Schwester
      * @param Kontakt Kontakt der Schwester
      */
-    public Schwester(int Station, String Name, int Personalnummer, String Kontakt)
+    public Schwester(int Station, String Name, int Personalnummer, String Kontakt) throws Exception
     {
         super(Name, Personalnummer, "Schwester", Kontakt);    // Arbeitszweig wird fest auf Schwester festgelegt. 
         SetStation(Station);
@@ -41,11 +41,11 @@ public class Schwester extends Personal
      * 
      * @param  Station  Es gibt 4 Stationen, welche mit Nummern gekennzeichnet sind: Chirurgie=1, Kinderstation=2, Herzstation=3, Innere Medizin=4
      */
-    public void SetStation(int Station)
+    public void SetStation(int Station) throws Exception
     {
         if (Station < 1 || Station > 4)   //Es gibt nur die Stationen Chirurgie=1, Kinderstation = 2, Herzstation = 3, Innere Medizin = 4
         { 
-            System.out.println("Station existiert nicht!");           //Exception muss da gemacht werden!
+           throw new Exception("Station existiert nicht!");           //Exception muss da gemacht werden!
         }
         else
         {this.Station = Station;
