@@ -45,7 +45,7 @@ public class Verwaltung
          */ 
         }
 
-    public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
+    public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) throws Exception
     {
         Arzt b = new Arzt( Fachrichtung,  Rang,  Name,  Personalnummer, Kontakt);
         boolean ans = personalarzt.contains(b);
@@ -78,7 +78,7 @@ public class Verwaltung
         operationsliste.add(b);
     }
 
-    public void PersonalDatenLoeschen(int Personalnummer) //Die Daten zu einer Bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    public void PersonalDatenLoeschen(int Personalnummer) //Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
