@@ -48,7 +48,16 @@ public class Verwaltung
     public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
         Arzt b = new Arzt( Fachrichtung,  Rang,  Name,  Personalnummer, Kontakt);
-        personalarzt.add(b);
+        boolean ans = personalarzt.contains(b);
+        if(ans==true)
+        {
+            System.out.println("Diese Personalnummer existiert schon");
+        }
+        else
+        {
+            personalarzt.add(b);
+        }
+        
     }
 
     public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt) throws Exception
