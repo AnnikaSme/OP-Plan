@@ -24,7 +24,7 @@ public class Arzt extends Personal
      * @param Personalnummer Personalnummer des Arztes
      * @param Kontakt Kontakt des Arztes
      */
-    public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
+    public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) throws Exception
     {
         super(Name, Personalnummer, "Arzt", Kontakt);  // Arbeitszweig wird fest auf Arzt festgelegt. 
         SetFachrichtung(Fachrichtung);
@@ -68,11 +68,11 @@ public class Arzt extends Personal
      * 
      * @param  Rang  Es gibt 4 Ränge, welche mit Nummern gekennzeichnet sind: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4.
      */
-    public void SetRang(int Rang)
+    public void SetRang(int Rang) throws Exception
     {
         if (Rang < 1 || Rang > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3, Assistenzarzt = 4
         { 
-            System.out.println("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception muss da gemacht werden!
+            throw new Exception("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception --> Fehlerweitergabe
         }
         else
         {

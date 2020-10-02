@@ -45,7 +45,7 @@ public class Schwester extends Personal
     {
         if (Station < 1 || Station > 4)   //Es gibt nur die Stationen Chirurgie=1, Kinderstation = 2, Herzstation = 3, Innere Medizin = 4
         { 
-           throw new Exception("Station existiert nicht!");           //Exception muss da gemacht werden!
+           throw new Exception("Station existiert nicht!");           //Fehlerweitergabe-->
         }
         else
         {this.Station = Station;
