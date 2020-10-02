@@ -31,7 +31,7 @@ public class OP
      * @param OPTyp Typ der OP
      * @param Dringlichkeit Dringlichkeit der OP
      */
-    public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
+    public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)throws Exception
     {
         setNamePatient(NamePatient);
         setAlterPatient(AlterPatient);
@@ -75,17 +75,17 @@ public class OP
      * 
      * @param  AlterPatient Alter des Patienten kann nur zwischen 0 und 130 Jahren liegen.
      */
-    public void setAlterPatient(int AlterPatient)
+    public void setAlterPatient(int AlterPatient)throws Exception
     {
-        if (AlterPatient < 0 || AlterPatient > 130)   //Kein Mensch kann über 130 Jahre alt werden und kein Mensch kann unter 0 sein.
+            if (AlterPatient < 0 || AlterPatient > 130)   //Kein Mensch kann über 130 Jahre alt werden und kein Mensch kann unter 0 sein.
         { 
-            System.out.println("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 130 Jahre alt sein.");           //Exception muss da gemacht werden!
+            throw new Exception("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 130 Jahre alt sein.");           //Exception geworfen
         }
         else
         {
             this.AlterPatient = AlterPatient;
         }
-    }
+}
     
     /**
      * Set-Methode für den Gesundheitszustand des Patienten
@@ -102,11 +102,11 @@ public class OP
      * 
      * @param  AnzahlAerzte Anzahl der Ärzte kann nicht <2 oder >4 sein
      */
-    public void setAnzahlAerzte(int AnzahlAerzte)
+    public void setAnzahlAerzte(int AnzahlAerzte)throws Exception
     {
         if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
-            System.out.println("Es müssen 2 bis 4 Ärzte bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+            throw new Exception("Es müssen 2 bis 4 Ärzte bei einer Operation dabei sein.");                                                     //Exception geworfen
         }
         else
         {
@@ -119,11 +119,11 @@ public class OP
      * 
      * @param  AnzahlSchwester Anzahl der Schwestern muss zwischen 1 und 4 liegen.
      */
-    public void setAnzahlSchwester(int AnzahlSchwester)
+    public void setAnzahlSchwester(int AnzahlSchwester)throws Exception
     {
         if ( AnzahlSchwester < 1 || AnzahlSchwester > 4)   //Es muessen mindestens 1 und es können nur maximal 4 Schwestern an einer Operation teilnehmen.
         { 
-            System.out.println("Es müssen 1 bis 4 Schwestern bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+            throw new Exception("Es müssen 1 bis 4 Schwestern bei einer Operation dabei sein.");                                                  //Exception geworfe!
         }
         else
         {
@@ -136,11 +136,11 @@ public class OP
      * 
      * @param  AnzahlKT Anzahl der Kardiotechniker kann 0 oder 1 sein
      */
-    public void setAnzahlKT(int AnzahlKT)
+    public void setAnzahlKT(int AnzahlKT)throws Exception
     {
         if ( AnzahlKT < 0|| AnzahlKT > 1)   //Es wird nicht bei jeder Operation ein Kardiotechniker benötigt, mehr als einer wird nicht gebraucht.
         { 
-            System.out.println("Es können nicht weniger als 0 und nicht mehr als 1 Kardiotechniker bei einer Operation dabei sein.");           //Exception muss da gemacht werden!
+            throw new Exception("Es können nicht weniger als 0 und nicht mehr als 1 Kardiotechniker bei einer Operation dabei sein.");           //Exception geworfen
         }
         else
         {
@@ -153,11 +153,11 @@ public class OP
      * 
      * @param  Dauer Dauer der OP kann nicht negativ und nicht >10 Stunden sein
      */
-    public void setDauer(int Dauer)
+    public void setDauer(int Dauer)throws Exception
     {
          if ( Dauer < 1|| Dauer > 10)   //Eine Operation muss mindestens 1 Stunde und kann nur bis zu 10 Stunden dauern.
         { 
-            System.out.println("Die Dauer einer Operation muss mindestens 1 Stunde und kann höchstens 10 Stunden betragen.");           //Exception muss da gemacht werden!
+            throw new Exception("Die Dauer einer Operation muss mindestens 1 Stunde und kann höchstens 10 Stunden betragen.");           //Exception geworfen
         }
         else
         {
@@ -180,11 +180,11 @@ public class OP
      * 
      * @param  Dringlichkeit Dringlichkeit der Operation
      */
-    public void setDringlichkeit(int Dringlichkeit)
+    public void setDringlichkeit(int Dringlichkeit)throws Exception
     {
          if ( Dringlichkeit < 1|| Dringlichkeit > 4)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
         { 
-            System.out.println("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception muss da gemacht werden!
+            throw new Exception("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception geworfen
         }
         else
         {
