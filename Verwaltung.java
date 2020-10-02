@@ -109,6 +109,18 @@ public class Verwaltung
         }
     }
 
+    public Raum Raumsuche()
+    {
+        int i = 0;
+        while(i<raeume.length)
+        {
+            if(raeume[i].getFreiR() == true)
+            {
+                return raeume [i];
+            }
+        }
+        return null;
+    }
     public int Raumzuweisen ()
     {
         return 1;
