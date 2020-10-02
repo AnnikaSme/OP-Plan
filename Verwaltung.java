@@ -51,7 +51,7 @@ public class Verwaltung
         boolean ans = personalarzt.contains(b);
         if(ans==true)
         {
-            System.out.println("Diese Personalnummer existiert schon");
+            throw new Exception("Diese Personalnummer existiert schon");
         }
         else
         {
@@ -78,7 +78,7 @@ public class Verwaltung
         operationsliste.add(b);
     }
 
-    public void PersonalDatenLoeschen(int Personalnummer) //Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    public void PersonalDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
@@ -95,7 +95,7 @@ public class Verwaltung
         }
         else
         {
-            System.out.println("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+            throw new Exception("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
         }
     }
 
