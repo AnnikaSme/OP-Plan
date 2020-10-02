@@ -60,12 +60,33 @@ public class Verwaltung
 
     public void PersonalDatenLoeschen(int Personalnummer) //Die Daten zu einer Bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
-
+        Integer p = new Integer (Personalnummer);
+        String gesuchtA = p.toString();
+        boolean gefunden = true;
+        int i = 0;
+        while (i<personalarzt.size() && !gefunden)
+        {
+            gefunden = gesuchtA.equals(personalarzt.get(i));
+            i++;
+        }
+        if (i<personalarzt.size())
+        {
+            personalarzt.remove(i);
+        }
+        else
+        {
+            System.out.println("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+        }
     }
 
     public void OpDatenLöschen() //Alle Daten aus der OP-Array-List sollen gelöscht werden.
     {
-
+        int i = 0;
+        while (i<operationsliste.size())
+        {
+            operationsliste.remove(i);
+            i++;
+        }
     }
 
     public int Raumzuweisen ()
