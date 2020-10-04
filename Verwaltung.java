@@ -167,7 +167,7 @@ public class Verwaltung
         return null;
     }
     
-        public Raum Raumzuweisen (String NamePatient)
+     public Raum Raumzuweisen (String NamePatient)
     {
         boolean gefunden = true;
         int j = 0;
