@@ -17,6 +17,7 @@ public class OP
     private int Dauer;
     private String OPTyp;
     private int Dringlichkeit; 
+    private Raum raum;
     
 
     /**
@@ -42,6 +43,7 @@ public class OP
         setDauer(Dauer);
         setOPTyp(OPTyp);
         setDringlichkeit(Dringlichkeit);
+        setRaum(raum);
     }
     
     /**
@@ -191,6 +193,10 @@ public class OP
             this.Dringlichkeit = Dringlichkeit;
         }
     }
+    public void setRaum(Raum raum)
+    {
+        this.raum = raum;
+    }
     
     /**
      * Get-Methode für den  Namen des Patienten.
@@ -281,6 +287,10 @@ public class OP
     public int getDringlichkeit()
     {
         return Dringlichkeit;
+    }
+    public Raum getRaum()
+    {
+        return raum;
     }
     
      // /**
