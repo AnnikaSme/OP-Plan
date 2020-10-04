@@ -6,7 +6,7 @@
  * 
  *
  * @author Nicolas Fix, Erwin Malsam, Sarah Huber, Nathalie Schatz, Lilli Stoffels, Annika Smetaczko
- * @version 01.10.2020, 1.1
+ * @version 01.10.2020, 0.0.2
  */
 
 import java.util.ArrayList;
@@ -58,14 +58,22 @@ public class Verwaltung
     public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) throws Exception
     {
         Arzt b = new Arzt( Fachrichtung,  Rang,  Name,  Personalnummer, Kontakt);
-        boolean ans = personalarzt.contains(b);
-        if(ans==true)
+        boolean ans = false;
+        for(int i=0; i<personalarzt.size(); i++)
         {
-            throw new Exception("Diese Personalnummer existiert schon");    //funktioniert noch nicht, Fehlermeldung wird nicht ausgegeben!
+            if(personalarzt.get(i).GetPersonalnummer()==b.GetPersonalnummer())
+            {
+                ans=true;
+            }
+        }
+        
+        if(ans==false)
+        {
+              personalarzt.add(b);  //funktioniert noch nicht, Fehlermeldung wird nicht ausgegeben!
         }
         else
         {
-            personalarzt.add(b);
+            throw new IllegalArgumentException("Diese Personalnummer existiert schon");
         }
         
     }
