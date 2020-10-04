@@ -32,7 +32,7 @@ public class OP
      * @param OPTyp Typ der OP
      * @param Dringlichkeit Dringlichkeit der OP
      */
-    public OP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)throws Exception
+    public OP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit, Raum raum)throws Exception
     {
         setNamePatient(NamePatient);
         setAlterPatient(AlterPatient);

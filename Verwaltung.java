@@ -6,7 +6,7 @@
  * 
  *
  * @author Nicolas Fix, Erwin Malsam, Sarah Huber, Nathalie Schatz, Lilli Stoffels, Annika Smetaczko
- * @version 01.10.2020, 0.0.2
+ * @version 01.10.2020, 0.0.3
  */
 
 import java.util.ArrayList;
@@ -107,7 +107,7 @@ public class Verwaltung
      */
     public void speicherOP(String NamePatient,int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit, Raum raum)throws Exception
     {
-        OP b = new OP( NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit, raum);
+        OP b = new OP( NamePatient,AlterPatient,Gesundheitszustand,AnzahlAerzte,AnzahlSchwester,AnzahlKT,Dauer,OPTyp,Dringlichkeit,raum);
         operationsliste.add(b);
     }
 
@@ -177,24 +177,21 @@ public class Verwaltung
             j++;
         }
         if (j<operationsliste.size())
-        {
-            
-            OP.setRaum(Raumsuche());
+        { 
+            if(Raumsuche()!=null)
+            {
+                operationsliste.get(j).setRaum(Raumsuche());
+                return operationsliste.get(j).getRaum();
+            }
+            else
+            {
+                throw new IllegalArgumentException("Kein freier Raum mehr zur Verfügung");
+            }
         }
         else
         {
-            System.out.println("Diese OP ist nicht in der Datenbank");      // Exceptions hinzufügen!
+            throw new IllegalArgumentException("Diese OP ist nicht in der Datenbank");
         }
-        
-        // if(raum==null)
-        // {
-            // return false;
-        // }
-        // else
-        // {
-            // raum=v.Raumsuche();
-            // return true;    
-        // } 
     }
 
     /**
