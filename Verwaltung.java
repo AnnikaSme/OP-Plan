@@ -166,8 +166,25 @@ public class Verwaltung
         }
         return null;
     }
-    // public boolean Raumzuweisen (Verwaltung v)
-    // {
+    
+        public Raum Raumzuweisen (String NamePatient)
+    {
+        boolean gefunden = true;
+        int j = 0;
+        while (j<operationsliste.size() && !gefunden)  //Bisher funktioniert es nur für personalarzt. Um alle zu verwenden muss das auskommentierte Array personal fertig sein.
+        {
+            gefunden = NamePatient.equals(operationsliste.get(j));
+            j++;
+        }
+        if (j<operationsliste.size())
+        {
+            
+            OP.setRaum(Raumsuche());
+        }
+        else
+        {
+            System.out.println("Diese OP ist nicht in der Datenbank");      // Exceptions hinzufügen!
+        }
         
         // if(raum==null)
         // {
@@ -178,7 +195,7 @@ public class Verwaltung
             // raum=v.Raumsuche();
             // return true;    
         // } 
-    // }
+    }
 
     /**
      * In der Methode Zeitzuweisung wird die Zeit einer OP zugewiesen. 
