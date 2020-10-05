@@ -1,6 +1,6 @@
 
 /**
- * Die Klasse Verwaltung ist die Klasse die alle weiteren Klassen verwaltet. 
+ * Die Klasse Verwaltung ist die Klasse, die alle weiteren Klassen verwaltet. 
  * Hierbei werden die Räume in eine Array gespeichert und verwaltet.
  * Die Personalakten der Ärzte, Schwestern und Kardiotechniker werden in einzelnen ArrayListen verwaltet, welche in ein einem Array gespeichert sind.
  * 
@@ -69,7 +69,7 @@ public class Verwaltung
         
         if(ans==false)
         {
-              personalarzt.add(b);  //funktioniert noch nicht, Fehlermeldung wird nicht ausgegeben!
+              personalarzt.add(b);
         }
         else
         {
@@ -86,7 +86,24 @@ public class Verwaltung
     public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt) throws Exception
     {
         Schwester b = new Schwester( Station, Name,  Personalnummer, Kontakt);
-        personalschwester.add(b);
+        boolean ans = false;
+        for(int i=0; i<personalschwester.size(); i++)
+        {
+            if(personalschwester.get(i).GetPersonalnummer()==b.GetPersonalnummer())
+            {
+                ans=true;
+            }
+        }
+        
+        if(ans==false)
+        {
+              personalschwester.add(b);
+        }
+        else
+        {
+            throw new IllegalArgumentException("Diese Personalnummer existiert schon");
+        }
+        
     }
 
     /**
@@ -97,7 +114,24 @@ public class Verwaltung
     public void speicherKardiotechniker( String Name, int Personalnummer, String Kontakt)
     {
         Kardiotechniker b = new Kardiotechniker(  Name,  Personalnummer, Kontakt);
-        personalkardiotechniker.add(b);
+        boolean ans = false;
+        for(int i=0; i<personalkardiotechniker.size(); i++)
+        {
+            if(personalkardiotechniker.get(i).GetPersonalnummer()==b.GetPersonalnummer())
+            {
+                ans=true;
+            }
+        }
+        
+        if(ans==false)
+        {
+              personalkardiotechniker.add(b);
+        }
+        else
+        {
+            throw new IllegalArgumentException("Diese Personalnummer existiert schon");
+        }
+        
     }
 
     /**
@@ -171,7 +205,7 @@ public class Verwaltung
     {
         boolean gefunden = true;
         int j = 0;
-        while (j<operationsliste.size() && !gefunden)  //Bisher funktioniert es nur für personalarzt. Um alle zu verwenden muss das auskommentierte Array personal fertig sein.
+        while (j<operationsliste.size() && !gefunden)
         {
             gefunden = NamePatient.equals(operationsliste.get(j));
             j++;
