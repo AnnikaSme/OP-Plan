@@ -10,6 +10,8 @@
  */
 
 import java.util.ArrayList;
+import java.io.*;
+
 public class Verwaltung
 {
     private Raum[] raeume;
@@ -18,8 +20,6 @@ public class Verwaltung
     private ArrayList<Kardiotechniker>personalkardiotechniker;
     private ArrayList<OP>operationsliste;
     //private Personal[] personal;
-    
-   
 
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert.
@@ -36,19 +36,19 @@ public class Verwaltung
             raeume [i] = new Raum (a, true);
             a++;
         }
-        
+
         personalarzt=new ArrayList<Arzt>();
         personalschwester=new ArrayList<Schwester>();
         personalkardiotechniker=new ArrayList<Kardiotechniker>();
         operationsliste=new ArrayList<OP>();
-        
-       /*
+
+        /*
         personal = new Personal[3];
         personal[0] = personalarzt;
         personal[1] = personalschwester;
         personal[2] = personalkardiotechniker;
          */ 
-        }
+    }
 
     /**
      * In der Methode speicherPersonalarzt werden die Daten in die ArrayList personalarzt geschrieben. 
@@ -66,16 +66,16 @@ public class Verwaltung
                 ans=true;
             }
         }
-        
+
         if(ans==false)
         {
-              personalarzt.add(b);
+            personalarzt.add(b);
         }
         else
         {
             throw new IllegalArgumentException("Diese Personalnummer existiert schon");
         }
-        
+
     }
 
     /**
@@ -94,16 +94,16 @@ public class Verwaltung
                 ans=true;
             }
         }
-        
+
         if(ans==false)
         {
-              personalschwester.add(b);
+            personalschwester.add(b);
         }
         else
         {
             throw new IllegalArgumentException("Diese Personalnummer existiert schon");
         }
-        
+
     }
 
     /**
@@ -122,16 +122,16 @@ public class Verwaltung
                 ans=true;
             }
         }
-        
+
         if(ans==false)
         {
-              personalkardiotechniker.add(b);
+            personalkardiotechniker.add(b);
         }
         else
         {
             throw new IllegalArgumentException("Diese Personalnummer existiert schon");
         }
-        
+
     }
 
     /**
@@ -200,8 +200,8 @@ public class Verwaltung
         }
         return null;
     }
-    
-     public Raum Raumzuweisen (String NamePatient)
+
+    public Raum Raumzuweisen (String NamePatient)
     {
         boolean gefunden = true;
         int j = 0;
@@ -249,8 +249,43 @@ public class Verwaltung
     /**
      * In der Methode DatenExportieren werden die Daten exportiert, sodass sie in Excel oder einer anderen Datenbank längerfristig gespeichert werden können. 
      **/
-    public String DatenExportieren ()
+    public void DatenExportieren ()
     {
-        return "daten";      // Alle Daten zu einer Operation sollen ausgegeben werden. Zum langfristigen Speichern.
+        try
+        {
+            FileOutputStream out = new FileOutputStream("test.txt");
+            ObjectOutputStream oout = new ObjectOutputStream(out);
+
+            for (int i=0; i<personalarzt.size();i++)
+            {
+                oout.writeObject(i);
+            }
+            for (int i=0; i<personalschwester.size();i++)
+            {
+                oout.writeObject(i);
+            }
+            for (int i=0; i<personalkardiotechniker.size();i++)
+            {
+                oout.writeObject(i);
+            }
+            oout.close();
+            //ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void DatenImportieren () //funktioniert noch nicht
+    {
+        try
+        {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));
+
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
     }
 }
