@@ -60,6 +60,7 @@ public class OP
         Dauer = 5;
         OPTyp = "Herzklappenrekonstruktion";
         Dringlichkeit = 2;
+        
     }
 
     /**
