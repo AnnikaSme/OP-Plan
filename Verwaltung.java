@@ -19,7 +19,7 @@ public class Verwaltung
     private ArrayList<Schwester>personalschwester;
     private ArrayList<Kardiotechniker>personalkardiotechniker;
     private ArrayList<OP>operationsliste;
-    //private Personal[] personal;
+    private ArrayList[] personal;
 
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert.
@@ -42,12 +42,12 @@ public class Verwaltung
         personalkardiotechniker=new ArrayList<Kardiotechniker>();
         operationsliste=new ArrayList<OP>();
 
-        /*
-        personal = new Personal[3];
+        
+        personal = new ArrayList[3];
         personal[0] = personalarzt;
         personal[1] = personalschwester;
         personal[2] = personalkardiotechniker;
-         */ 
+         
     }
 
     /**
