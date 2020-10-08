@@ -20,7 +20,8 @@ public class Verwaltung
     private ArrayList<Kardiotechniker>personalkardiotechniker;
     private ArrayList<OP>operationsliste;
     private ArrayList[] personal;
-
+    public static Verwaltung verwalter;
+    
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert.
      * Er erzeugt vier ArryList für die Daten des Arzts, der Schwester, des Kardiotechniker und der OP.
@@ -245,7 +246,7 @@ public class Verwaltung
     {
         return "Daten"; //Personal trägt sich zur OP ein und die Daten des Personals werden ausgegeben.
     }
-
+               
     /**
      * In der Methode DatenExportieren werden die Daten exportiert, sodass sie in Excel oder einer anderen Datenbank längerfristig gespeichert werden können. 
      **/
@@ -255,37 +256,27 @@ public class Verwaltung
         {
             FileOutputStream out = new FileOutputStream("test.txt");
             ObjectOutputStream oout = new ObjectOutputStream(out);
-
-            for (int i=0; i<personalarzt.size();i++)
-            {
-                oout.writeObject(i);
-            }
-            for (int i=0; i<personalschwester.size();i++)
-            {
-                oout.writeObject(i);
-            }
-            for (int i=0; i<personalkardiotechniker.size();i++)
-            {
-                oout.writeObject(i);
-            }
+            oout.writeObject(verwalter);
             oout.close();
-            //ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));
         }
-        catch (Exception ex) {
+        catch (Exception ex) 
+        {
             ex.printStackTrace();
         }
     }
 
-    public void DatenImportieren () //funktioniert noch nicht
+    public void DatenImportieren () 
     {
-        try
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));)
         {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));
-
-        }
+            Verwaltung verwalter = (Verwaltung)ois.readObject();  
+        }  
         catch(Exception ex)
         {
             ex.printStackTrace();
         }
     }
+
+    
 }
