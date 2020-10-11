@@ -43,10 +43,10 @@ public class Raum
         if (Raumnummer < 1 || Raumnummer > 6) // Es gibt nur 6 OP-Räume
        {
            throw new Exception("Diese Raumnummer kann nicht vergeben werden");                                                              // Exception geworfen
-        }
+       }
        else
        {
-        this.Raumnummer = Raumnummer;
+         this.Raumnummer = Raumnummer;
        }
     }
     /**
