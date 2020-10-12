@@ -242,9 +242,100 @@ public class Verwaltung
      * In der Methode Eintragen wird mit dem Eintragen einer Person in einer OP verwaltet. 
      * Zurückgegeben werden die Daten des Personals, der OP, der Zeit und des Raums in Form eines Strings.
      **/
-    public String Eintragen ()
+    public void Eintragen (int Personalnummer, String NamePatient) throws Exception
     {
-        return "Daten"; //Personal trägt sich zur OP ein und die Daten des Personals werden ausgegeben.
+        Integer p = new Integer (Personalnummer);
+        String gesuchtA = p.toString();
+        boolean gefunden = true;
+        int i = 0;
+        while (i<personalarzt.size() && !gefunden)
+        {
+            gefunden = gesuchtA.equals(personalarzt.get(i));
+            i++;
+        }
+        if (i<personalarzt.size())
+        {
+            String n = new String (NamePatient);
+            gefunden = true;
+            int j = 0;
+            while (j<operationsliste.size() && !gefunden)
+            {
+                gefunden = gesuchtA.equals(operationsliste.get(j));
+                j++;
+            }
+            if (j<operationsliste.size())
+            {
+                operationsliste.get(j).setAnzahlAerzte(operationsliste.get(j).getAnzahlAerzte());
+
+            }
+            else
+            {
+                System.out.println("Diese OP existiert noch nicht");
+            }
+        }
+        else 
+        {
+            while (i<personalschwester.size() && !gefunden)  
+            {
+                gefunden = gesuchtA.equals(personalschwester.get(i));
+                i++;
+            }
+
+            if (i<personalschwester.size())
+            {
+                String n = new String (NamePatient);
+                gefunden = true;
+                int j = 0;
+                while (j<operationsliste.size() && !gefunden)
+                {
+                    gefunden = gesuchtA.equals(operationsliste.get(j));
+                    j++;
+                }
+                if (j<operationsliste.size())
+                {
+                    operationsliste.get(j).setAnzahlSchwester(operationsliste.get(j).getAnzahlSchwester());
+
+                }
+                else
+                {
+                    System.out.println("Diese OP existiert noch nicht");
+                }
+            }
+            else
+            {
+                while (i<personalschwester.size() && !gefunden)  
+                {
+                    gefunden = gesuchtA.equals(personalkardiotechniker.get(i));
+                    i++;
+                }
+
+                if (i<personalkardiotechniker.size())
+                {
+                    String n = new String (NamePatient);
+                    gefunden = true;
+                    int j = 0;
+                    while (j<operationsliste.size() && !gefunden)
+                    {
+                        gefunden = gesuchtA.equals(operationsliste.get(j));
+                        j++;
+                    }
+                    if (j<operationsliste.size())
+                    {
+                        operationsliste.get(j).setAnzahlKT(operationsliste.get(j).getAnzahlKT());
+
+                    }
+                    else
+                    {
+                        System.out.println("Diese OP existiert noch nicht");
+                    }
+                }
+
+                else
+                {
+                    System.out.println("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+                }
+            }
+        }
     }
                
     /**
