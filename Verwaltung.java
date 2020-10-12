@@ -265,7 +265,7 @@ public class Verwaltung
             }
             if (j<operationsliste.size())
             {
-                operationsliste.get(j).setAnzahlAerzte(operationsliste.get(j).getAnzahlAerzte());
+                operationsliste.get(j).setAnzahlAerzte(operationsliste.get(j).getAnzahlAerzte()-1);
 
             }
             else
@@ -293,7 +293,7 @@ public class Verwaltung
                 }
                 if (j<operationsliste.size())
                 {
-                    operationsliste.get(j).setAnzahlSchwester(operationsliste.get(j).getAnzahlSchwester());
+                    operationsliste.get(j).setAnzahlSchwester(operationsliste.get(j).getAnzahlSchwester()-1);
 
                 }
                 else
@@ -321,7 +321,7 @@ public class Verwaltung
                     }
                     if (j<operationsliste.size())
                     {
-                        operationsliste.get(j).setAnzahlKT(operationsliste.get(j).getAnzahlKT());
+                        operationsliste.get(j).setAnzahlKT(operationsliste.get(j).getAnzahlKT()-1);
 
                     }
                     else
