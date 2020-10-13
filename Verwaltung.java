@@ -140,9 +140,9 @@ public class Verwaltung
      * Die Daten werden von Hand eingegeben.
      * Mit der If-Bedingung wird getestet ob diese OP schon existiert und wird mit einer Bildschirmausgabe zurückgemeldet.
      */
-    public void speicherOP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit, Raum raum)throws Exception
+    public void speicherOP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)throws Exception
     {
-        OP b = new OP( NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit, raum);
+        OP b = new OP( NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit);
         operationsliste.add(b);
     }
 

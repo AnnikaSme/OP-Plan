@@ -32,7 +32,7 @@ public class OP
      * @param OPTyp Typ der OP
      * @param Dringlichkeit Dringlichkeit der OP
      */
-    public OP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit, Raum raum)throws Exception
+    public OP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)throws Exception
     {
         setNamePatient(NamePatient);
         setAlterPatient(AlterPatient);
@@ -43,7 +43,7 @@ public class OP
         setDauer(Dauer);
         setOPTyp(OPTyp);
         setDringlichkeit(Dringlichkeit);
-        setRaum(raum);
+        Raum raum = new Raum();
     }
     
     /**
@@ -107,9 +107,9 @@ public class OP
      */
     public void setAnzahlAerzte(int AnzahlAerzte)throws Exception
     {
-        if ( AnzahlAerzte < 2|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
+        if ( AnzahlAerzte < 1|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
-            throw new Exception("Es müssen 2 bis 4 Ärzte bei einer Operation dabei sein.");                                                     //Exception geworfen
+            throw new Exception("Es müssen 1 bis 4 Ärzte bei einer Operation dabei sein.");                                                     //Exception geworfen
         }
         else
         {
