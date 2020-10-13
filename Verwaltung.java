@@ -341,7 +341,7 @@ public class Verwaltung
     /**
      * In der Methode DatenExportieren werden die Daten exportiert, sodass sie in Excel oder einer anderen Datenbank längerfristig gespeichert werden können. 
      **/
-    public void DatenExportieren ()
+    public void DatenExportieren () // Oberfläche benötigt
     {
         try
         {
@@ -357,7 +357,7 @@ public class Verwaltung
         }
     }
 
-    public void DatenImportieren () 
+    public void DatenImportieren () //geht erst, wenn die Oberfläche vorhanden ist
     {
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));)
         {
