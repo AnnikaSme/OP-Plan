@@ -6,7 +6,7 @@
  * 
  *
  * @author Nicolas Fix, Erwin Malsam, Sarah Huber, Nathalie Schatz, Lilli Stoffels, Annika Smetaczko
- * @version 01.10.2020, 0.0.4
+ * @version 13.10.2020, 0.0.5
  */
 
 import java.util.ArrayList;

@@ -4,7 +4,7 @@
  * 
  * 
  * @author Sarah Huber, Nathalie Schatz
- * @version 01.10.2020, 1.1
+ * @version 13.10.2020, 0.0.2
  */
 public class OP
 {
@@ -32,18 +32,18 @@ public class OP
      * @param OPTyp Typ der OP
      * @param Dringlichkeit Dringlichkeit der OP
      */
-    public OP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)throws Exception
+    public OP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)
     {
-        setNamePatient(NamePatient);
-        setAlterPatient(AlterPatient);
-        setGesundheitszustand(Gesundheitszustand);
-        setAnzahlAerzte(AnzahlAerzte);
-        setAnzahlSchwester(AnzahlSchwester);
-        setAnzahlKT(AnzahlKT);
-        setDauer(Dauer);
-        setOPTyp(OPTyp);
-        setDringlichkeit(Dringlichkeit);
-        Raum raum = new Raum();
+        this.NamePatient = NamePatient;
+        this.AlterPatient = AlterPatient;
+        this.Gesundheitszustand = Gesundheitszustand;
+        this.AnzahlAerzte = AnzahlAerzte;
+        this.AnzahlSchwester = AnzahlSchwester;
+        this.AnzahlKT = AnzahlKT;
+        this.Dauer = Dauer;
+        this.OPTyp = OPTyp;
+        this.Dringlichkeit = Dringlichkeit;
+        raum = new Raum();
     }
     
     /**
@@ -60,7 +60,7 @@ public class OP
         Dauer = 5;
         OPTyp = "Herzklappenrekonstruktion";
         Dringlichkeit = 2;
-        
+        raum = new Raum();
     }
 
     /**
