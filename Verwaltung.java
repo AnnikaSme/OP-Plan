@@ -262,6 +262,10 @@ public class Verwaltung
                 gefunden = gesuchtA.equals(operationsliste.get(j));
                 j++;
             }
+             if(j>= personalarzt.size())
+                {
+                    throw new Exception("Diese OP ist schon belegt");
+                }
             if (j<operationsliste.size())
             {
                 operationsliste.get(j).setAnzahlAerzte(operationsliste.get(j).getAnzahlAerzte()-1);
@@ -290,10 +294,7 @@ public class Verwaltung
                     gefunden = gesuchtA.equals(operationsliste.get(j));
                     j++;
                 }
-                if(j>= operationsliste.size())
-                {
-                    throw new Exception("Diese OP ist schon belegt");
-                }
+              
 
                 if (j<operationsliste.size())
                 {
@@ -312,7 +313,7 @@ public class Verwaltung
                     gefunden = gesuchtA.equals(personalkardiotechniker.get(i));
                     i++;
                 }
-                if(i>= operationsliste.size())
+                if(i>= personalschwester.size())
                 {
                     throw new Exception("Diese OP ist schon belegt");
                 }
@@ -326,7 +327,7 @@ public class Verwaltung
                         gefunden = gesuchtA.equals(operationsliste.get(j));
                         j++;
                     }
-                    if(j>= operationsliste.size())
+                    if(j>= personalkardiotechniker.size())
                     {
                         throw new Exception("Diese OP ist schon belegt");
                     }
