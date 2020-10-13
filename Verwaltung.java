@@ -21,7 +21,7 @@ public class Verwaltung
     private ArrayList<OP>operationsliste;
     private ArrayList[] personal;
     public static Verwaltung verwalter;
-    
+
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert.
      * Er erzeugt vier ArryList für die Daten des Arzts, der Schwester, des Kardiotechniker und der OP.
@@ -43,12 +43,11 @@ public class Verwaltung
         personalkardiotechniker=new ArrayList<Kardiotechniker>();
         operationsliste=new ArrayList<OP>();
 
-        
         personal = new ArrayList[3];
         personal[0] = personalarzt;
         personal[1] = personalschwester;
         personal[2] = personalkardiotechniker;
-         
+
     }
 
     /**
@@ -266,7 +265,7 @@ public class Verwaltung
             if (j<operationsliste.size())
             {
                 operationsliste.get(j).setAnzahlAerzte(operationsliste.get(j).getAnzahlAerzte()-1);
-                
+
             }
             else
             {
@@ -291,6 +290,11 @@ public class Verwaltung
                     gefunden = gesuchtA.equals(operationsliste.get(j));
                     j++;
                 }
+                if(j>= operationsliste.size())
+                {
+                    throw new Exception("Diese OP ist schon belegt");
+                }
+
                 if (j<operationsliste.size())
                 {
                     operationsliste.get(j).setAnzahlSchwester(operationsliste.get(j).getAnzahlSchwester()-1);
@@ -308,7 +312,10 @@ public class Verwaltung
                     gefunden = gesuchtA.equals(personalkardiotechniker.get(i));
                     i++;
                 }
-
+                if(i>= operationsliste.size())
+                {
+                    throw new Exception("Diese OP ist schon belegt");
+                }
                 if (i<personalkardiotechniker.size())
                 {
                     String n = new String (NamePatient);
@@ -318,6 +325,10 @@ public class Verwaltung
                     {
                         gefunden = gesuchtA.equals(operationsliste.get(j));
                         j++;
+                    }
+                    if(j>= operationsliste.size())
+                    {
+                        throw new Exception("Diese OP ist schon belegt");
                     }
                     if (j<operationsliste.size())
                     {
@@ -337,7 +348,7 @@ public class Verwaltung
             }
         }
     }
-               
+
     /**
      * In der Methode DatenExportieren werden die Daten exportiert, sodass sie in Excel oder einer anderen Datenbank längerfristig gespeichert werden können. 
      **/
@@ -369,5 +380,4 @@ public class Verwaltung
         }
     }
 
-    
 }
