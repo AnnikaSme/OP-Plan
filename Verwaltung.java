@@ -266,7 +266,7 @@ public class Verwaltung
             if (j<operationsliste.size())
             {
                 operationsliste.get(j).setAnzahlAerzte(operationsliste.get(j).getAnzahlAerzte()-1);
-
+                
             }
             else
             {
