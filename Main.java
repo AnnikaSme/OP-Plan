@@ -16,7 +16,7 @@ import javafx.scene.layout.*;
 
 public class Main extends Application 
 {
-
+  
     public static void main(String [] args)
     {
 
@@ -62,13 +62,6 @@ public class Main extends Application
 
     }
 
-    /**
-     * Programmeinstiegspunkt fuer das Java-Programm. Es ist lediglich die launch()-Methode aufzurufen. 
-     * Initialisierungen passieren dann in der init()-Methode sowie der start()-Methode. Die MainLoop verbirgt 
-     * sich sozusagen in der Anwendung selbst. 
-     * Nach dem Ausstieg aus der "Mainloop" können notwendige Aufräumarbeiten in der stop()-Methode erfolgen.
-     * 
-     * @param  args   Kommandozeilenparameter zu Übergabe an den Application Launcher
-     */
+
 
 }
