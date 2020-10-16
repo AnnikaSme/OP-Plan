@@ -337,8 +337,8 @@ public class OP
         String O = getOPTyp();
         int Dr = getDringlichkeit();
         
-        String allesA = "Name des Patienten: " + N + "Alter des Patienten:" + A + "Gesundheitszustand des Patienten: " + G + "Anzahl der Aerzte:" + AA + "Anzahl der Schwestern:" + AS;
-        String allesB = "Anzahl der Kardiotechniker: " + AK + "Dauer der Operation:" + D + "Typ der Operation:" + O + "Dringlichkeit der Operation:" + Dr;
+        String allesA = "Name des Patienten: " + N +"\r\n" + "Alter des Patienten:" + A +"\r\n" + "Gesundheitszustand des Patienten: " + G + "\r\n" + "Anzahl der Aerzte:" + AA +"\r\n" + "Anzahl der Schwestern:" + AS;
+        String allesB = "Anzahl der Kardiotechniker: " + AK + "\r\n" + "Dauer der Operation:" + D +"\r\n"+ "Typ der Operation:" + O +"\r\n" + "Dringlichkeit der Operation:" + Dr;
         
         String gesamt = allesA + "\n" + allesB;
         
