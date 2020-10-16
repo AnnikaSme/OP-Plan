@@ -1,7 +1,7 @@
 
 /**
  * Die Hauptklasse einer JavaFX-Applikation
- * @author GOD
+ * @author Annika Smetaczko, Nathalie Schatz
  * @version 0.0.2
  */
 
