@@ -255,7 +255,7 @@ public class Verwaltung
             i++;
             if(i>= personalarzt.size())
             {
-                throw new Exception("Diese OP ist schon belegt");
+                throw new Exception("Dieser Arzt existiert nicht.");
             }
         }
         if (i<personalarzt.size())
@@ -285,6 +285,10 @@ public class Verwaltung
             {
                 gefunden = gesuchtA.equals(personalschwester.get(i));
                 i++;
+                if(i>= personalschwester.size())
+            {
+                throw new Exception("Dieser Schwester existiert nicht.");
+            }
             }
 
             if (i<personalschwester.size())
