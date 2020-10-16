@@ -229,14 +229,14 @@ public class Verwaltung
     }
 
     // Diese Methode Zeitzuweisung() wird in der Version nicht verwendet, da nur eine OP pro Raum pro Tag eingeplant wird.
-    
+
     ///**
-     // * In der Methode Zeitzuweisung wird die Zeit einer OP zugewiesen. 
-     // * Rückgegeben wird der entsprechende Timeslot.
-     // **/
+    // * In der Methode Zeitzuweisung wird die Zeit einer OP zugewiesen. 
+    // * Rückgegeben wird der entsprechende Timeslot.
+    // **/
     // public int Zeitzuweisung()
     // {
-        // return 2;
+    // return 2;
     // }
 
     /**
@@ -286,9 +286,9 @@ public class Verwaltung
                 gefunden = gesuchtA.equals(personalschwester.get(i));
                 i++;
                 if(i>= personalschwester.size())
-            {
-                throw new Exception("Dieser Schwester existiert nicht.");
-            }
+                {
+                    throw new Exception("Dieser Schwester existiert nicht.");
+                }
             }
 
             if (i<personalschwester.size())
