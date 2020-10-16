@@ -6,7 +6,7 @@
  * 
  *
  * @author Nicolas Fix, Erwin Malsam, Sarah Huber, Nathalie Schatz, Lilli Stoffels, Annika Smetaczko
- * @version 13.10.2020, 0.0.5
+ * @version 13.10.2020, 0.0.6
  */
 
 import java.util.ArrayList;
@@ -228,14 +228,16 @@ public class Verwaltung
         }
     }
 
-    /**
-     * In der Methode Zeitzuweisung wird die Zeit einer OP zugewiesen. 
-     * Rückgegeben wird der entsprechende Timeslot.
-     **/
-    public int Zeitzuweisung()
-    {
-        return 2;
-    }
+    // Diese Methode Zeitzuweisung() wird in der Version nicht verwendet, da nur eine OP pro Raum pro Tag eingeplant wird.
+    
+    ///**
+     // * In der Methode Zeitzuweisung wird die Zeit einer OP zugewiesen. 
+     // * Rückgegeben wird der entsprechende Timeslot.
+     // **/
+    // public int Zeitzuweisung()
+    // {
+        // return 2;
+    // }
 
     /**
      * In der Methode Eintragen wird mit dem Eintragen einer Person in einer OP verwaltet. 
