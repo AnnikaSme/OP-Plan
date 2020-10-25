@@ -16,7 +16,8 @@ import javafx.scene.layout.*;
 
 public class Main extends Application 
 {
-  
+    public static Stage primaryStage;
+    
     public static void main(String [] args)
     {
 
@@ -34,7 +35,7 @@ public class Main extends Application
      */
     public void start(Stage stage) throws Exception 
     {
-
+        primaryStage = stage;
         String fxmlFile = "main.fxml";
 
         try

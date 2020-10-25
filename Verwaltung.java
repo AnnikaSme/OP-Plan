@@ -28,7 +28,7 @@ public class Verwaltung
      * Das Array personal beinhaltet die ArrayLists personalarzt, personalschwester, personalkardiotechniker.
      *
      */
-    public Verwaltung () throws Exception
+    public Verwaltung() throws Exception
     {
         raeume = new Raum [5];  //Array mit 6 Speicherplätze für die 6 Räume wird erzeugt.
         for (int i=0; i<raeume.length; i++)     //Befüllung des Arrays
