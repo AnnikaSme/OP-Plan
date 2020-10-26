@@ -16,53 +16,49 @@ import javafx.scene.layout.*;
 
 public class Main extends Application 
 {
-    public static Stage primaryStage;
+   public static Stage primaryStage;
     
-    public static void main(String [] args)
+    public static Stage substage;
+    
+    @Override
+    public void start(Stage primaryStage) throws Exception
     {
+        
+        this.primaryStage = primaryStage;
+        this.primaryStage.setTitle("Chemische Analysedatenbank");
+        mainWindow();
+    }
 
+    public void mainWindow() throws Exception
+    {   
+        Verwaltung.erstelleVerwaltung();
+
+        try{
+ 
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindow.fxml"));
+            AnchorPane pane = loader.load();
+
+            primaryStage.setMinHeight(500.00);
+            primaryStage.setMinWidth(660.00);
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(this);
+            Scene scene = new Scene(pane);
+            
+            
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public static void main(String[] args)
+    {
         launch(args);
-
+        
     }
-
-    /**
-     * Start-Methode für die JavaFX-Applikation. 
-     * In dieser Methode wird insbesondere die grafische Benutzeroberfläche erzeugt. 
-     * Sie wird einmalig nach der Init()-Methode und im JavaFX-Thread ausgeführt. 
-     */
-    /**
-     * Start-Methode für die JavaFX-Applikation
-     */
-    public void start(Stage stage) throws Exception 
-    {
-        primaryStage = stage;
-        String fxmlFile = "main.fxml";
-
-        try
-        {
-
-            VBox root = FXMLLoader.load(getClass().getResource(fxmlFile));
-            Scene scene = new Scene(root);
-            stage.setTitle("Meine JavaFX App");
-            stage.setScene(scene);
-            stage.show();
-
-        }
-        catch(IOException e)
-        {
-
-            System.err.println("FXML-Ressource konnte nicht aus der Datei geladen werden: " + fxmlFile);
-
-        }
-        catch(NullPointerException e)
-        {
-
-            System.err.println("Beim Laden der FXML-Datei wurde kein Objekt der Basisklasse javafx.scene.Parent erzeugt.");
-
-        }
-
-    }
-
-
 
 }

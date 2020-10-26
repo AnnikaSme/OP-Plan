@@ -49,6 +49,12 @@ public class Verwaltung
         personal[2] = personalkardiotechniker;
 
     }
+    
+   public static void erstelleVerwaltung() throws Exception
+    {
+        verwalter = new Verwaltung();
+       
+    }
 
     /**
      * In der Methode speicherPersonalarzt werden die Daten in die ArrayList personalarzt geschrieben. 
