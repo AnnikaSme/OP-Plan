@@ -83,24 +83,33 @@ public class MainWindowController extends Verwaltung
 
     @FXML
     private Button Raumzuweisen;
-    
+
     @FXML
     private MenuItem Arzt;
-    
+
     @FXML
     private MenuItem Schwester;
-    
+
     @FXML
     private MenuItem Kardiotechniker;
-    
+
     @FXML
     private MenuItem ArztLö;
-    
+
     @FXML
     private MenuItem SchwesterLö;
-    
+
     @FXML
     private MenuItem KardiotechnikerLö;
+
+    @FXML 
+    private Button Arztspeichern;
+
+    @FXML 
+    private Button Schwesterspeichern;
+
+    @FXML 
+    private Button Kardiotechnikerspeichern;
 
     /**
      * Konstruktor für Objekte der Klasse n
@@ -156,4 +165,84 @@ public class MainWindowController extends Verwaltung
         }
 
     }
+
+    @FXML
+    public void Arzt()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Arzt.fxml"));
+            VBox pane = loader.load();
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+
+            Scene scene = new Scene(pane);
+            Main.primaryStage.setScene(scene);
+            Main.primaryStage.show();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void Schwester()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Schwester.fxml"));
+            VBox pane = loader.load();
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+
+            Scene scene = new Scene(pane);
+            Main.primaryStage.setScene(scene);
+            Main.primaryStage.show();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void Kardiotechniker()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Kardiotechniker.fxml"));
+            VBox pane = loader.load();
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+
+            Scene scene = new Scene(pane);
+            Main.primaryStage.setScene(scene);
+            Main.primaryStage.show();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void warningDaten() 
+    {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Achtung");
+        alert.setHeaderText("Achtung!");
+        alert.setContentText("Bitte Daten eingeben");
+
+        alert.showAndWait();
+    }
+
+    @FXML
+    public void Arzthinzufügen()
+    {
+
+    }
+
 }
