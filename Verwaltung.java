@@ -250,32 +250,32 @@ public class Verwaltung
         return null;
     }
 
-    public Raum Raumzuweisen (String NamePatient)
-    {
-        boolean gefunden = true;
-        int j = 0;
-        while (j<operationsliste.size() && !gefunden)
-        {
-            gefunden = NamePatient.equals(operationsliste.get(j));
-            j++;
-        }
-        if (j<operationsliste.size())
-        { 
-            if(Raumsuche()!=null)
-            {
-                operationsliste.get(j).setRaum(Raumsuche());
-                return operationsliste.get(j).getRaum();
-            }
-            else
-            {
-                throw new IllegalArgumentException("Kein freier Raum mehr zur Verfügung");
-            }
-        }
-        else
-        {
-            throw new IllegalArgumentException("Diese OP ist nicht in der Datenbank");
-        }
-    }
+    // public Raum Raumzuweisen (String NamePatient)
+    // {
+        // boolean gefunden = true;
+        // int j = 0;
+        // while (j<operationsliste.size() && !gefunden)
+        // {
+            // gefunden = NamePatient.equals(operationsliste.get(j));
+            // j++;
+        // }
+        // if (j<operationsliste.size())
+        // { 
+            // if(Raumsuche()!=null)
+            // {
+                // operationsliste.get(j).setRaum(Raumsuche());
+                // return operationsliste.get(j).getRaum();
+            // }
+            // else
+            // {
+                // throw new IllegalArgumentException("Kein freier Raum mehr zur Verfügung");
+            // }
+        // }
+        // else
+        // {
+            // throw new IllegalArgumentException("Diese OP ist nicht in der Datenbank");
+        // }
+    // }
 
     // Diese Methode Zeitzuweisung() wird in der Version nicht verwendet, da nur eine OP pro Raum pro Tag eingeplant wird.
 

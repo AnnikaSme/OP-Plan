@@ -31,7 +31,7 @@ import java.nio.file.*;
 import java.text.*;
 import java.time.format.*;
 import java.time.*;
-public class MainWindowController extends Verwaltung
+public class MainWindowController
 {   
     public Main main;
 
@@ -70,7 +70,7 @@ public class MainWindowController extends Verwaltung
     // Textfelder um Personal anzulegen
 
     @FXML
-    private Button Personalloeschen; 
+    private MenuButton Personalloeschen; 
 
     @FXML
     private TextField Personalnummerloeschen; // Personalnummer wird eingegeben und Daten des personals werden gesucht und gelöscht
@@ -110,13 +110,7 @@ public class MainWindowController extends Verwaltung
 
     @FXML 
     private Button Kardiotechnikerspeichern;
-
-    /**
-     * Konstruktor für Objekte der Klasse n
-     */
-    public MainWindowController() throws Exception
-    {
-    }
+    
 
     public void setMain(Main main)
     {
