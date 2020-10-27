@@ -244,5 +244,69 @@ public class MainWindowController extends Verwaltung
     {
 
     }
+    // public void notfallspeichern()
+    // {
+        // if(notfallname.getText() == null || notfallname.getText().trim().isEmpty() || notfalladresse.getText() == null || 
+        // notfalladresse.getText().trim().isEmpty() || notfallbeziehung.getText() == null || notfallbeziehung.getText().trim()
+        // .isEmpty() || notfalltelefonnummer.getText() == null || notfalltelefonnummer.getText().trim().isEmpty() ||
+        // notfallblutgruppe.getText() == null || notfallblutgruppe.getText().trim().isEmpty())
+        // {
+            // warningDaten(); 
+        // }
+        // else
+        // {
+            // if(notfallname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && notfallbeziehung.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            // notfalltelefonnummer.getText().replaceAll(" ","").matches("[0-9]+") && notfallblutgruppe.getText().replaceAll(" ","").matches("[a-zA-Z]+"))
+            // {
+                // verwalter.Aktesuchen(p.getKrankenkassenNr()).Notfallkontakterstellen(notfallname.getText(), notfalladresse.
+                    // getText(), notfallbeziehung.getText(), notfalltelefonnummer.getText(), notfallblutgruppe.getText());
+                // String nr = p.getKrankenkassenNr();
+                // p = verwalter.Aktesuchen(nr);
+                // patientenakteladen();
+            // }
+            // else
+            // {
+                // if(notfallbeziehung.getText().matches("[a-zA-Z]+")==false)
+                // {
+                    // Alert alert = new Alert(Alert.AlertType.WARNING);
+                    // alert.setTitle("Achtung");
+                    // alert.setHeaderText("Falsche Eingabe im Beziehungsfeld!");
+                    // alert.setContentText("Bitte nur Buchstaben eingeben");
 
+                    // alert.showAndWait();
+                    // notfallbeziehung.clear(); 
+                // }
+                // else if(notfallname.getText().matches("[a-zA-Z]+")==false)
+                // {
+                    // Alert alert = new Alert(Alert.AlertType.WARNING);
+                    // alert.setTitle("Achtung");
+                    // alert.setHeaderText("Falsche Eingabe im Namenfeld!");
+                    // alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                    // alert.showAndWait();
+                    // notfallname.clear(); 
+                // }
+                // else if(notfalltelefonnummer.getText().matches("[0-9]+")==false)
+                // {
+                    // Alert alert = new Alert(Alert.AlertType.WARNING);
+                    // alert.setTitle("Achtung");
+                    // alert.setHeaderText("Falsche Eingabe im Telefonnummerfeld!");
+                    // alert.setContentText("Bitte nur Zahlen eingeben");
+
+                    // alert.showAndWait();
+                    // notfalltelefonnummer.clear(); 
+                // }
+                // else if(notfallblutgruppe.getText().matches("[a-zA-Z]+")==false)
+                // {
+                    // Alert alert = new Alert(Alert.AlertType.WARNING);
+                    // alert.setTitle("Achtung");
+                    // alert.setHeaderText("Falsche Eingabe im Blutgruppefeld!");
+                    // alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                    // alert.showAndWait();
+                    // notfallblutgruppe.clear(); 
+                // }
+            // }
+        // }
+    // }
 }
