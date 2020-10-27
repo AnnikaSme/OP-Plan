@@ -48,7 +48,7 @@ public class MainWindowController extends Verwaltung
         this.main = main;
     }
     
-    
+   
     public void Verwaltung()
     {
         try
