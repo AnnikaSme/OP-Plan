@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="660.0" VBox.vgrow="ALWAYS" />
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="OPanlegen" layoutX="76.0" layoutY="81.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="OP anlegen" />
+            <Button fx:id="DatenExportieren" layoutX="259.0" layoutY="81.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Daten exportieren" />
+            <Button fx:id="Personalanlegen" layoutX="76.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Personal anlgen" />
+            <Button fx:id="Personalloeschen" layoutX="259.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Personal löschen" />
+            <Button fx:id="OPloeschen" layoutX="455.0" layoutY="81.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="OP löschen" />
+            <Button fx:id="Raumzuweisen" layoutX="455.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Raum zuweisen" />
+         </children></AnchorPane>
   </children>
 </VBox>
