@@ -19,6 +19,7 @@ public class Main extends Application
    public static Stage primaryStage;
     
     public static Stage substage;
+    Verwaltung verwalter;
     
     @Override
     public void start(Stage primaryStage) throws Exception
@@ -31,7 +32,7 @@ public class Main extends Application
 
     public void mainWindow() throws Exception
     {   
-        Verwaltung.erstelleVerwaltung();
+        verwalter = new Verwaltung();
 
         try{
  
