@@ -25,7 +25,7 @@ public class Main extends Application
     {
         
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Chemische Analysedatenbank");
+        this.primaryStage.setTitle("Op-Planungssytem");
         mainWindow();
     }
 
@@ -35,7 +35,7 @@ public class Main extends Application
 
         try{
  
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindow.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("main.fxml"));
             AnchorPane pane = loader.load();
 
             primaryStage.setMinHeight(500.00);

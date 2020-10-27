@@ -47,4 +47,37 @@ public class MainWindowController extends Verwaltung
     {
         this.main = main;
     }
+    
+    
+    public void Verwaltung()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Verwaltung.fxml"));
+            VBox pane = loader.load();
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+
+            Scene scene = new Scene(pane);
+            Main.primaryStage.setScene(scene);
+            Main.primaryStage.show();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
