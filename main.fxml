@@ -10,9 +10,9 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button layoutX="49.0" layoutY="177.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="211.0" text="Verwaltung" />
-            <Button layoutX="347.0" layoutY="177.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="211.0" text="Personal" />
-            <Text layoutX="148.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OP-Planungsystem" textAlignment="CENTER" wrappingWidth="343.7395324707031">
+            <Button fx:id="Verwaltung" layoutX="49.0" layoutY="177.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="211.0" text="Verwaltung" />
+            <Button fx:id="Personal" layoutX="347.0" layoutY="177.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="211.0" text="Personal" />
+            <Text fx:id="OPPlanungssystem" layoutX="148.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OP-Planungsystem" textAlignment="CENTER" wrappingWidth="343.7395324707031">
                <font>
                   <Font size="36.0" />
                </font>

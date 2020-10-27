@@ -35,6 +35,15 @@ public class MainWindowController extends Verwaltung
 {   
     public Main main;
     
+    @FXML
+    private Button Verwaltung;
+    
+    @FXML
+    private Button Personal;
+    
+    @FXML 
+    private Text OPPlanungssystem;
+    
 
     /**
      * Konstruktor für Objekte der Klasse n
