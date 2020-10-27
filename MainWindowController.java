@@ -43,7 +43,10 @@ public class MainWindowController extends Verwaltung
     
     @FXML 
     private Text OPPlanungssystem;
+     
     
+  
+   
 
     /**
      * Konstruktor für Objekte der Klasse n
