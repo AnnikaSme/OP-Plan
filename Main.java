@@ -31,7 +31,7 @@ public class Main extends Application
 
     public void mainWindow() throws Exception
     {   
-        Verwaltung.erstelleVerwaltung();
+        //Verwaltung.erstelleVerwaltung();
 
         try{
  

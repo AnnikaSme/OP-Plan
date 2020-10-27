@@ -49,11 +49,11 @@ public class Verwaltung
         personal[2] = personalkardiotechniker;
 
     }
-    
-   public static void erstelleVerwaltung() throws Exception
+
+    public static void erstelleVerwaltung() throws Exception
     {
         verwalter = new Verwaltung();
-       
+
     }
 
     /**
@@ -155,13 +155,13 @@ public class Verwaltung
      * In der Methode PersonalDatenLoeschen wird per Eingabe der Personalnummer nach vorhandenen Daten mit der Personalnummer gesucht. 
      * Ist diese Personalnummer vorhanden wird dieser Datensatz gelöscht. Wenn nicht wird eine Fehlermeldung auf dem Bildschirm zurück gegeben.
      */
-    public void PersonalDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    public void ArztDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
         boolean gefunden = true;
         int i = 0;
-        while (i<personalarzt.size() && !gefunden)  //Bisher funktioniert es nur für personalarzt. Um alle zu verwenden muss das auskommentierte Array personal fertig sein.
+        while (i<personalarzt.size() && !gefunden) 
         {
             gefunden = gesuchtA.equals(personalarzt.get(i));
             i++;
@@ -169,6 +169,49 @@ public class Verwaltung
         if (i<personalarzt.size())
         {
             personalarzt.remove(i);
+        }
+        else
+        {
+            throw new Exception("Diese Personalnummer ist nicht in der Datenbank");     
+        }
+    }
+
+    public void KardiotechnikerDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    {
+        Integer p = new Integer (Personalnummer);
+        String gesuchtA = p.toString();
+        boolean gefunden = true;
+        int i = 0;
+        while (i<personalkardiotechniker.size() && !gefunden)  //Bisher funktioniert es nur für personalarzt. Um alle zu verwenden muss das auskommentierte Array personal fertig sein.
+        {
+            gefunden = gesuchtA.equals(personalkardiotechniker.get(i));
+            i++;
+        }
+        if (i<personalkardiotechniker.size())
+        {
+            personalkardiotechniker.remove(i);
+        }
+        else
+        {
+            throw new Exception("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+        }
+    }
+
+       
+    public void SchwesterDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    {
+        Integer p = new Integer (Personalnummer);
+        String gesuchtA = p.toString();
+        boolean gefunden = true;
+        int i = 0;
+        while (i<personalschwester.size() && !gefunden)  
+        {
+            gefunden = gesuchtA.equals(personalschwester.get(i));
+            i++;
+        }
+        if (i<personalschwester.size())
+        {
+            personalschwester.remove(i);
         }
         else
         {
@@ -340,7 +383,7 @@ public class Verwaltung
                         gefunden = gesuchtA.equals(operationsliste.get(j));
                         j++;
                     }
-                    
+
                     if (j<operationsliste.size())
                     {
                         operationsliste.get(j).setAnzahlKT(operationsliste.get(j).getAnzahlKT()-1);

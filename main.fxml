@@ -8,10 +8,10 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
+    <AnchorPane accessibleRole="BUTTON" maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="Verwaltung" layoutX="49.0" layoutY="177.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="211.0" text="Verwaltung" />
-            <Button fx:id="Personal" layoutX="347.0" layoutY="177.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="211.0" text="Personal" />
+            <Button fx:id="Verwaltung" accessibleRole="MENU_BUTTON" layoutX="49.0" layoutY="177.0" mnemonicParsing="false" onAction="#Verwaltung" prefHeight="101.0" prefWidth="211.0" text="Verwaltung" />
+            <Button fx:id="Personal" layoutX="347.0" layoutY="177.0" mnemonicParsing="false" onAction="#Personal" prefHeight="101.0" prefWidth="211.0" text="Personal" />
             <Text fx:id="OPPlanungssystem" layoutX="148.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OP-Planungsystem" textAlignment="CENTER" wrappingWidth="343.7395324707031">
                <font>
                   <Font size="36.0" />
