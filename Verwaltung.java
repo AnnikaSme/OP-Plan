@@ -155,7 +155,7 @@ public class Verwaltung
      * In der Methode PersonalDatenLoeschen wird per Eingabe der Personalnummer nach vorhandenen Daten mit der Personalnummer gesucht. 
      * Ist diese Personalnummer vorhanden wird dieser Datensatz gelöscht. Wenn nicht wird eine Fehlermeldung auf dem Bildschirm zurück gegeben.
      */
-    public void ArztDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    public void ArztDatenLoeschen(int Personalnummer) throws Exception //Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
