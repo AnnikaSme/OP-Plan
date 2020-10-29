@@ -161,7 +161,7 @@ public class MainWindowController
         try
         {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("Personal.fxml"));
-            VBox pane = loader.load();
+            Pane pane = loader.load();
 
             MainWindowController mainWindowController = loader.getController();
             mainWindowController.setMain(main);
