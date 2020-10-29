@@ -257,7 +257,7 @@ public class MainWindowController
         if(Arztname.getText() == null || Arztname.getText().trim().isEmpty() || Arztkontakt.getText() == null || 
         Arztkontakt.getText().trim().isEmpty() || Arztrang.getText() == null || Arztrang.getText().trim()
         .isEmpty() || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() ||
-        Arztpersonalnummer.getText() == null || Arztpersonalnummer.getText().trim().isEmpty())
+        Arztpersonalnummer.getText() == null || Arztpersonalnummer.getText().trim().isEmpty() )
         {
             warningDaten(); 
         }
