@@ -258,6 +258,20 @@ public class MainWindowController
         Arztpersonalnummer.getText() == null || Arztpersonalnummer.getText().trim().isEmpty())
         
         warningDaten(); 
+        else
+        {
+            if(Arztname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Arztkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            Arztrang.getText().replaceAll(" ","").matches("[1-4]+") && Arztfachrichtung.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
+            Arztpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            {
+                
+                
+                // verwalter.Aktesuchen(p.getKrankenkassenNr()).Notfallkontakterstellen(notfallname.getText(), notfalladresse.
+                    // getText(), notfallbeziehung.getText(), notfalltelefonnummer.getText(), notfallblutgruppe.getText());
+                // String nr = p.getKrankenkassenNr();
+                // p = verwalter.Aktesuchen(nr);
+                // patientenakteladen();
+            }
 
     }
     // public void notfallspeichern()
@@ -325,4 +339,5 @@ public class MainWindowController
             // }
         // }
     // }
+}
 }
