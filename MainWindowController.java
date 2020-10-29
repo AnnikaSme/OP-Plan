@@ -112,19 +112,19 @@ public class MainWindowController
     private Button Kardiotechnikerspeichern;
     
     @FXML
-    private TextField Artzname;
+    private TextField Arztname;
     
     @FXML
-    private TextField Artzpersonalnummer;
+    private TextField Arztpersonalnummer;
     
     @FXML
-    private TextField Artzfachrichtung;
+    private TextField Arztfachrichtung;
     
     @FXML
-    private TextField Artzrang;
+    private TextField Arztrang;
     
     @FXML
-    private TextField Artzkontakt;
+    private TextField Arztkontakt;
     
 
     
@@ -252,7 +252,12 @@ public class MainWindowController
 
     @FXML
     public void Arzthinzufügen()
-    {
+    {if(Arztname.getText() == null || Arztname.getText().trim().isEmpty() || Arztkontakt.getText() == null || 
+        Arztkontakt.getText().trim().isEmpty() || Arztrang.getText() == null || Arztrang.getText().trim()
+        .isEmpty() || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() ||
+        Arztpersonalnummer.getText() == null || Arztpersonalnummer.getText().trim().isEmpty())
+        
+        warningDaten(); 
 
     }
     // public void notfallspeichern()
