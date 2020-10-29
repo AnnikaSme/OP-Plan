@@ -125,6 +125,9 @@ public class MainWindowController
 
     @FXML
     private TextField Arztkontakt;
+    
+    @FXML
+    private Alert alert1;
 
     public void setMain(Main main)
     {
@@ -266,7 +269,7 @@ public class MainWindowController
             // {
                 a = Integer.parseInt(Arztrang.getText());
             b = Integer.parseInt(Arztpersonalnummer.getText());
-            Verwaltung.speicherPersonalarzt(Arztfachrichtung.getText(), a, Arztname.getText(), b, Arztkontakt.getText() );
+            //Verwaltung.speicherPersonalarzt(Arztfachrichtung.getText(), a, Arztname.getText(), b, Arztkontakt.getText() );
         }
         
          if(Arztname.getText().matches("[a-zA-Z]+")==false)
