@@ -16,9 +16,9 @@
             <Button fx:id="Raumzuweisen" layoutX="259.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Raum zuweisen" />
             <MenuButton fx:id="Personalanlegen" layoutX="56.0" layoutY="74.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="141.0" text="Personal hinzufügen" AnchorPane.rightAnchor="442.66666666666663">
               <items>
-                <MenuItem fx:id="Arzt" mnemonicParsing="false" onAction="#Arzthinzufügen" text="Arzt" />
-                <MenuItem fx:id="Schwester" mnemonicParsing="false" onAction="#Schwester" text="Schwester" />
-                  <MenuItem fx:id="Kardiotechniker" mnemonicParsing="false" onAction="#Kardiotechniker" text="Kardiotechniker" />
+                <MenuItem fx:id="Arzt" mnemonicParsing="false" onAction="#Arzt" onMenuValidation="#Arzt" text="Arzt" />
+                <MenuItem fx:id="Schwester" mnemonicParsing="false" onAction="#Schwester" onMenuValidation="#Schwester" text="Schwester" />
+                  <MenuItem fx:id="Kardiotechniker" mnemonicParsing="false" onAction="#Kardiotechniker" onMenuValidation="#Kardiotechniker" text="Kardiotechniker" />
               </items>
             </MenuButton>
             <MenuButton fx:id="Personalloeschen" layoutX="56.0" layoutY="200.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="141.0" text="Personal löschen" textAlignment="CENTER">
