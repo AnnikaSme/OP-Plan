@@ -111,6 +111,23 @@ public class MainWindowController
     @FXML 
     private Button Kardiotechnikerspeichern;
     
+    @FXML
+    private TextField Artzname;
+    
+    @FXML
+    private TextField Artzpersonalnummer;
+    
+    @FXML
+    private TextField Artzfachrichtung;
+    
+    @FXML
+    private TextField Artzrang;
+    
+    @FXML
+    private TextField Artzkontakt;
+    
+
+    
 
     public void setMain(Main main)
     {
