@@ -1,4 +1,5 @@
 
+
 /**
  * Die Klasse MainWindowController dient zur Steuerung der Oberfläche.
  * 
@@ -504,6 +505,85 @@ public class MainWindowController extends Main
         }
 
     }
+    
+    @FXML
+    public void OPhinzufügen() throws Exception
+    {   int a;
+        int b;
+        if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() || OPAlterPatient.getText() == null ||OPAlterPatient.getText().trim().isEmpty()  || Arztkontakt.getText() == null || 
+        Arztkontakt.getText().trim().isEmpty() || Arztrang.getText() == null || Arztrang.getText().trim()
+        .isEmpty() || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() ||
+        Arztpersonalnummer.getText() == null || Arztpersonalnummer.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            if(Arztname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Arztkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            Arztrang.getText().replaceAll(" ","").matches("[1-4]+") && Arztfachrichtung.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
+            Arztpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            {
+                a = Integer.parseInt(Arztrang.getText());
+                b = Integer.parseInt(Arztpersonalnummer.getText());
+                Main.verwalter.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
+                Verwaltung();
+
+            }
+
+            if(Arztname.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Namensfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Arztname.clear(); 
+
+            }
+            else if(Arztkontakt.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Arztkontakt.clear(); 
+            }
+            else if(Arztrang.getText().matches("[1-4]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
+
+                alert.showAndWait();
+                Arztrang.clear(); 
+            }
+            else if(Arztfachrichtung.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Fachrichtungsfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Arztfachrichtung.clear(); 
+            }
+            else if(Arztpersonalnummer.getText().matches("[0-9]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                alert.setContentText("Bitte nur Zahlen eingeben");
+
+                alert.showAndWait();
+                Arztpersonalnummer.clear();
+
+            }
+        }
+    }
 
     @FXML
     public void ArztlöschenSub()
@@ -535,5 +615,3 @@ public class MainWindowController extends Main
     }
 
 }
-
-
