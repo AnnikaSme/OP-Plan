@@ -187,7 +187,7 @@ public class MainWindowController extends Main
     private TextField Schwesterlöschenpersonalnummer;
     
     @FXML
-    private Button LöschenSchewster;
+    private Button LöschenSchwester;
     
     @FXML
     private TextField Kardiotechnikerlöschenpersonalnummer;
