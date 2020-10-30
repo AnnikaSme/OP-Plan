@@ -270,7 +270,7 @@ public class MainWindowController extends Main
     }
 
     @FXML
-    public void Zurück2() 
+    public void Zurück2() throws Exception
     {
         Verwaltung();
     }

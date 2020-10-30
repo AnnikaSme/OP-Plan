@@ -10,7 +10,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
   <children>
-    <AnchorPane fx:id="Zurück2" maxHeight="-1.0" maxWidth="-1.0" onDragDetected="#Zurück2" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <Button fx:id="Arztspeichern" layoutX="291.0" layoutY="323.0" mnemonicParsing="false" onAction="#Arzthinzufügen" text="Speichern" />
             <VBox layoutX="166.0" layoutY="100.0" prefHeight="200.0" prefWidth="319.0">
