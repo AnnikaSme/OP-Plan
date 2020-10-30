@@ -188,6 +188,10 @@ public class MainWindowController extends Main
 
     @FXML
     private Button Zurück2;
+    
+    @FXML
+    private Button Raum;
+    
 
     public void setMain(Main main)
     {
@@ -766,7 +770,17 @@ public class MainWindowController extends Main
     @FXML
     public void Raum()
     {
-        Main.verwalter.Raumzuweisen(OPNamePatient.getText());
+         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                Main.verwalter.Raumzuweisen(OPNamePatient.getText());
+
+            }
+        
+        
     }
     
 }
