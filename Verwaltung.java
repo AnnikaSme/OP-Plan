@@ -61,7 +61,7 @@ public class Verwaltung
      * Die Daten werden von Hand eingegeben.
      * Mit der If-Bedingung wird getestet ob dieser Arzt schon existiert und wird mit einer Bildschirmausgabe zurückgemeldet.
      */
-    public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) throws Exception
+    public void speicherPersonalarzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) 
     {
         Arzt b = new Arzt( Fachrichtung,  Rang,  Name,  Personalnummer, Kontakt);
         boolean ans = false;
@@ -89,8 +89,8 @@ public class Verwaltung
      * Die Daten werden von Hand eingegeben.
      * Mit der If-Bedingung wird getestet ob diese Schwester schon existiert und wird mit einer Bildschirmausgabe zurückgemeldet.
      */
-    public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt) throws Exception
-    {
+    public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt) 
+{
         Schwester b = new Schwester( Station, Name,  Personalnummer, Kontakt);
         boolean ans = false;
         for(int i=0; i<personalschwester.size(); i++)

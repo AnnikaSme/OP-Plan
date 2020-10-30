@@ -1,4 +1,5 @@
 
+
 /**
  * Die Klasse MainWindowController dient zur Steuerung der Oberfläche.
  * 
@@ -394,7 +395,7 @@ public class MainWindowController extends Main
             {
                 a = Integer.parseInt(Schwesterstation.getText());
                 b = Integer.parseInt(Schwesterpersonalnummer.getText());
-                Main.verwalter.speicherPersonalschwester(a,  Schwestername.getText(),  b, Schwesterkontakt.getText());
+                Main.verwalter.speicherSchwester(a, Schwestername.getText(), b, Schwesterkontakt.getText());
                 Verwaltung();
             }
 
@@ -441,7 +442,7 @@ public class MainWindowController extends Main
 
             }
         }
-
+}
         @FXML
         public void Kardiotechnikerhinzufügen()
         {   int a;
@@ -456,7 +457,7 @@ public class MainWindowController extends Main
                 Kardiotechnikerpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
                 {
                     a = Integer.parseInt(Kardiotechnikerpersonalnummer.getText());
-                    Main.verwalter.speicherPersonalschwester(Kardiotechnikername.getText(),  a, Kardiotechnikerkontakt.getText());
+                    Main.verwalter.speicherKardiotechniker(Kardiotechnikername.getText(),  a, Kardiotechnikerkontakt.getText());
                     Verwaltung();
                 }
 
@@ -496,7 +497,7 @@ public class MainWindowController extends Main
             }
 
         }
-    }
+    
 
     public void ArztlöschenSub()
     {   
