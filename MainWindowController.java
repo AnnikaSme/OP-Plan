@@ -198,6 +198,12 @@ public class MainWindowController extends Main
     
     @FXML
     private Button LöschenKardiotechniker;
+    
+    @FXML
+    private TextField Eintragenpersonalnummer;
+    
+    @FXML
+    private TextField NamePatient;
 
     @FXML
     private Button Zurück;
@@ -599,7 +605,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setHeaderText("Falsche Eingabe im Patientenalterfeld!");
                 alert.setContentText("Bitte nur Zahlen zwischen 0 und 130 eingeben");
 
                 alert.showAndWait();
@@ -609,7 +615,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
+                alert.setHeaderText("Falsche Eingabe im Gesundheitszustandfeld!");
                 alert.setContentText("Bitte nur Buchstaben eingeben");
 
                 alert.showAndWait();
@@ -619,7 +625,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setHeaderText("Falsche Eingabe im Anzahl Ärztefeld!");
                 alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
 
                 alert.showAndWait();
@@ -629,7 +635,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setHeaderText("Falsche Eingabe im Anzahl Schweseternfeld!");
                 alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
 
                 alert.showAndWait();
@@ -639,18 +645,18 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setHeaderText("Falsche Eingabe im Anzahl Kardiotechnikerfeld!");
                 alert.setContentText("Bitte nur die Zahlen 0 oder 1 eingeben");
 
                 alert.showAndWait();
                 OPAnzahlKardiotechniker.clear(); 
             }
-            else if(OPDauer.getText().matches("[1-10]+")==false)
+            else if(OPDauer.getText().matches("[1-9]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
-                alert.setContentText("Bitte nur Zahlen zwischen 1 und 10 eingeben");
+                alert.setHeaderText("Falsche Eingabe im Dauerfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 9 eingeben");
 
                 alert.showAndWait();
                 OPDauer.clear(); 
@@ -659,7 +665,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Fachrichtungsfeld!");
+                alert.setHeaderText("Falsche Eingabe im OP-Typfeld!");
                 alert.setContentText("Bitte nur Buchstaben eingeben");
 
                 alert.showAndWait();
@@ -669,7 +675,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                alert.setHeaderText("Falsche Eingabe im Dringlichkeitsfeld!");
                 alert.setContentText("Bitte nur Zahlen zwischen 1 und 3 eingeben");
 
                 alert.showAndWait();
@@ -866,6 +872,88 @@ public class MainWindowController extends Main
 
             }
         }
+    }
+    
+    @FXML 
+    public void OPDatenlöschen()
+    {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Achtung");
+        alert.setHeaderText("OP Liste wird unwiderruflich gelöscht");
+        alert.setContentText("Bitte bestätigen");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) 
+        {
+              Main.verwalter.OpDatenLoeschen();
+              
+        }
+    }
+    
+    @FXML 
+    public void Eintrage()
+    {
+        int a;
+        
+        if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                a = Integer.parseInt(Eintragenpersonalnummer.getText());
+                Main.verwalter.Eintragen(a);
+
+            }
+            
+            
+    }
+    
+     @FXML
+    public void RaumSub()
+    {   
+        try{
+
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("RaumSub.fxml"));
+            HBox pane = loader.load();
+
+            main.substage = new Stage();
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
+
+            main.substage.setTitle("Raum hinzufügen");
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+            Scene scene = new Scene(pane);
+
+            main.substage.initModality(Modality.APPLICATION_MODAL);
+
+            main.substage.setScene(scene);
+            main.substage.show();
+
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    public void Raum()
+    {
+         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                Main.verwalter.Raumzuweisen(OPNamePatient.getText());
+
+            }
+        
+        
     }
     
      @FXML
