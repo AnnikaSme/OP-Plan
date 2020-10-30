@@ -28,7 +28,7 @@ import java.text.*;
 import java.time.format.*;
 import java.time.*;
 
-public class MainWindowController extends Main
+public class n extends Main
 {   
     public Main main;
 
@@ -533,7 +533,10 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
-
+    @FXML
+    public void Arztlöschen()
+    {
+    
+    }
 }
-
 

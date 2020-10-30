@@ -12,7 +12,7 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="Kardiotechnikerspeichern" layoutX="294.0" layoutY="310.0" mnemonicParsing="false" text="Speichern" />
+            <Button fx:id="Kardiotechnikerspeichern" layoutX="294.0" layoutY="310.0" mnemonicParsing="false" onAction="#Kardiotechnikerhinzufügen" text="Speichern" />
             <VBox layoutX="158.0" layoutY="123.0" prefHeight="200.0" prefWidth="378.0">
                <children>
                   <HBox prefHeight="53.0" prefWidth="378.0">
