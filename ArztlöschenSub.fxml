@@ -16,8 +16,8 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="64.0" layoutY="87.0" prefHeight="25.0" prefWidth="172.0" />
-            <Button layoutX="88.0" layoutY="132.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Arzt löschen">
+            <TextField fx:id="Arztlöschenpersonalnummer" layoutX="64.0" layoutY="87.0" prefHeight="25.0" prefWidth="172.0" />
+            <Button fx:id="LöschenArzt" layoutX="88.0" layoutY="132.0" mnemonicParsing="false" onAction="#Arztlöschen" prefHeight="40.0" prefWidth="123.0" text="Arzt löschen">
                <font>
                   <Font size="18.0" />
                </font>

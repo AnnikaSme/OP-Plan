@@ -176,10 +176,10 @@ public class MainWindowController extends Main
 
     @FXML
     private TextField OPDringlichkeit;
-    
+
     @FXML
     private TextField Arztlöschenpersonalnummer;
-    
+
     @FXML 
     private Button LöschenArzt;
 
@@ -514,10 +514,10 @@ public class MainWindowController extends Main
             HBox pane = loader.load();
 
             main.substage = new Stage();
-            main.substage.setMinHeight(500.00);
-            main.substage.setMinWidth(600.00);
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
 
-            main.substage.setTitle("Analysebericht suchen");
+            main.substage.setTitle("Arzt löschen");
 
             MainWindowController mainWindowController = loader.getController();
             mainWindowController.setMain(main);
@@ -534,6 +534,22 @@ public class MainWindowController extends Main
         }
     }
 
-}
+    @FXML
+    public void Arztlöschen()
+    {
+        int a;
+        if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
+            Main.verwalter.ArztDatenLoeschen(a);
+          
 
+        }
+
+    }
+}
 
