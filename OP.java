@@ -103,11 +103,11 @@ public class OP
     /**
      * Set-Methode für die Anzahl der Ärzte 
      * 
-     * @param  AnzahlAerzte Anzahl der Ärzte kann nicht <2 oder >4 sein
+     * @param  AnzahlAerzte Anzahl der Ärzte kann nicht <1oder >4 sein
      */
     public void setAnzahlAerzte(int AnzahlAerzte)throws Exception
     {
-        if ( AnzahlAerzte < 1|| AnzahlAerzte > 4)   //Es müssen mindestens 2 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
+        if ( AnzahlAerzte < 1|| AnzahlAerzte > 4)   //Es müssen mindestens 1 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
             throw new Exception("Es müssen 1 bis 4 Ärzte bei einer Operation dabei sein.");                                                     //Exception geworfen
         }
@@ -185,7 +185,7 @@ public class OP
      */
     public void setDringlichkeit(int Dringlichkeit)throws Exception
     {
-         if ( Dringlichkeit < 1|| Dringlichkeit > 4)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
+         if ( Dringlichkeit < 1|| Dringlichkeit > 3)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
         { 
             throw new Exception("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception geworfen
         }

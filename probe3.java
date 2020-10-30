@@ -510,18 +510,25 @@ public class MainWindowController extends Main
     public void OPhinzufügen() throws Exception
     {   int a;
         int b;
-        if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() || OPAlterPatient.getText() == null ||OPAlterPatient.getText().trim().isEmpty()  || Arztkontakt.getText() == null || 
-        Arztkontakt.getText().trim().isEmpty() || Arztrang.getText() == null || Arztrang.getText().trim()
-        .isEmpty() || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() ||
-        Arztpersonalnummer.getText() == null || Arztpersonalnummer.getText().trim().isEmpty() )
+        if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() || OPAlterPatient.getText() == null ||OPAlterPatient.getText().trim().isEmpty()
+        || OPGesundheitszustand.getText() == null || OPGesundheitszustand.getText().trim().isEmpty() ||OPAnzahlAerzte.getText() == null || OPAnzahlAerzte.getText().trim().isEmpty() 
+        || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() 
+        ||OPAnzahlSchwester.getText() == null || OPAnzahlSchwester.getText().trim().isEmpty() 
+        ||OPAnzahlKardiotechniker.getText() == null || OPAnzahlKardiotechniker.getText().trim().isEmpty() 
+        ||OPDauer.getText() == null || OPDauer.getText().trim().isEmpty() 
+        ||OPDringlichkeit.getText() == null || OPDringlickeit.getText().trim().isEmpty() )
         {
             warningDaten(); 
         }
         else
         {
-            if(Arztname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Arztkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            Arztrang.getText().replaceAll(" ","").matches("[1-4]+") && Arztfachrichtung.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
-            Arztpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            OPAlterPatient.getText().replaceAll(" ","").matches("[0-150]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
+            OPAnzahlSchwester.getText().replaceAll(" ","").matches("[1-2]+") &&
+            OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
+            OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
+            OPDauer.getText().replaceAll(" ","").matches("[0-9]+")&&
+            OPDringlichkeit.getText().replaceAll(" ","").matches("[1-3]+"))
             {
                 a = Integer.parseInt(Arztrang.getText());
                 b = Integer.parseInt(Arztpersonalnummer.getText());
