@@ -376,6 +376,127 @@ public class MainWindowController extends Main
             }
         }
     }
+    
+    @FXML
+    public void Schwesterhinzufügen()
+    {   int a;
+        int b;
+        if(Schwestername.getText() == null || Schwestername.getText().trim().isEmpty() || Schwesterkontakt.getText() == null || 
+        Schwesterkontakt.getText().trim().isEmpty() || Schwesterstation.getText() == null || Schwesterstation.getText().trim()
+        .isEmpty() || Schwesterpersonalnummer.getText() == null || Schwesterpersonalnummer.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            if(Schwestername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Schwesterkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            Schwesterstation.getText().replaceAll(" ","").matches("[1-4]+") && Schwesterpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            {
+                a = Integer.parseInt(Schwesterstation.getText());
+                b = Integer.parseInt(Schwesterpersonalnummer.getText());
+                Main.verwalter.speicherPersonalschwester(a,  Schwestername.getText(),  b, Schwesterkontakt.getText());
+                Verwaltung();
+            }
+
+            if(Schwestername.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Namensfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Schwestername.clear(); 
+
+            }
+            else if(Schwesterkontakt.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Schwesterkontakt.clear(); 
+            }
+            else if(Schwesterstation.getText().matches("[1-4]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
+
+                alert.showAndWait();
+                Schwesterstation.clear(); 
+            }
+            else if(Schwesterpersonalnummer.getText().matches("[0-9]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                alert.setContentText("Bitte nur Zahlen eingeben");
+
+                alert.showAndWait();
+                Schwesterpersonalnummer.clear();
+
+            }
+        }
+
+        @FXML
+        public void Kardiotechnikerhinzufügen()
+        {   int a;
+            if(Kardiotechnikername.getText() == null || Kardiotechnikername.getText().trim().isEmpty() || Kardiotechnikerkontakt.getText() == null || 
+            Kardiotechnikerkontakt.getText().trim().isEmpty() || Kardiotechnikerpersonalnummer.getText() == null || Kardiotechnikerpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                if(Kardiotechnikername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Kardiotechnikerkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+                Kardiotechnikerpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+                {
+                    a = Integer.parseInt(Kardiotechnikerpersonalnummer.getText());
+                    Main.verwalter.speicherPersonalschwester(Kardiotechnikername.getText(),  a, Kardiotechnikerkontakt.getText());
+                    Verwaltung();
+                }
+
+                if(Kardiotechnikername.getText().matches("[a-zA-Z]+")==false)
+                {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Achtung");
+                    alert.setHeaderText("Falsche Eingabe im Namensfeld!");
+                    alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                    alert.showAndWait();
+                    Kardiotechnikername.clear(); 
+
+                }
+                else if(Kardiotechnikerkontakt.getText().matches("[a-zA-Z]+")==false)
+                {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Achtung");
+                    alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
+                    alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                    alert.showAndWait();
+                    Kardiotechnikerkontakt.clear(); 
+                }
+
+                else if(Kardiotechnikerpersonalnummer.getText().matches("[0-9]+")==false)
+                {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Achtung");
+                    alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                    alert.setContentText("Bitte nur Zahlen eingeben");
+
+                    alert.showAndWait();
+                    Kardiotechnikerpersonalnummer.clear();
+
+                }
+            }
+
+        }
+    }
 
     public void ArztlöschenSub()
     {   
