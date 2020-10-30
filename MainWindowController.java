@@ -514,8 +514,8 @@ public class MainWindowController extends Main
             HBox pane = loader.load();
 
             main.substage = new Stage();
-            main.substage.setMinHeight(500.00);
-            main.substage.setMinWidth(600.00);
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
 
             main.substage.setTitle("Arzt löschen");
 
