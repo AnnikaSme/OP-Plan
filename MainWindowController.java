@@ -318,6 +318,9 @@ public class MainWindowController extends Main
                 a = Integer.parseInt(Arztrang.getText());
                 b = Integer.parseInt(Arztpersonalnummer.getText());
                 Main.verwalter.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
+                Verwaltung();
+                
+                
             }
 
             if(Arztname.getText().matches("[a-zA-Z]+")==false)
