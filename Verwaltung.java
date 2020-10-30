@@ -33,6 +33,7 @@ public class Verwaltung
     {
      return operationsliste;   
     }
+
     public Verwaltung() throws Exception
     {
         raeume = new Raum [5];  //Array mit 6 Speicherplätze für die 6 Räume wird erzeugt.

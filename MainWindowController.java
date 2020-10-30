@@ -186,22 +186,22 @@ public class MainWindowController extends Main
 
     @FXML 
     private Button LöschenArzt;
-    
+
     @FXML
     private TextField Schwesterlöschenpersonalnummer;
-    
+
     @FXML
     private Button LöschenSchwester;
-    
+
     @FXML
     private TextField Kardiotechnikerlöschenpersonalnummer;
-    
+
     @FXML
     private Button LöschenKardiotechniker;
-    
+
     @FXML
     private TextField Eintragenpersonalnummer;
-    
+
     @FXML
     private TextField NamePatient;
 
@@ -210,10 +210,9 @@ public class MainWindowController extends Main
 
     @FXML
     private Button Zurück2;
-    
+
     @FXML
     private Button Raum;
-    
 
     public void setMain(Main main)
     {
@@ -382,7 +381,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            
+
             if(Arztname.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -460,7 +459,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            
+
             if(Schwestername.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -525,7 +524,7 @@ public class MainWindowController extends Main
         }
         else
         {
-           
+
             if(Kardiotechnikername.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -559,7 +558,7 @@ public class MainWindowController extends Main
                 Kardiotechnikerpersonalnummer.clear();
 
             }
-             else if(Kardiotechnikername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Kardiotechnikerkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            else if(Kardiotechnikername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Kardiotechnikerkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
             Kardiotechnikerpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
             {
                 a = Integer.parseInt(Kardiotechnikerpersonalnummer.getText());
@@ -589,7 +588,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            
+
             if(OPNamePatient.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -748,12 +747,12 @@ public class MainWindowController extends Main
             {
                 a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
                 Main.verwalter.ArztDatenLoeschen(a);
-               
+
                 Arztlöschenpersonalnummer.clear(); 
             }
         }
     }
-    
+
     @FXML
     public void SchwesterlöschenSub()
     {   
@@ -782,7 +781,7 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     public void Schwesterlöschen()
     {
@@ -810,7 +809,7 @@ public class MainWindowController extends Main
             }
         }
     }
-    
+
     @FXML
     public void KardiotechnikerlöschenSub()
     {   
@@ -839,7 +838,7 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     public void Kardiotechnikerlöschen()
     {
@@ -867,7 +866,7 @@ public class MainWindowController extends Main
             }
         }
     }
-    
+
     @FXML 
     public void OPDatenlöschen()
     {
@@ -881,42 +880,40 @@ public class MainWindowController extends Main
 
         if (result.isPresent() && result.get() == ButtonType.OK) 
         {
-              Main.verwalter.OpDatenLoeschen();
-              
+            Main.verwalter.OpDatenLoeschen();
+
         }
     }
-    
+
     // @FXML 
     // public void Eintragen()
     // {
-        // int a;
-        
-        // if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
-            // {
-                // warningDaten(); 
-            // }
-            // else
-            // {
-                // a = Integer.parseInt(Eintragenpersonalnummer.getText());
-                // Main.verwalter.Eintragen(a);
+    // int a;
 
-            // }
-            
-           //if(NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
-          //  {
-              //  warningDaten(); 
-          //  }
-          //  else
-            //{
-            //    a = Integer.parseInt(NamePatient.getText());
-            //    Main.verwalter.Eintragen(b);
-
-            //}
-            
-            
+    // if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
+    // {
+    // warningDaten(); 
     // }
-    
-     @FXML
+    // else
+    // {
+    // a = Integer.parseInt(Eintragenpersonalnummer.getText());
+    // Main.verwalter.Eintragen(a);
+
+    // }
+
+    //if(NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
+    //  {
+    //  warningDaten(); 
+    //  }
+    //  else
+    //{
+    //    a = Integer.parseInt(NamePatient.getText());
+    //    Main.verwalter.Eintragen(b);
+
+    //}
+
+    // }
+    @FXML
     public void RaumSub()
     {   
         try{
@@ -944,39 +941,39 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     public void Raum()
     {
-         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
-            {
-                warningDaten(); 
-            }
-            else
-            {
-                Main.verwalter.Raumzuweisen(OPNamePatient.getText());
+        if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            Main.verwalter.Raumzuweisen(OPNamePatient.getText());
 
-            }
-        
-        
+        }
+
     }
-    
-    @FXML
-    public void OPsanzeigen()
-    {
-        Main.verwalter.GetOPListe();
+
+    // @FXML
+    // public void OPsanzeigen()
+    // {
+        // Main.verwalter.GetOPListe();
+
+        // Main.verwalter.setItem(operationsliste.get(1));
+        // Main.verwalter.setItem(operationsliste.get(2));
         
-        ListView listView = new ListView();
+
+        // ListView listView = new ListView();
                 
-        listView.getItems().add("a");
-        listView.getItems().add("Item 2");
-        listView.getItems().add("Item 3");
-        listView.getItems().add("Item 1");
-        listView.getItems().add("Item 2");
-        listView.getItems().add("Item 3");
-         
-    }
-   
-  
-}
+        // listView.getItems().add("Item 2");
+        // listView.getItems().add("Item 3");
+        // listView.getItems().add("Item 1");
+        // listView.getItems().add("Item 2");
+        // listView.getItems().add("Item 3");
 
+    // }
+
+}
