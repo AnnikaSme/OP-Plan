@@ -376,17 +376,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            if(Arztname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Arztkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            Arztrang.getText().replaceAll(" ","").matches("[1-4]+") && Arztfachrichtung.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
-            Arztpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
-            {
-                a = Integer.parseInt(Arztrang.getText());
-                b = Integer.parseInt(Arztpersonalnummer.getText());
-                Main.verwalter.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
-                Verwaltung();
-
-            }
-
+            
             if(Arztname.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -439,6 +429,16 @@ public class MainWindowController extends Main
                 Arztpersonalnummer.clear();
 
             }
+            else if(Arztname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Arztkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            Arztrang.getText().replaceAll(" ","").matches("[1-4]+") && Arztfachrichtung.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
+            Arztpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            {
+                a = Integer.parseInt(Arztrang.getText());
+                b = Integer.parseInt(Arztpersonalnummer.getText());
+                Main.verwalter.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
+                Verwaltung();
+
+            }
         }
     }
 
@@ -454,16 +454,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            if(Schwestername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Schwesterkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            Schwesterstation.getText().replaceAll(" ","").matches("[1-4]+") && Schwesterpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
-            {
-                a = Integer.parseInt(Schwesterstation.getText());
-                b = Integer.parseInt(Schwesterpersonalnummer.getText());
-                Main.verwalter.speicherSchwester(a, Schwestername.getText(), b, Schwesterkontakt.getText());
-
-                Verwaltung();
-            }
-
+            
             if(Schwestername.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -506,6 +497,15 @@ public class MainWindowController extends Main
                 Schwesterpersonalnummer.clear();
 
             }
+            else if(Schwestername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Schwesterkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            Schwesterstation.getText().replaceAll(" ","").matches("[1-4]+") && Schwesterpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            {
+                a = Integer.parseInt(Schwesterstation.getText());
+                b = Integer.parseInt(Schwesterpersonalnummer.getText());
+                Main.verwalter.speicherSchwester(a, Schwestername.getText(), b, Schwesterkontakt.getText());
+
+                Verwaltung();
+            }
         }
     }
 
@@ -519,14 +519,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            if(Kardiotechnikername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Kardiotechnikerkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            Kardiotechnikerpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
-            {
-                a = Integer.parseInt(Kardiotechnikerpersonalnummer.getText());
-                Main.verwalter.speicherKardiotechniker(Kardiotechnikername.getText(),  a, Kardiotechnikerkontakt.getText());
-                Verwaltung();
-            }
-
+           
             if(Kardiotechnikername.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -560,6 +553,13 @@ public class MainWindowController extends Main
                 Kardiotechnikerpersonalnummer.clear();
 
             }
+             else if(Kardiotechnikername.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Kardiotechnikerkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            Kardiotechnikerpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
+            {
+                a = Integer.parseInt(Kardiotechnikerpersonalnummer.getText());
+                Main.verwalter.speicherKardiotechniker(Kardiotechnikername.getText(),  a, Kardiotechnikerkontakt.getText());
+                Verwaltung();
+            }
         }
 
     }
@@ -583,24 +583,7 @@ public class MainWindowController extends Main
         }
         else
         {
-            if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            OPAlterPatient.getText().replaceAll(" ","").matches("[0-130]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
-            OPAnzahlSchwestern.getText().replaceAll(" ","").matches("[1-4]+") &&
-            OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
-            OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
-            OPDauer.getText().replaceAll(" ","").matches("[1-10]+")&&
-            OPDringlichkeit.getText().replaceAll(" ","").matches("[1-3]+"))
-            {
-                a = Integer.parseInt(OPAlterPatient.getText());
-                b = Integer.parseInt(OPAnzahlAerzte.getText());
-                c = Integer.parseInt(OPAnzahlSchwestern.getText());
-                d = Integer.parseInt(OPAnzahlKardiotechniker.getText());
-                e = Integer.parseInt(OPDauer.getText());
-                f = Integer.parseInt(OPDringlichkeit.getText());
-                Main.verwalter.speicherOP(OPNamePatient.getText(),a, OPGesundheitszustand.getText(),  b, c, d, e, OPTyp.getText(), f);
-                Verwaltung();
-            }
-
+            
             if(OPNamePatient.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -612,7 +595,7 @@ public class MainWindowController extends Main
                 OPNamePatient.clear(); 
 
             }
-            else if(OPAlterPatient.getText().matches("[0-130]+")==false)
+            else if(OPAlterPatient.getText().matches("[0-9]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
@@ -692,6 +675,23 @@ public class MainWindowController extends Main
                 alert.showAndWait();
                 OPDringlichkeit.clear();
 
+            }
+            else if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            OPAlterPatient.getText().replaceAll(" ","").matches("[0-130]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
+            OPAnzahlSchwestern.getText().replaceAll(" ","").matches("[1-4]+") &&
+            OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
+            OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
+            OPDauer.getText().replaceAll(" ","").matches("[1-10]+")&&
+            OPDringlichkeit.getText().replaceAll(" ","").matches("[1-3]+"))
+            {
+                a = Integer.parseInt(OPAlterPatient.getText());
+                b = Integer.parseInt(OPAnzahlAerzte.getText());
+                c = Integer.parseInt(OPAnzahlSchwestern.getText());
+                d = Integer.parseInt(OPAnzahlKardiotechniker.getText());
+                e = Integer.parseInt(OPDauer.getText());
+                f = Integer.parseInt(OPDringlichkeit.getText());
+                Main.verwalter.speicherOP(OPNamePatient.getText(),a, OPGesundheitszustand.getText(),  b, c, d, e, OPTyp.getText(), f);
+                Verwaltung();
             }
         }
     }

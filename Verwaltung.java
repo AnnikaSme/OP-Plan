@@ -52,7 +52,7 @@ public class Verwaltung
 
     // public static void erstelleVerwaltung() throws Exception
     // {
-        // verwalter = new Verwaltung();
+    // verwalter = new Verwaltung();
 
     // }
 
@@ -90,7 +90,7 @@ public class Verwaltung
      * Mit der If-Bedingung wird getestet ob diese Schwester schon existiert und wird mit einer Bildschirmausgabe zurückgemeldet.
      */
     public void speicherSchwester(int Station, String Name, int Personalnummer, String Kontakt) 
-{
+    {
         Schwester b = new Schwester( Station, Name,  Personalnummer, Kontakt);
         boolean ans = false;
         for(int i=0; i<personalschwester.size(); i++)
@@ -196,7 +196,6 @@ public class Verwaltung
         }
     }
 
-       
     public void SchwesterDatenLoeschen(int Personalnummer) //Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
@@ -291,7 +290,7 @@ public class Verwaltung
      * In der Methode Eintragen wird mit dem Eintragen einer Person in einer OP verwaltet. 
      * Zurückgegeben werden die Daten des Personals, der OP, der Zeit und des Raums in Form eines Strings.
      **/
-    public void Eintragen (int Personalnummer, String NamePatient) throws Exception
+    public void Eintragen (int Personalnummer, String NamePatient) 
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
@@ -303,7 +302,7 @@ public class Verwaltung
             i++;
             if(i>= personalarzt.size())
             {
-                throw new Exception("Dieser Arzt existiert nicht.");
+                throw new IllegalArgumentException("Dieser Arzt existiert nicht.");
             }
         }
         if (i<personalarzt.size())
@@ -324,7 +323,7 @@ public class Verwaltung
             }
             else
             {
-                System.out.println("Diese OP existiert noch nicht");
+                throw new IllegalArgumentException("Diese OP existiert noch nicht");
             }
         }
         else 
@@ -335,7 +334,7 @@ public class Verwaltung
                 i++;
                 if(i>= personalschwester.size())
                 {
-                    throw new Exception("Dieser Schwester existiert nicht.");
+                    throw new IllegalArgumentException("Dieser Schwester existiert nicht.");
                 }
             }
 
@@ -357,7 +356,7 @@ public class Verwaltung
                 }
                 else
                 {
-                    System.out.println("Diese OP existiert noch nicht");
+                    throw new IllegalArgumentException("Diese OP existiert noch nicht");
                 }
             }
             else
@@ -368,7 +367,7 @@ public class Verwaltung
                     i++;
                     if(i>= personalkardiotechniker.size())
                     {
-                        throw new Exception("Dieser Kardiotechniker existiert nicht");
+                        throw new IllegalArgumentException("Dieser Kardiotechniker existiert nicht");
                     }
                 }
 
@@ -390,13 +389,13 @@ public class Verwaltung
                     }
                     else
                     {
-                        System.out.println("Diese OP existiert noch nicht");
+                        throw new IllegalArgumentException ("Diese OP existiert noch nicht");
                     }
                 }
 
                 else
                 {
-                    System.out.println("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+                    throw new IllegalArgumentException("Diese Personalnummer ist nicht in der Datenbank");      
                 }
             }
         }
