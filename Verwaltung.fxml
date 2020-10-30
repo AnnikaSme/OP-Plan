@@ -13,7 +13,7 @@
             <Button fx:id="OPanlegen" layoutX="259.0" layoutY="81.0" mnemonicParsing="false" onAction="#OP" prefHeight="86.0" prefWidth="122.0" text="OP anlegen" />
             <Button fx:id="DatenExportieren" layoutX="455.0" layoutY="81.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Daten exportieren" />
             <Button fx:id="OPloeschen" layoutX="455.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="OP löschen" />
-            <Button fx:id="Raumzuweisen" layoutX="259.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Raum zuweisen" />
+            <Button fx:id="Raumzuweisen" layoutX="259.0" layoutY="196.0" mnemonicParsing="false" onAction="#RaumSub" prefHeight="86.0" prefWidth="122.0" text="Raum zuweisen" />
             <MenuButton fx:id="Personalanlegen" layoutX="56.0" layoutY="74.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="141.0" text="Personal hinzufügen" AnchorPane.rightAnchor="442.66666666666663">
               <items>
                 <MenuItem fx:id="Arzt" mnemonicParsing="false" onAction="#Arzt" onMenuValidation="#Arzt" text="Arzt" />
