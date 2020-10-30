@@ -396,6 +396,7 @@ public class MainWindowController extends Main
                 a = Integer.parseInt(Schwesterstation.getText());
                 b = Integer.parseInt(Schwesterpersonalnummer.getText());
                 Main.verwalter.speicherSchwester(a, Schwestername.getText(), b, Schwesterkontakt.getText());
+         
                 Verwaltung();
             }
 
