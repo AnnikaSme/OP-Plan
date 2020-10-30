@@ -204,6 +204,9 @@ public class MainWindowController extends Main
 
     @FXML
     private TextField NamePatient;
+    
+    @FXML
+    private Button EintragenSpeichern;
 
     @FXML
     private Button Zurück;
@@ -885,32 +888,35 @@ public class MainWindowController extends Main
         }
     }
 
-    // @FXML 
-    // public void Eintragen()
-    // {
-    // int a;
+    @FXML 
+    public void OPEintragen()
+    {
+        int a;
+        int b;
 
-    // if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
-    // {
-    // warningDaten(); 
-    // }
-    // else
-    // {
-    // a = Integer.parseInt(Eintragenpersonalnummer.getText());
-    // Main.verwalter.Eintragen(a);
+        if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            a = Integer.parseInt(Eintragenpersonalnummer.getText());
+            Main.verwalter.Eintragen(a);
 
-    // }
+        }
 
-    //if(NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
-    //  {
-    //  warningDaten(); 
-    //  }
-    //  else
-    //{
-    //    a = Integer.parseInt(NamePatient.getText());
-    //    Main.verwalter.Eintragen(b);
+        if(NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            b = Integer.parseInt(NamePatient.getText());
+            Main.verwalter.Eintragen(b);
 
-    //}
+        }
+
+    }
 
     // }
     @FXML
