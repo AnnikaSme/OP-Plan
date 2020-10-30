@@ -894,27 +894,42 @@ public class MainWindowController extends Main
         int a;
         int b;
 
-        if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
+        if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty()||NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
         {
             warningDaten(); 
         }
         else
         {
+             if(Eintragenpersonalnummer.getText().matches("[1-9]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                alert.setContentText("Bitte nur Zahlen eingeben");
+
+                alert.showAndWait();
+                Eintragenpersonalnummer.clear(); 
+            }
+            
+             else if(NamePatient.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Patientennamensfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                NamePatient.clear(); 
+            }
+            
+            
+            
             a = Integer.parseInt(Eintragenpersonalnummer.getText());
-            Main.verwalter.Eintragen(a);
+            Main.verwalter.Eintragen(a, NamePatient.getText());
 
         }
 
-        if(NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
-        {
-            warningDaten(); 
-        }
-        else
-        {
-            b = Integer.parseInt(NamePatient.getText());
-            Main.verwalter.Eintragen(b);
-
-        }
+        
 
     }
 
