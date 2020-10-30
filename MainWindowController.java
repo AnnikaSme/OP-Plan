@@ -182,6 +182,9 @@ public class MainWindowController extends Main
 
     @FXML 
     private Button LöschenArzt;
+    
+    @FXML
+    private Button Zurück;
 
     public void setMain(Main main)
     {
@@ -230,7 +233,13 @@ public class MainWindowController extends Main
         }
 
     }
-
+    
+    @FXML
+    public void Zurück() throws Exception
+    {
+        main.mainWindow();
+    }
+    
     @FXML
     public void Arzt()
     {

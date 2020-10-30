@@ -1,5 +1,4 @@
 
-
 /**
  * Die Klasse MainWindowController dient zur Steuerung der Oberfläche.
  * 
@@ -177,10 +176,10 @@ public class MainWindowController extends Main
 
     @FXML
     private TextField OPDringlichkeit;
-    
+
     @FXML
     private TextField Arztlöschenpersonalnummer;
-    
+
     @FXML 
     private Button LöschenArzt;
 
@@ -505,7 +504,7 @@ public class MainWindowController extends Main
         }
 
     }
-    
+
     @FXML
     public void OPhinzufügen() throws Exception
     {   int a;
@@ -615,10 +614,10 @@ public class MainWindowController extends Main
             main.substage.setScene(scene);
             main.substage.show();
 
-        } 
-        catch(IOException e){
-            e.printStackTrace();
-        }
+    } 
+    catch(IOException e){
+        e.printStackTrace();
     }
+}
 
 // }

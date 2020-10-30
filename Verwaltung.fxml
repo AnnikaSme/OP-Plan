@@ -28,6 +28,7 @@
                   <MenuItem fx:id="KardiotechnikerLö" mnemonicParsing="false" text="Kardiotechniker" />
               </items>
             </MenuButton>
+            <Button fx:id="Zurück" layoutX="551.0" layoutY="27.0" mnemonicParsing="false" onAction="#Zurück" text="Zurück" />
          </children></AnchorPane>
   </children>
 </VBox>
