@@ -182,10 +182,10 @@ public class MainWindowController extends Main
 
     @FXML 
     private Button LöschenArzt;
-    
+
     @FXML
     private Button Zurück;
-    
+
     @FXML
     private Button Zurück2;
 
@@ -236,19 +236,19 @@ public class MainWindowController extends Main
         }
 
     }
-    
+
     @FXML
     public void Zurück() throws Exception
     {
         main.mainWindow();
     }
-    
+
     @FXML
     public void Zurück2() 
     {
         Verwaltung();
     }
-    
+
     @FXML
     public void Arzt()
     {
@@ -311,7 +311,7 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     public void OP()
     {
@@ -543,7 +543,7 @@ public class MainWindowController extends Main
         }
 
     }
-    
+
     @FXML
     public void OPhinzufügen() throws Exception
     {   int a;
@@ -710,9 +710,9 @@ public class MainWindowController extends Main
     @FXML
     public void Arztlöschen()
     {
-        
+
         int a;
-        
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Achtung");
         alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
@@ -722,19 +722,51 @@ public class MainWindowController extends Main
 
         if (result.isPresent() && result.get() == ButtonType.OK) 
         {
-        if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
-        {
-            warningDaten(); 
-        }
-        else
-        {
-            a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
-            Main.verwalter.ArztDatenLoeschen(a);
-          
+            if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
+                Main.verwalter.ArztDatenLoeschen(a);
 
+            }
         }
-
     }
-}
+     @FXML
+    public void RaumSub()
+    {   
+        try{
+
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("RaumSub.fxml"));
+            HBox pane = loader.load();
+
+            main.substage = new Stage();
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
+
+            main.substage.setTitle("Raum hinzufügen");
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+            Scene scene = new Scene(pane);
+
+            main.substage.initModality(Modality.APPLICATION_MODAL);
+
+            main.substage.setScene(scene);
+            main.substage.show();
+
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void Raum()
+    {
+        Main.verwalter.Raumzuweisen(OPNamePatient.getText());
+    }
+    
 }
 

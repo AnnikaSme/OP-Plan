@@ -110,5 +110,6 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Button fx:id="Zurück2" layoutX="491.0" layoutY="32.0" mnemonicParsing="false" onAction="#Zurück2" text="Zurück" />
    </children>
 </AnchorPane>
