@@ -892,147 +892,72 @@ public class MainWindowController extends Main
         }
     }
     
-    @FXML 
-    public void Eintrage()
-    {
-        int a;
+    // @FXML 
+    // public void Eintragen()
+    // {
+        // int a;
         
-        if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
-            {
-                warningDaten(); 
-            }
-            else
-            {
-                a = Integer.parseInt(Eintragenpersonalnummer.getText());
-                Main.verwalter.Eintragen(a);
-
-            }
-            
-            
-    }
-    
-     @FXML
-    public void RaumSub()
-    {   
-        try{
-
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("RaumSub.fxml"));
-            HBox pane = loader.load();
-
-            main.substage = new Stage();
-            main.substage.setMinHeight(200.00);
-            main.substage.setMinWidth(300.00);
-
-            main.substage.setTitle("Raum hinzufügen");
-
-            MainWindowController mainWindowController = loader.getController();
-            mainWindowController.setMain(main);
-            Scene scene = new Scene(pane);
-
-            main.substage.initModality(Modality.APPLICATION_MODAL);
-
-            main.substage.setScene(scene);
-            main.substage.show();
-
-        } 
-        catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-    
-    @FXML
-    public void Raum()
-    {
-         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
-            {
-                warningDaten(); 
-            }
-            else
-            {
-                Main.verwalter.Raumzuweisen(OPNamePatient.getText());
-
-            }
-        
-        
-    }
-    
-     @FXML
-    public void RaumSub()
-    {   
-        try{
-
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("RaumSub.fxml"));
-            HBox pane = loader.load();
-
-            main.substage = new Stage();
-            main.substage.setMinHeight(200.00);
-            main.substage.setMinWidth(300.00);
-
-            main.substage.setTitle("Raum hinzufügen");
-
-            MainWindowController mainWindowController = loader.getController();
-            mainWindowController.setMain(main);
-            Scene scene = new Scene(pane);
-
-            main.substage.initModality(Modality.APPLICATION_MODAL);
-
-            main.substage.setScene(scene);
-            main.substage.show();
-
-        } 
-        catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-    
-    @FXML
-    public void Raum()
-    {
-         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
-            {
-                warningDaten(); 
-            }
-            else
-            {
-                Main.verwalter.Raumzuweisen(OPNamePatient.getText());
-
-            }
-        
-    }
-    @FXML
-    public void ListenExportieren()
-    {
-        // Path f = Paths.get("C:\\ChemischeAnalysedatenbank\\Analyseberichte");
-        // if (!Files.exists(f)) 
-        // {
-            // try 
+        // if(Eintragenpersonalnummer.getText() == null || Eintragenpersonalnummer.getText().trim().isEmpty() )
             // {
-                // Files.createDirectories(f);
-            // } 
-            // catch (IOException e) 
-            // {
-                // e.printStackTrace();    
+                // warningDaten(); 
             // }
-        // }
+            // else
+            // {
+                // a = Integer.parseInt(Eintragenpersonalnummer.getText());
+                // Main.verwalter.Eintragen(a);
 
-         // FileChooser filechooser = new FileChooser();
-         // filechooser.setTitle("Speicherort auswählen");
+            // }
+            
+            
+    // }
+    
+     @FXML
+    public void RaumSub()
+    {   
+        try{
 
-         // filechooser.setInitialDirectory(new File(System.getProperty("user.home")));
-         // filechooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Excel (*.xlsx)", "*.xlsx"));
-         // File file = filechooser.showSaveDialog(Main.primaryStage);
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("RaumSub.fxml"));
+            HBox pane = loader.load();
 
-        // if (file == null)
-        // {
+            main.substage = new Stage();
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
 
-        // }
-        // else
-        // {
-            // String change = new String(file.getPath());
-            // String berichtnr = BerichtNR.getText().replace("Analysebericht Nr. ", "");
-            // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren2(change.replaceAll(file.getName(), berichtnr + file.getName()));
-            // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren(change.replaceAll(file.getName(), berichtnr + file.getName()));
-        // }
+            main.substage.setTitle("Raum hinzufügen");
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+            Scene scene = new Scene(pane);
+
+            main.substage.initModality(Modality.APPLICATION_MODAL);
+
+            main.substage.setScene(scene);
+            main.substage.show();
+
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
+    
+    @FXML
+    public void Raum()
+    {
+         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                Main.verwalter.Raumzuweisen(OPNamePatient.getText());
+
+            }
+        
+        
+    }
+    
+   
+   
+  
 }
 
