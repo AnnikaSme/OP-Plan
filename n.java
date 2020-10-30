@@ -536,6 +536,18 @@ public class n extends Main
     @FXML
     public void Arztlöschen()
     {
+        int a;
+        if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
+            Main.verwalter.ArztDatenLoeschen(a);
+            Verwaltung();
+            
+        }
     
     }
 }
