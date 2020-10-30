@@ -46,38 +46,34 @@ public class MainWindowController extends Main
     private Text OPPlanungssystem;
 
     @FXML
-    private Button PersonalEintragen; // um sich für einen op einzutragen
+    private Button PersonalEintragen; 
+    
+    @FXML
+    private TextField Personalnummer; 
+    @FXML
+    private Button OPListe; 
 
     @FXML
-    private TextField Personalnummer; // damit sucht das system die gesamten daten eines personals und trägt sie in die gewünschte op
+    private Text Operationen; 
 
     @FXML
-    private Button OPListe; // Button um zur OP liste zu kommen
-
-    @FXML
-    private Text Operationen; // OPListe
-
-    @FXML
-    private Button OPanlegen; // Button um eine neue OP anzulegen
-
-    // textfelder um Op anzulegen 
-
+    private Button OPanlegen; 
     @FXML
     private Button DatenExportieren;
 
     @FXML
     private MenuButton Personalanlegen;
 
-    // Textfelder um Personal anzulegen
+  
 
     @FXML
     private MenuButton Personalloeschen; 
 
     @FXML
-    private TextField Personalnummerloeschen; // Personalnummer wird eingegeben und Daten des personals werden gesucht und gelöscht
+    private TextField Personalnummerloeschen; 
 
     @FXML
-    private Button OPloeschen; // Op wird gelöscht
+    private Button OPloeschen;
 
     @FXML
     private TextField OPeingeben;  
