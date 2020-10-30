@@ -85,7 +85,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="OPDauer" />
-                  <Label prefHeight="18.0" prefWidth="88.0" text=" 1-10 Stunden" />
+                  <Label prefHeight="18.0" prefWidth="88.0" text=" 1-9 Stunden" />
                </children>
             </HBox>
             <HBox prefHeight="30.0" prefWidth="434.0">
