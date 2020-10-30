@@ -962,8 +962,18 @@ public class MainWindowController extends Main
     }
     
     @FXML
-    public void ListenExportieren()
+    public void OPsanzeigen()
     {
+        Main.verwalter.GetOPListe();
+        
+        ListView listView = new ListView();
+                
+        listView.getItems().add("a");
+        listView.getItems().add("Item 2");
+        listView.getItems().add("Item 3");
+        listView.getItems().add("Item 1");
+        listView.getItems().add("Item 2");
+        listView.getItems().add("Item 3");
          
     }
    

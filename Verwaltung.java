@@ -21,13 +21,18 @@ public class Verwaltung
     private ArrayList<OP>operationsliste;
     private ArrayList[] personal;
     //public static Verwaltung verwalter;
-
+   
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert.
      * Er erzeugt vier ArryList für die Daten des Arzts, der Schwester, des Kardiotechniker und der OP.
      * Das Array personal beinhaltet die ArrayLists personalarzt, personalschwester, personalkardiotechniker.
      *
      */
+    
+    public ArrayList GetOPListe()
+    {
+     return operationsliste;   
+    }
     public Verwaltung() throws Exception
     {
         raeume = new Raum [5];  //Array mit 6 Speicherplätze für die 6 Räume wird erzeugt.
@@ -47,6 +52,9 @@ public class Verwaltung
         personal[0] = personalarzt;
         personal[1] = personalschwester;
         personal[2] = personalkardiotechniker;
+        
+        
+      
 
     }
 
