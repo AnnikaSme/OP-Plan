@@ -573,8 +573,7 @@ public class MainWindowController extends Main
         int e;
         int f;
         if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() || OPAlterPatient.getText() == null ||OPAlterPatient.getText().trim().isEmpty()
-        || OPGesundheitszustand.getText() == null || OPGesundheitszustand.getText().trim().isEmpty() ||OPAnzahlAerzte.getText() == null || OPAnzahlAerzte.getText().trim().isEmpty() 
-        || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() 
+        || OPGesundheitszustand.getText() == null || OPGesundheitszustand.getText().trim().isEmpty() ||OPAnzahlAerzte.getText() == null || OPAnzahlAerzte.getText().trim().isEmpty()
         ||OPAnzahlSchwestern.getText() == null || OPAnzahlSchwestern.getText().trim().isEmpty() 
         ||OPAnzahlKardiotechniker.getText() == null || OPAnzahlKardiotechniker.getText().trim().isEmpty() 
         ||OPDauer.getText() == null || OPDauer.getText().trim().isEmpty() 
@@ -585,7 +584,7 @@ public class MainWindowController extends Main
         else
         {
             if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            OPAlterPatient.getText().replaceAll(" ","").matches("[0-150]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
+            OPAlterPatient.getText().replaceAll(" ","").matches("[0-130]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
             OPAnzahlSchwestern.getText().replaceAll(" ","").matches("[1-4]+") &&
             OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
             OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
@@ -600,7 +599,6 @@ public class MainWindowController extends Main
                 f = Integer.parseInt(OPDringlichkeit.getText());
                 Main.verwalter.speicherOP(OPNamePatient.getText(),a, OPGesundheitszustand.getText(),  b, c, d, e, OPTyp.getText(), f);
                 Verwaltung();
-
             }
 
             if(OPNamePatient.getText().matches("[a-zA-Z]+")==false)
@@ -913,10 +911,10 @@ public class MainWindowController extends Main
             }
         
     }
-    // @FXML
-    // public void ListenExportieren()
-    // {
-        // // Path f = Paths.get("C:\\ChemischeAnalysedatenbank\\Analyseberichte");
+    @FXML
+    public void ListenExportieren()
+    {
+        // Path f = Paths.get("C:\\ChemischeAnalysedatenbank\\Analyseberichte");
         // if (!Files.exists(f)) 
         // {
             // try 
@@ -936,17 +934,17 @@ public class MainWindowController extends Main
          // filechooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Excel (*.xlsx)", "*.xlsx"));
          // File file = filechooser.showSaveDialog(Main.primaryStage);
 
-        // // if (file == null)
-        // // {
+        // if (file == null)
+        // {
 
-        // // }
-        // // else
-        // // {
-            // // String change = new String(file.getPath());
-            // // String berichtnr = BerichtNR.getText().replace("Analysebericht Nr. ", "");
-            // // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren2(change.replaceAll(file.getName(), berichtnr + file.getName()));
-            // // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren(change.replaceAll(file.getName(), berichtnr + file.getName()));
-        // // }
-    // }
+        // }
+        // else
+        // {
+            // String change = new String(file.getPath());
+            // String berichtnr = BerichtNR.getText().replace("Analysebericht Nr. ", "");
+            // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren2(change.replaceAll(file.getName(), berichtnr + file.getName()));
+            // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren(change.replaceAll(file.getName(), berichtnr + file.getName()));
+        // }
+    }
 }
 
