@@ -522,6 +522,140 @@ public class MainWindowController extends Main
         }
 
     }
+    
+    @FXML
+    public void OPhinzufügen() throws Exception
+    {   int a;
+        int b;
+        int c;
+        int d;
+        int e;
+        int f;
+        if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() || OPAlterPatient.getText() == null ||OPAlterPatient.getText().trim().isEmpty()
+        || OPGesundheitszustand.getText() == null || OPGesundheitszustand.getText().trim().isEmpty() ||OPAnzahlAerzte.getText() == null || OPAnzahlAerzte.getText().trim().isEmpty() 
+        || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() 
+        ||OPAnzahlSchwester.getText() == null || OPAnzahlSchwester.getText().trim().isEmpty() 
+        ||OPAnzahlKardiotechniker.getText() == null || OPAnzahlKardiotechniker.getText().trim().isEmpty() 
+        ||OPDauer.getText() == null || OPDauer.getText().trim().isEmpty() 
+        ||OPDringlichkeit.getText() == null || OPDringlickeit.getText().trim().isEmpty() )
+        {
+            warningDaten(); 
+        }
+        else
+        {
+            if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
+            OPAlterPatient.getText().replaceAll(" ","").matches("[0-150]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
+            OPAnzahlSchwester.getText().replaceAll(" ","").matches("[1-4]+") &&
+            OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
+            OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
+            OPDauer.getText().replaceAll(" ","").matches("[1-10]+")&&
+            OPDringlichkeit.getText().replaceAll(" ","").matches("[1-3]+"))
+            {
+                a = Integer.parseInt(OPAlterPatient.getText());
+                b = Integer.parseInt(OPAnzahlAerzte.getText());
+                c = Integer.parseInt(OPAnzahlSchwester.getText());
+                d = Integer.parseInt(OPAnzahlKardiotechniker.getText());
+                e = Integer.parseInt(OPDauer.getText());
+                f = Integer.parseInt(OPDringlichkeit.getText());
+                Main.verwalter.speicherPersonalarzt(OPNamePatient.getText(),a, OPGesundheitszustand.getText(),  b, c, d, e, OPTyp.getText(), f);
+                Verwaltung();
+
+            }
+
+            if(OPNamePatient.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Namensfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                OPNamePatient.clear(); 
+
+            }
+            else if(OPAlterPatient.getText().matches("[0-130]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 0 und 130 eingeben");
+
+                alert.showAndWait();
+                OPAlterPatient.clear(); 
+            }
+            else if(OPGesundheitszustand.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                OPGesundheitszustand.clear(); 
+            }
+            else if(OPAnzahlAerzte.getText().matches("[1-4]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
+
+                alert.showAndWait();
+                OPAnzahlAerzte.clear(); 
+            }
+            else if(OPAnzahlSchwester.getText().matches("[1-4]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
+
+                alert.showAndWait();
+                OPAnzahlSchwester.clear(); 
+            }
+            else if(OPAnzahlKardiotechniker.getText().matches("[0-1]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur die Zahlen 0 oder 1 eingeben");
+
+                alert.showAndWait();
+                OPAnzahlKardiotechniker.clear(); 
+            }
+            else if(OPDauer.getText().matches("[1-10]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 10 eingeben");
+
+                alert.showAndWait();
+                OPDauer.clear(); 
+            }
+            else if(OPTyp.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Fachrichtungsfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                OPTyp.clear(); 
+            }
+            else if(OPDringlichkeit.getText().matches("[1-3]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 3 eingeben");
+
+                alert.showAndWait();
+                OPDringlichkeit.clear();
+
+            }
+        }
+    }
 
     @FXML
     public void ArztlöschenSub()
