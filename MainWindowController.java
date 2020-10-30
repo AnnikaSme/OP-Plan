@@ -185,6 +185,9 @@ public class MainWindowController extends Main
     
     @FXML
     private Button Zurück;
+    
+    @FXML
+    private Button Zurück2;
 
     public void setMain(Main main)
     {
@@ -238,6 +241,12 @@ public class MainWindowController extends Main
     public void Zurück() throws Exception
     {
         main.mainWindow();
+    }
+    
+    @FXML
+    public void Zurück2() 
+    {
+        Verwaltung();
     }
     
     @FXML

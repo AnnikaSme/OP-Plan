@@ -10,7 +10,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane fx:id="Zurück2" maxHeight="-1.0" maxWidth="-1.0" onDragDetected="#Zurück2" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <Button fx:id="Schwesterspeichern" layoutX="294.0" layoutY="282.0" mnemonicParsing="false" onAction="#Schwesterhinzufügen" text="Speichern" />
             <Label layoutX="264.0" layoutY="29.0" prefHeight="64.0" prefWidth="128.0" text="Schwester">
@@ -62,6 +62,7 @@
                   </HBox>
                </children>
             </VBox>
+            <Button layoutX="530.0" layoutY="36.0" mnemonicParsing="false" onAction="#Zurück2" text="Zurück" />
          </children>
     </AnchorPane>
   </children>
