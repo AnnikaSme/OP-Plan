@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
+   <children>
+      <Button layoutX="257.0" layoutY="357.0" mnemonicParsing="false" text="Speichern" />
+      <VBox layoutX="83.0" layoutY="59.0" prefHeight="297.0" prefWidth="434.0">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Patientenname">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPNamePatient" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Patientenalter">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPAlterPatient" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Gesundheitszustand">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPGesundheitszustand" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Anzahl Ärzte">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPAnzahlAerzte" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Anzahl Schwestern">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPAnzahlSchwestern" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Anzahl Kardiotechniker">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPAnzahlKardiotechniker" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Dauer">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPDauer" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="OP Typ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPTyp" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="434.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="192.0" text="Dringlichkeit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OPDringlichkeit" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="259.0" layoutY="14.0" text="OP">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

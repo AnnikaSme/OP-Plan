@@ -20,10 +20,6 @@ import java.awt.Frame;
 import java.util.*;
 import java.util.*;
 import java.io.File;
-import org.apache.poi.xssf.usermodel.*;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.commons.collections4.*;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -110,6 +106,9 @@ public class MainWindowController
 
     @FXML 
     private Button Kardiotechnikerspeichern;
+    
+    @FXML
+    private Button OPspeichern;
 
     @FXML
     private TextField Arztname;
@@ -128,6 +127,54 @@ public class MainWindowController
     
     @FXML
     private Alert alert1;
+    
+    @FXML
+    private TextField Schwestername;
+    
+    @FXML
+    private TextField Schwesterpersonalnummer;
+    
+    @FXML
+    private TextField Schwesterstation;
+    
+    @FXML
+    private TextField Schwesterkontakt;
+    
+    @FXML
+    private TextField Kardiotechnikername;
+    
+    @FXML
+    private TextField Kardiotechnikerpersonalnummer;
+    
+    @FXML
+    private TextField Kardiotechnikerkontakt;
+    
+    @FXML
+    private TextField OPNamePatient;
+    
+    @FXML
+    private TextField OPAlterPatient;
+    
+    @FXML
+    private TextField OPGesundheitszustand;
+    
+    @FXML
+    private TextField OPAnzahlAerzte;
+    
+    @FXML
+    private TextField OPAnzahlSchwestern;
+    
+    @FXML
+    private TextField OPAnzahlKardiotechniker;
+    
+    @FXML
+    private TextField OPDauer;
+    
+    @FXML
+    private TextField OPTyp;
+    
+    @FXML
+    private TextField OPDringlichkeit;
 
     public void setMain(Main main)
     {
