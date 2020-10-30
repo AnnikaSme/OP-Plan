@@ -12,7 +12,7 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="Schwesterspeichern" layoutX="294.0" layoutY="282.0" mnemonicParsing="false" text="Speichern" />
+            <Button fx:id="Schwesterspeichern" layoutX="294.0" layoutY="282.0" mnemonicParsing="false" onAction="#Schwesterhinzufügen" text="Speichern" />
             <Label layoutX="264.0" layoutY="29.0" prefHeight="64.0" prefWidth="128.0" text="Schwester">
                <font>
                   <Font size="24.0" />
