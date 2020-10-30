@@ -682,13 +682,7 @@ public class MainWindowController extends Main
                 OPDringlichkeit.clear();
 
             }
-            else if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
-            OPAlterPatient.getText().replaceAll(" ","").matches("[0-130]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
-            OPAnzahlSchwestern.getText().replaceAll(" ","").matches("[1-4]+") &&
-            OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
-            OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
-            OPDauer.getText().replaceAll(" ","").matches("[1-10]+")&&
-            OPDringlichkeit.getText().replaceAll(" ","").matches("[1-3]+"))
+            else 
             {
                 a = Integer.parseInt(OPAlterPatient.getText());
                 b = Integer.parseInt(OPAnzahlAerzte.getText());
