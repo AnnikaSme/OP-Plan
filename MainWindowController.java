@@ -499,7 +499,7 @@ public class MainWindowController extends Main
 
         }
     
-
+        @FXML
     public void ArztlöschenSub()
     {   
         try{
@@ -527,5 +527,6 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
+    
 }
 
