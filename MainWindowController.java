@@ -27,6 +27,10 @@ import java.nio.file.*;
 import java.text.*;
 import java.time.format.*;
 import java.time.*;
+import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.commons.collections4.*;
 
 public class MainWindowController extends Main
 {   
@@ -908,8 +912,41 @@ public class MainWindowController extends Main
 
             }
         
-        
     }
-    
+    // @FXML
+    // public void ListenExportieren()
+    // {
+        // // Path f = Paths.get("C:\\ChemischeAnalysedatenbank\\Analyseberichte");
+        // if (!Files.exists(f)) 
+        // {
+            // try 
+            // {
+                // Files.createDirectories(f);
+            // } 
+            // catch (IOException e) 
+            // {
+                // e.printStackTrace();    
+            // }
+        // }
+
+         // FileChooser filechooser = new FileChooser();
+         // filechooser.setTitle("Speicherort auswählen");
+
+         // filechooser.setInitialDirectory(new File(System.getProperty("user.home")));
+         // filechooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Excel (*.xlsx)", "*.xlsx"));
+         // File file = filechooser.showSaveDialog(Main.primaryStage);
+
+        // // if (file == null)
+        // // {
+
+        // // }
+        // // else
+        // // {
+            // // String change = new String(file.getPath());
+            // // String berichtnr = BerichtNR.getText().replace("Analysebericht Nr. ", "");
+            // // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren2(change.replaceAll(file.getName(), berichtnr + file.getName()));
+            // // p.Analyseberichtsuchen2(berichtnr).Berichtexportieren(change.replaceAll(file.getName(), berichtnr + file.getName()));
+        // // }
+    // }
 }
 
