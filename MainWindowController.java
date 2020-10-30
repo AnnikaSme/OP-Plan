@@ -311,6 +311,27 @@ public class MainWindowController extends Main
             e.printStackTrace();
         }
     }
+    
+    @FXML
+    public void OP()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("OP.fxml"));
+            VBox pane = loader.load();
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+
+            Scene scene = new Scene(pane);
+            Main.primaryStage.setScene(scene);
+            Main.primaryStage.show();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 
     public void warningDaten() 
     {
