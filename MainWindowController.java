@@ -204,7 +204,7 @@ public class MainWindowController extends Main
 
     @FXML
     private TextField NamePatient;
-    
+
     @FXML
     private Button EintragenSpeichern;
 
@@ -888,6 +888,27 @@ public class MainWindowController extends Main
         }
     }
 
+    @FXML
+    public void Eintragenöffnen()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Eintragen.fxml"));
+            Pane pane = loader.load();
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+
+            Scene scene = new Scene(pane);
+            Main.primaryStage.setScene(scene);
+            Main.primaryStage.show();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     @FXML 
     public void OPEintragen()
     {
@@ -900,7 +921,7 @@ public class MainWindowController extends Main
         }
         else
         {
-             if(Eintragenpersonalnummer.getText().matches("[1-9]+")==false)
+            if(Eintragenpersonalnummer.getText().matches("[1-9]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
@@ -910,8 +931,8 @@ public class MainWindowController extends Main
                 alert.showAndWait();
                 Eintragenpersonalnummer.clear(); 
             }
-            
-             else if(NamePatient.getText().matches("[a-zA-Z]+")==false)
+
+            else if(NamePatient.getText().matches("[a-zA-Z]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
@@ -921,18 +942,14 @@ public class MainWindowController extends Main
                 alert.showAndWait();
                 NamePatient.clear(); 
             }
-            
-            
-            
+
             a = Integer.parseInt(Eintragenpersonalnummer.getText());
             Main.verwalter.Eintragen(a, NamePatient.getText());
+            Verwaltung();
 
         }
 
-        
-
     }
-
     // }
     @FXML
     public void RaumSub()
@@ -981,19 +998,17 @@ public class MainWindowController extends Main
     // @FXML
     // public void OPsanzeigen()
     // {
-        // Main.verwalter.GetOPListe();
+    // Main.verwalter.GetOPListe();
 
-        // Main.verwalter.setItem(operationsliste.get(1));
-        // Main.verwalter.setItem(operationsliste.get(2));
-        
+    // Main.verwalter.setItem(operationsliste.get(1));
+    // Main.verwalter.setItem(operationsliste.get(2));
 
-        // ListView listView = new ListView();
-                
-        // listView.getItems().add("Item 2");
-        // listView.getItems().add("Item 3");
-        // listView.getItems().add("Item 1");
-        // listView.getItems().add("Item 2");
-        // listView.getItems().add("Item 3");
+    // ListView listView = new ListView();
+    // listView.getItems().add("Item 2");
+    // listView.getItems().add("Item 3");
+    // listView.getItems().add("Item 1");
+    // listView.getItems().add("Item 2");
+    // listView.getItems().add("Item 3");
 
     // }
 
