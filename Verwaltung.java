@@ -145,8 +145,7 @@ public class Verwaltung
      * Die Daten werden von Hand eingegeben.
      * Mit der If-Bedingung wird getestet ob diese OP schon existiert und wird mit einer Bildschirmausgabe zurückgemeldet.
      */
-    public void speicherOP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit)throws Exception
-    {
+    public void speicherOP(String NamePatient, int AlterPatient, String Gesundheitszustand, int AnzahlAerzte, int AnzahlSchwester, int AnzahlKT, int Dauer, String OPTyp, int Dringlichkeit){
         OP b = new OP( NamePatient, AlterPatient, Gesundheitszustand, AnzahlAerzte, AnzahlSchwester, AnzahlKT, Dauer, OPTyp, Dringlichkeit);
         operationsliste.add(b);
     }
@@ -176,7 +175,7 @@ public class Verwaltung
         }
     }
 
-    public void KardiotechnikerDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    public void KardiotechnikerDatenLoeschen(int Personalnummer) //Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
@@ -193,12 +192,12 @@ public class Verwaltung
         }
         else
         {
-            throw new Exception("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+            throw new IllegalArgumentException("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
         }
     }
 
        
-    public void SchwesterDatenLoeschen(int Personalnummer) throws Exception//Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
+    public void SchwesterDatenLoeschen(int Personalnummer) //Die Daten zu einer bestimmten Person des Personales sollen gelöscht werde. Gesucht wird über die Personalnummer.
     {
         Integer p = new Integer (Personalnummer);
         String gesuchtA = p.toString();
@@ -215,7 +214,7 @@ public class Verwaltung
         }
         else
         {
-            throw new Exception("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
+            throw new IllegalArgumentException("Diese Personalnummer ist nicht in der Datenbank");      // Exceptions hinzufügen!
         }
     }
 

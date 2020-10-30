@@ -23,9 +23,9 @@
             </MenuButton>
             <MenuButton fx:id="Personalloeschen" layoutX="56.0" layoutY="200.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="141.0" text="Personal löschen" textAlignment="CENTER">
               <items>
-                <MenuItem fx:id="ArztLö" mnemonicParsing="false" onAction="#ArztlöschenSub" text="Arzt" />
-                <MenuItem fx:id="SchwesterLö" mnemonicParsing="false" text="Schwester" />
-                  <MenuItem fx:id="KardiotechnikerLö" mnemonicParsing="false" text="Kardiotechniker" />
+                <MenuItem fx:id="ArztLö" mnemonicParsing="false" onAction="#ArztlöschenSub" onMenuValidation="#ArztlöschenSub" text="Arzt" />
+                <MenuItem fx:id="SchwesterLö" mnemonicParsing="false" onAction="#SchwesterlöschenSub" onMenuValidation="#SchwesterlöschenSub" text="Schwester" />
+                  <MenuItem fx:id="KardiotechnikerLö" mnemonicParsing="false" onAction="#KardiotechnikerlöschenSub" onMenuValidation="#KardiotechnikerlöschenSub" text="Kardiotechniker" />
               </items>
             </MenuButton>
             <Button fx:id="Zurück" layoutX="551.0" layoutY="27.0" mnemonicParsing="false" onAction="#Zurück" text="Zurück" />

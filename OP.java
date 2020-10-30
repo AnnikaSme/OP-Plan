@@ -78,11 +78,11 @@ public class OP
      * 
      * @param  AlterPatient Alter des Patienten kann nur zwischen 0 und 130 Jahren liegen.
      */
-    public void setAlterPatient(int AlterPatient)throws Exception
+    public void setAlterPatient(int AlterPatient)
     {
             if (AlterPatient < 0 || AlterPatient > 130)   //Kein Mensch kann über 130 Jahre alt werden und kein Mensch kann unter 0 sein.
         { 
-            throw new Exception("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 130 Jahre alt sein.");           //Exception geworfen
+            throw new IllegalArgumentException("Der Patient kann nicht unter 0 Jahre alt sein und nicht über 130 Jahre alt sein.");           //Exception geworfen
         }
         else
         {
@@ -105,11 +105,11 @@ public class OP
      * 
      * @param  AnzahlAerzte Anzahl der Ärzte kann nicht <1oder >4 sein
      */
-    public void setAnzahlAerzte(int AnzahlAerzte)throws Exception
+    public void setAnzahlAerzte(int AnzahlAerzte)
     {
         if ( AnzahlAerzte < 1|| AnzahlAerzte > 4)   //Es müssen mindestens 1 und es können nur maximal 4 Aerzte an einer Operation teilnehmen.
         { 
-            throw new Exception("Es müssen 1 bis 4 Ärzte bei einer Operation dabei sein.");                                                     //Exception geworfen
+            throw new IllegalArgumentException("Es müssen 1 bis 4 Ärzte bei einer Operation dabei sein.");                                                     //Exception geworfen
         }
         else
         {
@@ -122,11 +122,11 @@ public class OP
      * 
      * @param  AnzahlSchwester Anzahl der Schwestern muss zwischen 1 und 4 liegen.
      */
-    public void setAnzahlSchwester(int AnzahlSchwester)throws Exception
+    public void setAnzahlSchwester(int AnzahlSchwester)
     {
         if ( AnzahlSchwester < 1 || AnzahlSchwester > 4)   //Es muessen mindestens 1 und es können nur maximal 4 Schwestern an einer Operation teilnehmen.
         { 
-            throw new Exception("Es müssen 1 bis 4 Schwestern bei einer Operation dabei sein.");                                                  //Exception geworfe!
+            throw new IllegalArgumentException("Es müssen 1 bis 4 Schwestern bei einer Operation dabei sein.");                                                  //Exception geworfe!
         }
         else
         {
@@ -139,11 +139,11 @@ public class OP
      * 
      * @param  AnzahlKT Anzahl der Kardiotechniker kann 0 oder 1 sein
      */
-    public void setAnzahlKT(int AnzahlKT)throws Exception
+    public void setAnzahlKT(int AnzahlKT)
     {
         if ( AnzahlKT < 0|| AnzahlKT > 1)   //Es wird nicht bei jeder Operation ein Kardiotechniker benötigt, mehr als einer wird nicht gebraucht.
         { 
-            throw new Exception("Es können nicht weniger als 0 und nicht mehr als 1 Kardiotechniker bei einer Operation dabei sein.");           //Exception geworfen
+            throw new IllegalArgumentException("Es können nicht weniger als 0 und nicht mehr als 1 Kardiotechniker bei einer Operation dabei sein.");           //Exception geworfen
         }
         else
         {
@@ -156,11 +156,11 @@ public class OP
      * 
      * @param  Dauer Dauer der OP kann nicht negativ und nicht >10 Stunden sein
      */
-    public void setDauer(int Dauer)throws Exception
+    public void setDauer(int Dauer)
     {
          if ( Dauer < 1|| Dauer > 10)   //Eine Operation muss mindestens 1 Stunde und kann nur bis zu 10 Stunden dauern.
         { 
-            throw new Exception("Die Dauer einer Operation muss mindestens 1 Stunde und kann höchstens 10 Stunden betragen.");           //Exception geworfen
+            throw new IllegalArgumentException("Die Dauer einer Operation muss mindestens 1 Stunde und kann höchstens 10 Stunden betragen.");           //Exception geworfen
         }
         else
         {
@@ -183,11 +183,11 @@ public class OP
      * 
      * @param  Dringlichkeit Dringlichkeit der Operation
      */
-    public void setDringlichkeit(int Dringlichkeit)throws Exception
+    public void setDringlichkeit(int Dringlichkeit)
     {
          if ( Dringlichkeit < 1|| Dringlichkeit > 3)   //Es gibt nur die Dringlichkeitsstufen: Notoperation = 1, Dringend = 2, NIcht sehr Dringend = 3
         { 
-            throw new Exception("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception geworfen
+            throw new IllegalArgumentException("Diese Dringlichkeit existiert nicht! Es gibt nur die Dringlichkeitsstufen 1 bis 3.");           //Exception geworfen
         }
         else
         {

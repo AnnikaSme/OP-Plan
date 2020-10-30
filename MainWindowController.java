@@ -746,7 +746,8 @@ public class MainWindowController extends Main
             {
                 a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
                 Main.verwalter.ArztDatenLoeschen(a);
-
+               
+              Arztlöschenpersonalnummer.clear(); 
             }
         }
     }
