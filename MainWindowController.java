@@ -318,7 +318,7 @@ public class MainWindowController extends Main
         try
         {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("OP.fxml"));
-            VBox pane = loader.load();
+            Pane pane = loader.load();
 
             MainWindowController mainWindowController = loader.getController();
             mainWindowController.setMain(main);
@@ -710,7 +710,18 @@ public class MainWindowController extends Main
     @FXML
     public void Arztlöschen()
     {
+        
         int a;
+        
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Achtung");
+        alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
+        alert.setContentText("Bitte bestätigen");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) 
+        {
         if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
         {
             warningDaten(); 
@@ -724,5 +735,6 @@ public class MainWindowController extends Main
         }
 
     }
+}
 }
 

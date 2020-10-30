@@ -10,7 +10,7 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="OPanlegen" layoutX="259.0" layoutY="81.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="OP anlegen" />
+            <Button fx:id="OPanlegen" layoutX="259.0" layoutY="81.0" mnemonicParsing="false" onAction="#OP" prefHeight="86.0" prefWidth="122.0" text="OP anlegen" />
             <Button fx:id="DatenExportieren" layoutX="455.0" layoutY="81.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Daten exportieren" />
             <Button fx:id="OPloeschen" layoutX="455.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="OP löschen" />
             <Button fx:id="Raumzuweisen" layoutX="259.0" layoutY="196.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="122.0" text="Raum zuweisen" />
