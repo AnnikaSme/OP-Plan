@@ -484,7 +484,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setHeaderText("Falsche Eingabe im Stationsfeld!");
                 alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
 
                 alert.showAndWait();
@@ -633,7 +633,7 @@ public class MainWindowController extends Main
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
-                alert.setHeaderText("Falsche Eingabe im Anzahl Schweseternfeld!");
+                alert.setHeaderText("Falsche Eingabe im Anzahl Schwesternfeld!");
                 alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
 
                 alert.showAndWait();
@@ -789,7 +789,7 @@ public class MainWindowController extends Main
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Achtung");
-        alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
+        alert.setHeaderText("Schwester wird unwiderruflich gelöscht");
         alert.setContentText("Bitte bestätigen");
 
         Optional<ButtonType> result = alert.showAndWait();
@@ -846,7 +846,7 @@ public class MainWindowController extends Main
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Achtung");
-        alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
+        alert.setHeaderText("Kardiotechniker wird unwiderruflich gelöscht");
         alert.setContentText("Bitte bestätigen");
 
         Optional<ButtonType> result = alert.showAndWait();
