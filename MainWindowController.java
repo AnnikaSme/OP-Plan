@@ -991,21 +991,5 @@ public class MainWindowController extends Main
 
     }
 
-    // @FXML
-    // public void OPsanzeigen()
-    // {
-    // Main.verwalter.GetOPListe();
-
-    // Main.verwalter.setItem(operationsliste.get(1));
-    // Main.verwalter.setItem(operationsliste.get(2));
-
-    // ListView listView = new ListView();
-    // listView.getItems().add("Item 2");
-    // listView.getItems().add("Item 3");
-    // listView.getItems().add("Item 1");
-    // listView.getItems().add("Item 2");
-    // listView.getItems().add("Item 3");
-
-    // }
-
+   
 }
