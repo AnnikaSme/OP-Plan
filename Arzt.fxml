@@ -72,7 +72,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="531.0" layoutY="34.0" mnemonicParsing="false" text="Zurück" />
+            <Button fx:id="Zurück2" layoutX="531.0" layoutY="34.0" mnemonicParsing="false" onAction="#Zurück2" text="Zurück" />
          </children>
     </AnchorPane>
   </children>

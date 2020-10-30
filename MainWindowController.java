@@ -739,7 +739,7 @@ public class MainWindowController extends Main
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Achtung");
-        alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
+        alert.setHeaderText("Arzt wird unwiderruflich gelöscht");
         alert.setContentText("Bitte bestätigen");
 
         Optional<ButtonType> result = alert.showAndWait();
@@ -755,7 +755,7 @@ public class MainWindowController extends Main
                 a = Integer.parseInt(Arztlöschenpersonalnummer.getText());
                 Main.verwalter.ArztDatenLoeschen(a);
                
-              Arztlöschenpersonalnummer.clear(); 
+                Arztlöschenpersonalnummer.clear(); 
             }
         }
     }
