@@ -182,6 +182,18 @@ public class MainWindowController extends Main
 
     @FXML 
     private Button LöschenArzt;
+    
+    @FXML
+    private TextField Schwesterlöschenpersonalnummer;
+    
+    @FXML
+    private Button LöschenSchewster;
+    
+    @FXML
+    private TextField Kardiotechnikerlöschenpersonalnummer;
+    
+    @FXML
+    private Button LöschenKardiotechniker;
 
     @FXML
     private Button Zurück;
@@ -738,6 +750,121 @@ public class MainWindowController extends Main
             }
         }
     }
+    
+    @FXML
+    public void SchwesterlöschenSub()
+    {   
+        try{
+
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("SchwesterlöschenSub.fxml"));
+            HBox pane = loader.load();
+
+            main.substage = new Stage();
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
+
+            main.substage.setTitle("Schwester löschen");
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+            Scene scene = new Scene(pane);
+
+            main.substage.initModality(Modality.APPLICATION_MODAL);
+
+            main.substage.setScene(scene);
+            main.substage.show();
+
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    public void Schwesterlöschen()
+    {
+
+        int a;
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Achtung");
+        alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
+        alert.setContentText("Bitte bestätigen");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) 
+        {
+            if(Schwesterlöschenpersonalnummer.getText() == null || Schwesterlöschenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                a = Integer.parseInt(Schwesterlöschenpersonalnummer.getText());
+                Main.verwalter.SchwesterDatenLoeschen(a);
+
+            }
+        }
+    }
+    
+    @FXML
+    public void KardiotechnikerlöschenSub()
+    {   
+        try{
+
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("KardiotechnikerlöschenSub.fxml"));
+            HBox pane = loader.load();
+
+            main.substage = new Stage();
+            main.substage.setMinHeight(200.00);
+            main.substage.setMinWidth(300.00);
+
+            main.substage.setTitle("Kardiotechniker löschen");
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+            Scene scene = new Scene(pane);
+
+            main.substage.initModality(Modality.APPLICATION_MODAL);
+
+            main.substage.setScene(scene);
+            main.substage.show();
+
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    public void Kardiotechnikerlöschen()
+    {
+
+        int a;
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Achtung");
+        alert.setHeaderText("Notfallkontakt wird unwiderruflich gelöscht");
+        alert.setContentText("Bitte bestätigen");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) 
+        {
+            if(Kardiotechnikerlöschenpersonalnummer.getText() == null || Kardiotechnikerlöschenpersonalnummer.getText().trim().isEmpty() )
+            {
+                warningDaten(); 
+            }
+            else
+            {
+                a = Integer.parseInt(Kardiotechnikerlöschenpersonalnummer.getText());
+                Main.verwalter.KardiotechnikerDatenLoeschen(a);
+
+            }
+        }
+    }
+    
      @FXML
     public void RaumSub()
     {   
