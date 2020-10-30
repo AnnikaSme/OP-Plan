@@ -908,6 +908,17 @@ public class MainWindowController extends Main
 
             // }
             
+           //if(NamePatient.getText() == null || NamePatient.getText().trim().isEmpty() )
+          //  {
+              //  warningDaten(); 
+          //  }
+          //  else
+            //{
+            //    a = Integer.parseInt(NamePatient.getText());
+            //    Main.verwalter.Eintragen(b);
+
+            //}
+            
             
     // }
     
