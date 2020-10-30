@@ -52,7 +52,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="OPAnzahlAerzte" />
-                  <Label text=" 2-4 Ärzte" />
+                  <Label prefHeight="18.0" prefWidth="74.0" text=" 1-4 Ärzte" />
                </children>
             </HBox>
             <HBox prefHeight="30.0" prefWidth="434.0">
