@@ -27,6 +27,7 @@ import java.nio.file.*;
 import java.text.*;
 import java.time.format.*;
 import java.time.*;
+
 public class MainWindowController
 {   
     public Main main;
@@ -106,7 +107,7 @@ public class MainWindowController
 
     @FXML 
     private Button Kardiotechnikerspeichern;
-    
+
     @FXML
     private Button OPspeichern;
 
@@ -124,55 +125,55 @@ public class MainWindowController
 
     @FXML
     private TextField Arztkontakt;
-    
+
     @FXML
     private Alert alert1;
-    
+
     @FXML
     private TextField Schwestername;
-    
+
     @FXML
     private TextField Schwesterpersonalnummer;
-    
+
     @FXML
     private TextField Schwesterstation;
-    
+
     @FXML
     private TextField Schwesterkontakt;
-    
+
     @FXML
     private TextField Kardiotechnikername;
-    
+
     @FXML
     private TextField Kardiotechnikerpersonalnummer;
-    
+
     @FXML
     private TextField Kardiotechnikerkontakt;
-    
+
     @FXML
     private TextField OPNamePatient;
-    
+
     @FXML
     private TextField OPAlterPatient;
-    
+
     @FXML
     private TextField OPGesundheitszustand;
-    
+
     @FXML
     private TextField OPAnzahlAerzte;
-    
+
     @FXML
     private TextField OPAnzahlSchwestern;
-    
+
     @FXML
     private TextField OPAnzahlKardiotechniker;
-    
+
     @FXML
     private TextField OPDauer;
-    
+
     @FXML
     private TextField OPTyp;
-    
+
     @FXML
     private TextField OPDringlichkeit;
 
@@ -313,64 +314,66 @@ public class MainWindowController
             if(Arztname.getText().replaceAll(" ","").matches("[a-zA-Z]+") && Arztkontakt.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
             Arztrang.getText().replaceAll(" ","").matches("[1-4]+") && Arztfachrichtung.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
             Arztpersonalnummer.getText().replaceAll(" ","").matches("[0-9]+"))
-            // {
+            {
                 a = Integer.parseInt(Arztrang.getText());
-            b = Integer.parseInt(Arztpersonalnummer.getText());
-            //Verwaltung.speicherPersonalarzt(Arztfachrichtung.getText(), a, Arztname.getText(), b, Arztkontakt.getText() );
+                b = Integer.parseInt(Arztpersonalnummer.getText());
+                Verwaltung.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
+            }
+
+            if(Arztname.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Namensfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Arztname.clear(); 
+
+            }
+            else if(Arztkontakt.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Arztkontakt.clear(); 
+            }
+            else if(Arztrang.getText().matches("[1-4]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Rangfeld!");
+                alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
+
+                alert.showAndWait();
+                Arztrang.clear(); 
+            }
+            else if(Arztfachrichtung.getText().matches("[a-zA-Z]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Fachrichtungsfeld!");
+                alert.setContentText("Bitte nur Buchstaben eingeben");
+
+                alert.showAndWait();
+                Arztfachrichtung.clear(); 
+            }
+            else if(Arztpersonalnummer.getText().matches("[0-9]+")==false)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Achtung");
+                alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
+                alert.setContentText("Bitte nur Zahlen eingeben");
+
+                alert.showAndWait();
+                Arztpersonalnummer.clear();
+
+            }
         }
-        
-         if(Arztname.getText().matches("[a-zA-Z]+")==false)
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Achtung");
-            alert.setHeaderText("Falsche Eingabe im Namensfeld!");
-            alert.setContentText("Bitte nur Buchstaben eingeben");
 
-            alert.showAndWait();
-            Arztname.clear(); 
-
-        }
-        else if(Arztkontakt.getText().matches("[a-zA-Z]+")==false)
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Achtung");
-            alert.setHeaderText("Falsche Eingabe im Kontaktfeld!");
-            alert.setContentText("Bitte nur Buchstaben eingeben");
-
-            alert.showAndWait();
-            Arztkontakt.clear(); 
-        }
-        else if(Arztrang.getText().matches("[1-4]+")==false)
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Achtung");
-            alert.setHeaderText("Falsche Eingabe im Rangfeld!");
-            alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
-
-            alert.showAndWait();
-            Arztrang.clear(); 
-        }
-        else if(Arztfachrichtung.getText().matches("[a-zA-Z]+")==false)
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Achtung");
-            alert.setHeaderText("Falsche Eingabe im Fachrichtungsfeld!");
-            alert.setContentText("Bitte nur Buchstaben eingeben");
-
-            alert.showAndWait();
-            Arztfachrichtung.clear(); 
-        }
-        else if(Arztpersonalnummer.getText().matches("[0-9]+")==false)
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Achtung");
-            alert.setHeaderText("Falsche Eingabe im Personalnummerfeld!");
-            alert.setContentText("Bitte nur Zahlen eingeben");
-
-            alert.showAndWait();
-            Arztpersonalnummer.clear();
-
-        }
     }
-
 }
+
