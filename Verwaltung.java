@@ -20,7 +20,7 @@ public class Verwaltung
     private ArrayList<Kardiotechniker>personalkardiotechniker;
     private ArrayList<OP>operationsliste;
     private ArrayList[] personal;
-    public static Verwaltung verwalter;
+    //public static Verwaltung verwalter;
 
     /**
      * Konstruktor der Verwaltung, welcher die OP-Räume in einem Array der Länge 6 speichert.
@@ -50,11 +50,11 @@ public class Verwaltung
 
     }
 
-    public static void erstelleVerwaltung() throws Exception
-    {
-        verwalter = new Verwaltung();
+    // public static void erstelleVerwaltung() throws Exception
+    // {
+        // verwalter = new Verwaltung();
 
-    }
+    // }
 
     /**
      * In der Methode speicherPersonalarzt werden die Daten in die ArrayList personalarzt geschrieben. 
@@ -412,7 +412,7 @@ public class Verwaltung
         {
             FileOutputStream out = new FileOutputStream("test.txt");
             ObjectOutputStream oout = new ObjectOutputStream(out);
-            oout.writeObject(verwalter);
+            oout.writeObject(this);
             oout.close();
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("test.txt"));
         }

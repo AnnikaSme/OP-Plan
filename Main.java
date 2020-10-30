@@ -19,7 +19,7 @@ public class Main extends Application
    public static Stage primaryStage;
     
     public static Stage substage;
-    Verwaltung verwalter;
+    public static Verwaltung verwalter;
     
     @Override
     public void start(Stage primaryStage) throws Exception
@@ -32,10 +32,9 @@ public class Main extends Application
 
     public void mainWindow() throws Exception
     {   
-        verwalter = new Verwaltung();
 
         try{
- 
+            Main.verwalter = new Verwaltung();
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("main.fxml"));
             VBox pane = loader.load();
 

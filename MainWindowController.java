@@ -28,7 +28,7 @@ import java.text.*;
 import java.time.format.*;
 import java.time.*;
 
-public class MainWindowController
+public class MainWindowController extends Main
 {   
     public Main main;
 
@@ -299,7 +299,7 @@ public class MainWindowController
     }
 
     @FXML
-    public void Arzthinzufügen()
+    public void Arzthinzufügen() throws Exception
     {   int a;
         int b;
         if(Arztname.getText() == null || Arztname.getText().trim().isEmpty() || Arztkontakt.getText() == null || 
@@ -317,7 +317,7 @@ public class MainWindowController
             {
                 a = Integer.parseInt(Arztrang.getText());
                 b = Integer.parseInt(Arztpersonalnummer.getText());
-                Verwaltung.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
+                Main.verwalter.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
             }
 
             if(Arztname.getText().matches("[a-zA-Z]+")==false)

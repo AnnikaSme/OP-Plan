@@ -24,11 +24,11 @@ public class Arzt extends Personal
      * @param Personalnummer Personalnummer des Arztes
      * @param Kontakt Kontakt des Arztes
      */
-    public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt) throws Exception
+    public Arzt(String Fachrichtung, int Rang, String Name, int Personalnummer, String Kontakt)
     {
         super(Name, Personalnummer, "Arzt", Kontakt);  // Arbeitszweig wird fest auf Arzt festgelegt. 
-        SetFachrichtung(Fachrichtung);
-        SetRang(Rang);
+        this.Fachrichtung = Fachrichtung;
+        this.Rang = Rang;
     }
     
     /**
@@ -68,11 +68,11 @@ public class Arzt extends Personal
      * 
      * @param  Rang  Es gibt 4 Ränge, welche mit Nummern gekennzeichnet sind: Chefarzt=1, Oberarzt=2, Facharzt=3, Assistenzarzt=4.
      */
-    public void SetRang(int Rang) throws Exception
+    public void SetRang(int Rang)
     {
         if (Rang < 1 || Rang > 4)   //Es gibt nur die Ränge: Chefarzt = 1, Oberarzt = 2, Facharzt = 3, Assistenzarzt = 4
         { 
-            throw new Exception("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception --> Fehlerweitergabe
+            throw new IllegalArgumentException("Dieser Rang existiert nicht! Es gibt nur die Ränge 1 bis 4.");           //Exception --> Fehlerweitergabe
         }
         else
         {
