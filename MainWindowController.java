@@ -534,10 +534,10 @@ public class MainWindowController extends Main
         if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() || OPAlterPatient.getText() == null ||OPAlterPatient.getText().trim().isEmpty()
         || OPGesundheitszustand.getText() == null || OPGesundheitszustand.getText().trim().isEmpty() ||OPAnzahlAerzte.getText() == null || OPAnzahlAerzte.getText().trim().isEmpty() 
         || Arztfachrichtung.getText() == null || Arztfachrichtung.getText().trim().isEmpty() 
-        ||OPAnzahlSchwester.getText() == null || OPAnzahlSchwester.getText().trim().isEmpty() 
+        ||OPAnzahlSchwestern.getText() == null || OPAnzahlSchwestern.getText().trim().isEmpty() 
         ||OPAnzahlKardiotechniker.getText() == null || OPAnzahlKardiotechniker.getText().trim().isEmpty() 
         ||OPDauer.getText() == null || OPDauer.getText().trim().isEmpty() 
-        ||OPDringlichkeit.getText() == null || OPDringlickeit.getText().trim().isEmpty() )
+        ||OPDringlichkeit.getText() == null || OPDringlichkeit.getText().trim().isEmpty() )
         {
             warningDaten(); 
         }
@@ -545,7 +545,7 @@ public class MainWindowController extends Main
         {
             if(OPNamePatient.getText().replaceAll(" ","").matches("[a-zA-Z]+") && OPGesundheitszustand.getText().replaceAll(" ","").matches("[a-zA-Z]+") &&
             OPAlterPatient.getText().replaceAll(" ","").matches("[0-150]+") && OPAnzahlAerzte.getText().replaceAll(" ","").matches("[2-4]+") && 
-            OPAnzahlSchwester.getText().replaceAll(" ","").matches("[1-4]+") &&
+            OPAnzahlSchwestern.getText().replaceAll(" ","").matches("[1-4]+") &&
             OPAnzahlKardiotechniker.getText().replaceAll(" ","").matches("[0-1]+") &&
             OPTyp.getText().replaceAll(" ","").matches("[a-zA-Z]+")&&
             OPDauer.getText().replaceAll(" ","").matches("[1-10]+")&&
@@ -553,11 +553,11 @@ public class MainWindowController extends Main
             {
                 a = Integer.parseInt(OPAlterPatient.getText());
                 b = Integer.parseInt(OPAnzahlAerzte.getText());
-                c = Integer.parseInt(OPAnzahlSchwester.getText());
+                c = Integer.parseInt(OPAnzahlSchwestern.getText());
                 d = Integer.parseInt(OPAnzahlKardiotechniker.getText());
                 e = Integer.parseInt(OPDauer.getText());
                 f = Integer.parseInt(OPDringlichkeit.getText());
-                Main.verwalter.speicherPersonalarzt(OPNamePatient.getText(),a, OPGesundheitszustand.getText(),  b, c, d, e, OPTyp.getText(), f);
+                Main.verwalter.speicherOP(OPNamePatient.getText(),a, OPGesundheitszustand.getText(),  b, c, d, e, OPTyp.getText(), f);
                 Verwaltung();
 
             }
@@ -603,7 +603,7 @@ public class MainWindowController extends Main
                 alert.showAndWait();
                 OPAnzahlAerzte.clear(); 
             }
-            else if(OPAnzahlSchwester.getText().matches("[1-4]+")==false)
+            else if(OPAnzahlSchwestern.getText().matches("[1-4]+")==false)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Achtung");
@@ -611,7 +611,7 @@ public class MainWindowController extends Main
                 alert.setContentText("Bitte nur Zahlen zwischen 1 und 4 eingeben");
 
                 alert.showAndWait();
-                OPAnzahlSchwester.clear(); 
+                OPAnzahlSchwestern.clear(); 
             }
             else if(OPAnzahlKardiotechniker.getText().matches("[0-1]+")==false)
             {
