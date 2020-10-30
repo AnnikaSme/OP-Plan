@@ -319,8 +319,7 @@ public class MainWindowController extends Main
                 b = Integer.parseInt(Arztpersonalnummer.getText());
                 Main.verwalter.speicherPersonalarzt(Arztfachrichtung.getText(),a,  Arztname.getText(),  b, Arztkontakt.getText());
                 Verwaltung();
-                
-                
+
             }
 
             if(Arztname.getText().matches("[a-zA-Z]+")==false)
@@ -376,7 +375,34 @@ public class MainWindowController extends Main
 
             }
         }
+    }
 
+    public void ArztlöschenSub()
+    {   
+        try{
+
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("ArztlöschenSub.fxml"));
+            HBox pane = loader.load();
+
+            main.substage = new Stage();
+            main.substage.setMinHeight(500.00);
+            main.substage.setMinWidth(600.00);
+
+            main.substage.setTitle("Analysebericht suchen");
+
+            MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setMain(main);
+            Scene scene = new Scene(pane);
+
+            main.substage.initModality(Modality.APPLICATION_MODAL);
+
+            main.substage.setScene(scene);
+            main.substage.show();
+
+        } 
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 }
 

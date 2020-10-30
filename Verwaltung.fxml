@@ -23,7 +23,7 @@
             </MenuButton>
             <MenuButton fx:id="Personalloeschen" layoutX="56.0" layoutY="200.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="141.0" text="Personal löschen" textAlignment="CENTER">
               <items>
-                <MenuItem fx:id="ArztLö" mnemonicParsing="false" text="Arzt" />
+                <MenuItem fx:id="ArztLö" mnemonicParsing="false" onAction="#ArztlöschenSub" text="Arzt" />
                 <MenuItem fx:id="SchwesterLö" mnemonicParsing="false" text="Schwester" />
                   <MenuItem fx:id="KardiotechnikerLö" mnemonicParsing="false" text="Kardiotechniker" />
               </items>
