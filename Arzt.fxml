@@ -22,7 +22,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="Artzname" prefHeight="25.0" prefWidth="140.0" />
+                        <TextField fx:id="Arztname" prefHeight="25.0" prefWidth="140.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="37.0" prefWidth="319.0">
