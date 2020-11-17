@@ -27,10 +27,7 @@ import java.nio.file.*;
 import java.text.*;
 import java.time.format.*;
 import java.time.*;
-import org.apache.poi.xssf.usermodel.*;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.commons.collections4.*;
+
 
 public class MainWindowController extends Main
 {   
@@ -57,14 +54,13 @@ public class MainWindowController extends Main
     private Text Operationen; 
 
     @FXML
-    private Button OPanlegen; 
+    private Button OPanlegen;
+    
     @FXML
     private Button DatenExportieren;
 
     @FXML
     private MenuButton Personalanlegen;
-
-  
 
     @FXML
     private MenuButton Personalloeschen; 
@@ -209,6 +205,9 @@ public class MainWindowController extends Main
 
     @FXML
     private Button Zurück2;
+    
+    @FXML
+    private Button Zurück3;
 
     @FXML
     private Button Raum;
@@ -218,7 +217,10 @@ public class MainWindowController extends Main
         this.main = main;
     }
 
-    @FXML
+   
+
+   
+ @FXML
     public void Verwaltung()
     {
         try
@@ -260,19 +262,25 @@ public class MainWindowController extends Main
         }
 
     }
-
-    @FXML
+    
+     @FXML
     public void Zurück() throws Exception
     {
         main.mainWindow();
     }
 
     @FXML
-    public void Zurück2() throws Exception
+    public void Zurück2() 
     {
         Verwaltung();
     }
-
+    
+     @FXML
+    public void Zurück3() 
+    {
+        Personal();
+    }
+    
     @FXML
     public void Arzt()
     {

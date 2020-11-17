@@ -44,5 +44,6 @@
             <Font size="20.0" />
          </font>
       </Button>
+      <Button fx:id="Zurück3" layoutX="516.0" layoutY="28.0" mnemonicParsing="false" onAction="#Zurück3" text="Zurück" />
    </children>
 </AnchorPane>
