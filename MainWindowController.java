@@ -28,7 +28,6 @@ import java.text.*;
 import java.time.format.*;
 import java.time.*;
 
-
 public class MainWindowController extends Main
 {   
     public Main main;
@@ -44,7 +43,7 @@ public class MainWindowController extends Main
 
     @FXML
     private Button PersonalEintragen; 
-    
+
     @FXML
     private TextField Personalnummer; 
     @FXML
@@ -55,7 +54,7 @@ public class MainWindowController extends Main
 
     @FXML
     private Button OPanlegen;
-    
+
     @FXML
     private Button DatenExportieren;
 
@@ -205,7 +204,7 @@ public class MainWindowController extends Main
 
     @FXML
     private Button Zurück2;
-    
+
     @FXML
     private Button Zurück3;
 
@@ -217,10 +216,7 @@ public class MainWindowController extends Main
         this.main = main;
     }
 
-   
-
-   
- @FXML
+    @FXML
     public void Verwaltung()
     {
         try
@@ -262,8 +258,8 @@ public class MainWindowController extends Main
         }
 
     }
-    
-     @FXML
+
+    @FXML
     public void Zurück() throws Exception
     {
         main.mainWindow();
@@ -274,13 +270,13 @@ public class MainWindowController extends Main
     {
         Verwaltung();
     }
-    
-     @FXML
+
+    @FXML
     public void Zurück3() 
     {
         Personal();
     }
-    
+
     @FXML
     public void Arzt()
     {
@@ -987,7 +983,7 @@ public class MainWindowController extends Main
     @FXML
     public void Raum()
     {
-        if(Arztlöschenpersonalnummer.getText() == null || Arztlöschenpersonalnummer.getText().trim().isEmpty() )
+        if(OPNamePatient.getText() == null || OPNamePatient.getText().trim().isEmpty() )
         {
             warningDaten(); 
         }
@@ -999,5 +995,4 @@ public class MainWindowController extends Main
 
     }
 
-   
 }
